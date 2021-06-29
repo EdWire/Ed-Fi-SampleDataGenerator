@@ -92,7 +92,10 @@ namespace EdFi.SampleDataGenerator.Console
 
         private static string Schoolifier(string schoolName)
         {
-            return string.Empty;
+            if (schoolName.Substring(schoolName.Length - 3, 3) == " EL") return schoolName.Substring(1, schoolName.Length - 3) + "ELEMENTARY SCHOOL";
+            if (schoolName.Substring(schoolName.Length - 4, 4) == " M S") return schoolName.Substring(1, schoolName.Length - 4) + "MIDDLE SCHOOL";
+            if (schoolName.Substring(schoolName.Length - 4, 4) == " H S") return schoolName.Substring(1, schoolName.Length - 4) + "HIGH SCHOOL";
+            return schoolName;
         }
 
         private static SampleDataGeneratorConfig LoadXmlConfig(SampleDataGeneratorConsoleConfig commandLineConfig)
@@ -115,6 +118,8 @@ namespace EdFi.SampleDataGenerator.Console
                 System.Console.WriteLine("Please enter a NCES District ID and hit ENTER: ");  //4808940 = Austin ISD
                 string districtID = System.Console.ReadLine();
 
+                System.Console.WriteLine(); System.Console.WriteLine(); System.Console.WriteLine();
+
                 commandLineConfig.ConfigXmlPath = @"..\..\Samples\SampleDataGenerator\NCESBlankConfig.xml";
                 SqliteConnection sqliteConnection = new SqliteConnection(@"Filename=..\..\Samples\SampleDataGenerator\DataFiles\nces-2019.db");
                 sqliteConnection.Open();
@@ -133,6 +138,8 @@ namespace EdFi.SampleDataGenerator.Console
                     district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1,3);
                 }
 
+                System.Console.WriteLine("District -" + district.Name);
+
                 //before your loop
                 var csv = new StringBuilder();
 
@@ -142,13 +149,13 @@ namespace EdFi.SampleDataGenerator.Console
 
                 while (sqliteDataReader.Read())
                 {
-                    //in your loop
-                    var first = sqliteDataReader["SCH_NAME"].ToString();
-                    var second = sqliteDataReader["LCITY"].ToString();
-                    //Suggestion made by KyleMit
-                    var newLine = string.Format("{0},{1}", first, second);
+                    Entities.School school = new Entities.School();
+                    school.Name = sqliteDataReader["SCH_NAME"].ToString();
+                    //school.Name = Schoolifier(sqliteDataReader["SCH_NAME"].ToString());
+                    school.City = sqliteDataReader["LCITY"].ToString();
+                    var newLine = string.Format("{0},{1}", school.Name, school.City);                    
                     csv.AppendLine(newLine);
-                    System.Console.WriteLine(newLine.ToString());
+                    System.Console.WriteLine("  School -- " + newLine.ToString());
                 }
 
             }

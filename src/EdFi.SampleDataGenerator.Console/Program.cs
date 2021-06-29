@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 using EdFi.SampleDataGenerator.Console.Config;
 using EdFi.SampleDataGenerator.Core.Config.Xml;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Coordination;
@@ -89,6 +90,11 @@ namespace EdFi.SampleDataGenerator.Console
             }
         }
 
+        private static string Schoolifier(string schoolName)
+        {
+            return string.Empty;
+        }
+
         private static SampleDataGeneratorConfig LoadXmlConfig(SampleDataGeneratorConsoleConfig commandLineConfig)
         {
 
@@ -127,13 +133,31 @@ namespace EdFi.SampleDataGenerator.Console
                     district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1,3);
                 }
 
-                System.Console.WriteLine("Break now");
-                System.Console.ReadLine();
+                //before your loop
+                var csv = new StringBuilder();
+
+                sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM school WHERE LEAID='{0}';", districtID), sqliteConnection);
+                sqliteDataReader = sqliteCommand.ExecuteReader();
+                string[] row = { };
+
+                while (sqliteDataReader.Read())
+                {
+                    //in your loop
+                    var first = sqliteDataReader["SCH_NAME"].ToString();
+                    var second = sqliteDataReader["LCITY"].ToString();
+                    //Suggestion made by KyleMit
+                    var newLine = string.Format("{0},{1}", first, second);
+                    csv.AppendLine(newLine);
+                    System.Console.WriteLine(newLine.ToString());
+                }
+
             }
             catch (Exception e)
             {
                 throw new Exception("Error when trying to create configration", e);
             }
+
+            System.Console.ReadLine();
 
 
             try

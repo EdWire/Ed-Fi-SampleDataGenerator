@@ -561,6 +561,9 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\Program.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\School - original.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\School.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

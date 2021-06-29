@@ -9,5 +9,7 @@ namespace EdFi.SampleDataGenerator.Console.Entities
     class School
     {
         public string ID { get; set; }
+        public string Name { get; set; }
+
     }
 }

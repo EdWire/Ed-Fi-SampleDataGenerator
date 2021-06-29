@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using EdFi.SampleDataGenerator.Console.Config;
@@ -6,6 +6,7 @@ using EdFi.SampleDataGenerator.Core.Config.Xml;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Coordination;
 using log4net;
 using log4net.Config;
+using Microsoft.Data.Sqlite;
 
 namespace EdFi.SampleDataGenerator.Console
 {
@@ -90,6 +91,51 @@ namespace EdFi.SampleDataGenerator.Console
 
         private static SampleDataGeneratorConfig LoadXmlConfig(SampleDataGeneratorConsoleConfig commandLineConfig)
         {
+
+
+            /*	<DistrictProfile DistrictName="Grand Bend ISD">
+		<LocationInfo State="TX">
+			<City Name="Grand Bend" County="Liberty">
+				<!-- Set as many AreaCodes for the City as necessary. -->
+				<AreaCode Value="936" />
+				<AreaCode Value="832" />
+				<!-- Multiple PostalCodes may also be defined for a given City. -->
+				<PostalCode Value="77535" />
+			</City>
+		</LocationInfo> */
+
+            try
+            {
+                System.Console.WriteLine("Please enter a NCES District ID and hit ENTER: ");  //4808940 = Austin ISD
+                string districtID = System.Console.ReadLine();
+
+                commandLineConfig.ConfigXmlPath = @"..\..\Samples\SampleDataGenerator\NCESBlankConfig.xml";
+                SqliteConnection sqliteConnection = new SqliteConnection(@"Filename=..\..\Samples\SampleDataGenerator\DataFiles\nces-2019.db");
+                sqliteConnection.Open();
+                SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM lea WHERE LEAID='{0}';",districtID), sqliteConnection);
+                SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+
+                Entities.District district = new Entities.District();
+
+                if (sqliteDataReader.Read())
+                {
+                    district.Name = sqliteDataReader["LEA_NAME"].ToString();
+                    district.ID = sqliteDataReader["LEAID"].ToString();
+                    district.City = sqliteDataReader["LCITY"].ToString();
+                    district.State = sqliteDataReader["LSTATE"].ToString();
+                    district.PostalCode = sqliteDataReader["LZIP"].ToString();
+                    district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1,3);
+                }
+
+                System.Console.WriteLine("Break now");
+                System.Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error when trying to create configration", e);
+            }
+
+
             try
             {
                 var config = XmlConfigHelpers.ParseConfigFileToObject<SampleDataGeneratorConfig>(commandLineConfig.ConfigXmlPath);

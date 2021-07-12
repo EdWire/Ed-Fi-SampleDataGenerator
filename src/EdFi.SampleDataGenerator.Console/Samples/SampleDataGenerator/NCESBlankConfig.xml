@@ -44,22 +44,21 @@
 		</DataClock>
 	</TimeConfig>
 	<!-- Configure your school district using the DistrictProfile element. -->
-	<DistrictProfile DistrictName="Grand Bend ISD">
-		<LocationInfo State="TX">
-			<City Name="Grand Bend" County="Liberty">
+	<DistrictProfile DistrictName="**DistrictName**">
+		<LocationInfo State="**DistrictState**">
+			<City Name="**DistrictCity**" County="**DistrictCounty**">
 				<!-- Set as many AreaCodes for the City as necessary. -->
-				<AreaCode Value="936" />
-				<AreaCode Value="832" />
+				<AreaCode Value="**DistrictAreaCode**" />
 				<!-- Multiple PostalCodes may also be defined for a given City. -->
-				<PostalCode Value="77535" />
+				<PostalCode Value="**DistrictPostalCode**" />
 			</City>
 		</LocationInfo>
 		<!-- High-performing students can take part in advanced courses. -->
-		<HighPerformingStudentPercentile>0.93</HighPerformingStudentPercentile>
+		<HighPerformingStudentPercentile>0.20</HighPerformingStudentPercentile>
 		<!-- Each district is composed of one or more schools. -->
 		<!-- Your SchoolId must be an Id also found in your School.csv input file. -->
 		<!-- The CourseLoad property controls the number of classes assigned per term to the student population. -->
-		<SchoolProfile SchoolName="Grand Bend High School" SchoolId="255901001" CourseLoad="8">
+		<SchoolProfile SchoolName="**SchoolName**" SchoolId="**SchoolId**" CourseLoad="8">
 			<!-- Control discipline for your school with these properties. -->
 			<!-- Note that this is an /expected/ number of events. Your results won't necessarily -->
 			<!-- match these numbers exactly for every run of the SDG because the model is based on probabilities. -->
@@ -215,22 +214,6 @@
 		<ImmigrantProfile>
 			<CountryOfOrigin Name="MX" Race="Hispanic" Frequency="0.05" />
 		</ImmigrantProfile>
-	</StudentProfile>
-	<StudentProfile Name="AllWhiteMale">
-		<RaceConfiguration>
-			<Option Value="White" Frequency="1.0" />
-		</RaceConfiguration>
-		<SexConfiguration>
-			<Option Value="Male" Frequency="1.0" />
-		</SexConfiguration>
-	</StudentProfile>
-	<StudentProfile Name="AllBlackFemale">
-		<RaceConfiguration>
-			<Option Value="Black" Frequency="1.0" />
-		</RaceConfiguration>
-		<SexConfiguration>
-			<Option Value="Female" Frequency="1.0" />
-		</SexConfiguration>
 	</StudentProfile>
 	<!-- One or more GraduationPlanTemplate elements should be defined to set the number of credits -->
 	<!-- required for a student to graduation from their current school. -->

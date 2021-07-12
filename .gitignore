@@ -45,3 +45,4 @@ packages/
 /*.XML
 /src/.vs/Ed-Fi-SDG/v16/Server/sqlite3
 /src/EdFi.SampleDataGenerator.Console/Samples/SampleDataGenerator/DataFiles/nces-2019.db
+src/EdFi.SampleDataGenerator.Console/Samples/SampleDataGenerator/DataFiles/nces-2019.zip

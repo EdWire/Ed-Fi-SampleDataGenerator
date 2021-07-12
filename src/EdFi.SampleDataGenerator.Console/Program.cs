@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 using EdFi.SampleDataGenerator.Console.Config;
 using EdFi.SampleDataGenerator.Core.Config.Xml;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Coordination;
@@ -90,6 +92,7 @@ namespace EdFi.SampleDataGenerator.Console
             }
         }
 
+        // Method to convert common prefixes into full wording
         private static string Schoolifier(string schoolName)
         {
             if (schoolName.Substring(schoolName.Length - 3, 3) == " EL") return schoolName.Substring(1, schoolName.Length - 3) + "ELEMENTARY SCHOOL";
@@ -98,21 +101,14 @@ namespace EdFi.SampleDataGenerator.Console
             return schoolName;
         }
 
+        private static string TitleCase(string name)
+        {
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            return textInfo.ToTitleCase(name);
+        }
+
         private static SampleDataGeneratorConfig LoadXmlConfig(SampleDataGeneratorConsoleConfig commandLineConfig)
         {
-
-
-            /*	<DistrictProfile DistrictName="Grand Bend ISD">
-		<LocationInfo State="TX">
-			<City Name="Grand Bend" County="Liberty">
-				<!-- Set as many AreaCodes for the City as necessary. -->
-				<AreaCode Value="936" />
-				<AreaCode Value="832" />
-				<!-- Multiple PostalCodes may also be defined for a given City. -->
-				<PostalCode Value="77535" />
-			</City>
-		</LocationInfo> */
-
             try
             {
                 System.Console.WriteLine("Please enter a NCES District ID and hit ENTER: ");  //4808940 = Austin ISD
@@ -123,40 +119,28 @@ namespace EdFi.SampleDataGenerator.Console
                 commandLineConfig.ConfigXmlPath = @"..\..\Samples\SampleDataGenerator\NCESBlankConfig.xml";
                 SqliteConnection sqliteConnection = new SqliteConnection(@"Filename=..\..\Samples\SampleDataGenerator\DataFiles\nces-2019.db");
                 sqliteConnection.Open();
-                SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM lea WHERE LEAID='{0}';",districtID), sqliteConnection);
+                SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM lea WHERE LEAID='{0}';", districtID), sqliteConnection);
                 SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
 
-                Entities.District district = new Entities.District();
+                Entities.District district;
+                List<Entities.School> schools;
+                
 
-                if (sqliteDataReader.Read())
-                {
-                    district.Name = sqliteDataReader["LEA_NAME"].ToString();
-                    district.ID = sqliteDataReader["LEAID"].ToString();
-                    district.City = sqliteDataReader["LCITY"].ToString();
-                    district.State = sqliteDataReader["LSTATE"].ToString();
-                    district.PostalCode = sqliteDataReader["LZIP"].ToString();
-                    district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1,3);
-                }
+                district = FillDistrict(sqliteDataReader);
 
-                System.Console.WriteLine("District -" + district.Name);
-
-                //before your loop
-                var csv = new StringBuilder();
-
-                sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM school WHERE LEAID='{0}';", districtID), sqliteConnection);
+                sqliteCommand = new SqliteCommand(String.Format("SELECT RACE_ETHNICITY, SUM(STUDENT_COUNT) from school_student where LEAID ='{0}' GROUP BY RACE_ETHNICITY;", district.ID), sqliteConnection);
                 sqliteDataReader = sqliteCommand.ExecuteReader();
-                string[] row = { };
+                var districtStatistics = FillDistrictStatistics(district, sqliteDataReader);
 
-                while (sqliteDataReader.Read())
-                {
-                    Entities.School school = new Entities.School();
-                    school.Name = sqliteDataReader["SCH_NAME"].ToString();
-                    //school.Name = Schoolifier(sqliteDataReader["SCH_NAME"].ToString());
-                    school.City = sqliteDataReader["LCITY"].ToString();
-                    var newLine = string.Format("{0},{1}", school.Name, school.City);                    
-                    csv.AppendLine(newLine);
-                    System.Console.WriteLine("  School -- " + newLine.ToString());
-                }
+                sqliteCommand = new SqliteCommand(String.Format("SELECT SEX, SUM(STUDENT_COUNT) from school_student where LEAID ='{0}' GROUP BY SEX;", district.ID), sqliteConnection);
+                sqliteDataReader = sqliteCommand.ExecuteReader();
+                districtStatistics = FillDistrictStatistics(district, sqliteDataReader);
+
+
+                sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM school WHERE LEAID='{0}';", district.ID), sqliteConnection);
+                sqliteDataReader = sqliteCommand.ExecuteReader();
+                schools = FillSchools(district, sqliteDataReader);
+
 
             }
             catch (Exception e)
@@ -194,6 +178,57 @@ namespace EdFi.SampleDataGenerator.Console
             {
                 throw new Exception("Error when trying to read config file", e);
             }
+        }
+
+        private static Entities.District FillDistrict(SqliteDataReader sqliteDataReader)
+        {
+            Entities.District district = new Entities.District();
+
+            if (sqliteDataReader.Read())
+            {
+                district.Name = TitleCase(sqliteDataReader["LEA_NAME"].ToString());
+                district.ID = sqliteDataReader["LEAID"].ToString();
+                district.City = sqliteDataReader["LCITY"].ToString();
+                district.State = sqliteDataReader["LSTATE"].ToString();
+                district.PostalCode = sqliteDataReader["LZIP"].ToString();
+                district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1, 3);
+            }
+
+            return district;
+        }
+
+        private static Entities.District FillDistrictStatistics(Entities.District district, SqliteDataReader sqliteDataReader)
+        {
+            if (district != null && sqliteDataReader != null)
+            {
+                
+            }
+
+            return district;
+
+        }
+
+        private static List<Entities.School> FillSchools(Entities.District district, SqliteDataReader sqliteDataReader)
+        {
+            //before your loop
+            var csv = new StringBuilder();
+
+            string[] row = { };
+
+            while (sqliteDataReader.Read())
+            {
+                Entities.School school = new Entities.School();
+                school.Name = sqliteDataReader["SCH_NAME"].ToString();
+                //school.Name = Schoolifier(sqliteDataReader["SCH_NAME"].ToString());
+                school.City = sqliteDataReader["LCITY"].ToString();
+                var newLine = string.Format("{0},{1}", school.Name, school.City);
+                csv.AppendLine(newLine);
+                System.Console.WriteLine("  School -- " + newLine.ToString());
+            }
+
+
+
+            return new List<Entities.School>();
         }
 
         private static bool ShouldScanForDataFiles(SampleDataGeneratorConfig parsedConfig)

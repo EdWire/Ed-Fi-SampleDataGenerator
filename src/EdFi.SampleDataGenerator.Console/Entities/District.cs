@@ -14,5 +14,12 @@ namespace EdFi.SampleDataGenerator.Console.Entities
         public string State { get; set; }
         public string PostalCode { get; set; }
         public string AreaCode { get; set; }
+
+        public Demographics DistrictDemographics { get; set; }
+
+        public District()
+        {
+            this.DistrictDemographics = new Demographics();
+        }
     }
 }

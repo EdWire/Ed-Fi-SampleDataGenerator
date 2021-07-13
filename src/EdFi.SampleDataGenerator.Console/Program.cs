@@ -113,35 +113,21 @@ namespace EdFi.SampleDataGenerator.Console
             {
                 System.Console.WriteLine("Please enter a NCES District ID and hit ENTER: ");  //4808940 = Austin ISD
                 string districtID = System.Console.ReadLine();
+                int districtInt;
+                int.TryParse(districtID, out districtInt);
 
                 System.Console.WriteLine(); System.Console.WriteLine(); System.Console.WriteLine();
 
                 commandLineConfig.ConfigXmlPath = @"..\..\Samples\SampleDataGenerator\NCESBlankConfig.xml";
                 SqliteConnection sqliteConnection = new SqliteConnection(@"Filename=..\..\Samples\SampleDataGenerator\DataFiles\nces-2019.db");
                 sqliteConnection.Open();
-                SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM lea WHERE LEAID='{0}';", districtID), sqliteConnection);
-                SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
 
-                Entities.District district;
-                List<Entities.School> schools;
-                
+                Entities.District district = FillDistrict(sqliteConnection, districtID);
+                var raceStatistics = FillDistrictRaceStatistics(sqliteConnection, district);
+                var sexStatistics = FillDistrictSexStatistics(sqliteConnection, district);
+                List<Entities.School> schools = FillSchools(sqliteConnection, district);
 
-                district = FillDistrict(sqliteDataReader);
-
-                sqliteCommand = new SqliteCommand(String.Format("SELECT RACE_ETHNICITY, SUM(STUDENT_COUNT) from school_student where LEAID ='{0}' GROUP BY RACE_ETHNICITY;", district.ID), sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-                var districtStatistics = FillDistrictStatistics(district, sqliteDataReader);
-
-                sqliteCommand = new SqliteCommand(String.Format("SELECT SEX, SUM(STUDENT_COUNT) from school_student where LEAID ='{0}' GROUP BY SEX;", district.ID), sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-                districtStatistics = FillDistrictStatistics(district, sqliteDataReader);
-
-
-                sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM school WHERE LEAID='{0}';", district.ID), sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-                schools = FillSchools(district, sqliteDataReader);
-
-
+                //TODO:  Modify the XML config using NCES stats and generate related CSV files
             }
             catch (Exception e)
             {
@@ -180,8 +166,12 @@ namespace EdFi.SampleDataGenerator.Console
             }
         }
 
-        private static Entities.District FillDistrict(SqliteDataReader sqliteDataReader)
+        private static Entities.District FillDistrict(SqliteConnection sqliteDataConnection, string districtID)
         {
+            SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM lea WHERE LEAID='{0}';", districtID), sqliteDataConnection);
+
+            SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+
             Entities.District district = new Entities.District();
 
             if (sqliteDataReader.Read())
@@ -197,38 +187,126 @@ namespace EdFi.SampleDataGenerator.Console
             return district;
         }
 
-        private static Entities.District FillDistrictStatistics(Entities.District district, SqliteDataReader sqliteDataReader)
+        private static Entities.District FillDistrictRaceStatistics(SqliteConnection sqliteConnection, Entities.District district)
         {
+            SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT RACE_ETHNICITY, SUM(STUDENT_COUNT) from school_student where LEAID ='{0}' GROUP BY RACE_ETHNICITY;", district.ID), sqliteConnection);
+            SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+
             if (district != null && sqliteDataReader != null)
             {
-                
+                while (sqliteDataReader.Read())
+                {
+                    switch (sqliteDataReader.GetString(0))
+                    {
+                        case ("American Indian or Alaska Native"):
+                            district.DistrictDemographics.AmericanIndianAlaskaNativePercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Asian"):
+                            district.DistrictDemographics.AsianPercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Black or African American"):
+                            district.DistrictDemographics.BlackPercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Hispanic/Latino"):
+                            district.DistrictDemographics.HispanicPercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Native Hawaiian or Other Pacific Islander"):
+                            district.DistrictDemographics.NativeHawaiianOtherPacificIslander = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("No Category Codes"):
+                            district.DistrictDemographics.NoCategoryCodes = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Not Specified"):
+                            district.DistrictDemographics.NotSpecified = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Two or more races"):
+                            district.DistrictDemographics.TwoOrMoreRaces = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("White"):
+                            district.DistrictDemographics.WhitePercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        default:
+                            System.Console.WriteLine(sqliteDataReader.GetString(0));
+                            break;
+                    }
+                    district.DistrictDemographics.TotalStudents += sqliteDataReader.GetInt32(1);
+                }
+
+                // Total the identified students (excluding "no category" and "not specified"
+                int totalRecordedStudents = (int)district.DistrictDemographics.AmericanIndianAlaskaNativePercentage +
+                    (int)district.DistrictDemographics.AsianPercentage +
+                    (int)district.DistrictDemographics.BlackPercentage +
+                    (int)district.DistrictDemographics.HispanicPercentage +
+                    (int)district.DistrictDemographics.NativeHawaiianOtherPacificIslander +
+                    (int)district.DistrictDemographics.TwoOrMoreRaces +
+                    (int)district.DistrictDemographics.WhitePercentage;
+
+                // Convert the counts into percentages
+                district.DistrictDemographics.AmericanIndianAlaskaNativePercentage = district.DistrictDemographics.AmericanIndianAlaskaNativePercentage / totalRecordedStudents;
+                district.DistrictDemographics.AsianPercentage = district.DistrictDemographics.AsianPercentage / totalRecordedStudents;
+                district.DistrictDemographics.BlackPercentage = district.DistrictDemographics.BlackPercentage / totalRecordedStudents;
+                district.DistrictDemographics.HispanicPercentage = district.DistrictDemographics.HispanicPercentage / totalRecordedStudents;
+                district.DistrictDemographics.NativeHawaiianOtherPacificIslander = district.DistrictDemographics.NativeHawaiianOtherPacificIslander / totalRecordedStudents;
+                district.DistrictDemographics.TwoOrMoreRaces = district.DistrictDemographics.TwoOrMoreRaces / totalRecordedStudents;
+                district.DistrictDemographics.WhitePercentage = district.DistrictDemographics.WhitePercentage / totalRecordedStudents;
             }
 
             return district;
-
         }
 
-        private static List<Entities.School> FillSchools(Entities.District district, SqliteDataReader sqliteDataReader)
+        private static Entities.District FillDistrictSexStatistics(SqliteConnection sqliteConnection, Entities.District district)
         {
-            //before your loop
-            var csv = new StringBuilder();
+            SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT SEX as SexCategory, SUM(STUDENT_COUNT) as StudentCountBySexCategory from school_student where LEAID ='{0}' GROUP BY SEX;", district.ID), sqliteConnection);
+            SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+
+            if (district != null && sqliteDataReader != null)
+            {
+
+
+                while (sqliteDataReader.Read())
+                {
+                    switch (sqliteDataReader.GetString(0))
+                    {
+                        case ("Female"):
+                            district.DistrictDemographics.FemalePercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                        case ("Male"):
+                            district.DistrictDemographics.MalePercentage = sqliteDataReader.GetDouble(1);
+                            break;
+                    }
+
+                }
+
+                double total = district.DistrictDemographics.FemalePercentage + district.DistrictDemographics.MalePercentage;
+                district.DistrictDemographics.FemalePercentage = district.DistrictDemographics.FemalePercentage / total;
+                district.DistrictDemographics.MalePercentage = district.DistrictDemographics.MalePercentage / total;
+            }
+
+            return district;
+       }
+
+        private static List<Entities.School> FillSchools(SqliteConnection sqliteConnection, Entities.District district)
+        {
+            SqliteCommand sqliteCommand = new SqliteCommand(String.Format("SELECT * FROM school WHERE LEAID='{0}';", district.ID), sqliteConnection);
+            SqliteDataReader sqliteDataReader = sqliteCommand.ExecuteReader();
+
+            List<Entities.School> schools = new List<Entities.School>();
 
             string[] row = { };
 
             while (sqliteDataReader.Read())
             {
                 Entities.School school = new Entities.School();
-                school.Name = sqliteDataReader["SCH_NAME"].ToString();
-                //school.Name = Schoolifier(sqliteDataReader["SCH_NAME"].ToString());
+                //school.Name = sqliteDataReader["SCH_NAME"].ToString();
+                school.ID = sqliteDataReader["NCESSCH"].ToString();
+                school.Name = Schoolifier(sqliteDataReader["SCH_NAME"].ToString());
                 school.City = sqliteDataReader["LCITY"].ToString();
-                var newLine = string.Format("{0},{1}", school.Name, school.City);
-                csv.AppendLine(newLine);
-                System.Console.WriteLine("  School -- " + newLine.ToString());
+                school.State = sqliteDataReader["LSTATE"].ToString();
+                school.PostalCode = sqliteDataReader["LZIP"].ToString();
+                schools.Add(school);
             }
 
-
-
-            return new List<Entities.School>();
+            return schools;
         }
 
         private static bool ShouldScanForDataFiles(SampleDataGeneratorConfig parsedConfig)

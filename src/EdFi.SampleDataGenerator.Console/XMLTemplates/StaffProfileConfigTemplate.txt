@@ -1,0 +1,12 @@
+			<StaffProfile>
+				<StaffRaceConfiguration>
+					<Option Value="White" Frequency="0.49" />
+					<Option Value="Hispanic" Frequency="0.29" />
+					<Option Value="Black" Frequency="0.16" />
+					<Option Value="Asian" Frequency="0.06" />
+				</StaffRaceConfiguration>
+				<StaffSexConfiguration>
+					<Option Value="Male" Frequency="0.24" />
+					<Option Value="Female" Frequency="0.76" />
+				</StaffSexConfiguration>
+			</StaffProfile>

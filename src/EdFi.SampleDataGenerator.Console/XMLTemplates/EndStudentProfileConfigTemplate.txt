@@ -1,0 +1,5 @@
+		</HomelessStatusConfiguration>
+		<ImmigrantProfile>
+			<CountryOfOrigin Name="MX" Race="Hispanic" Frequency="0.05" />
+		</ImmigrantProfile>
+	</StudentProfile>

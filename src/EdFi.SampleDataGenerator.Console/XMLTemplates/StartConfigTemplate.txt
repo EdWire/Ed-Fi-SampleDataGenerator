@@ -1,0 +1,27 @@
+<SampleDataGeneratorConfig>
+	<MutatorConfig>
+		<Mutator Name="TransposeAreaCodeDigits" Type="Error" Probability="0.01" />
+		<Mutator Name="TransposePostalCodeDigits" Type="Error" Probability="0.05" />
+		<Mutator Name="TransposeBirthDateDigits" Type="Error"  Probability="0.01" />
+		<Mutator Name="SubstituteStudentMiddleName" Type="Error" Probability="0.05" />
+		<Mutator Name="SwapStudentSalutation" Type="Error" Probability="0.01" />
+		<Mutator Name="ShuffleStudentsClassPeriod" Type="Evolver" Probability="0.01" />
+		<Mutator Name="ChangeStudentPrimaryContactParent" Type="Evolver" Probability="0.01" />
+		<Mutator Name="ChangeStudentAddress" Type="Evolver" Probability="0.01" />
+		<Mutator Name="ChangeStudentPhone" Type="Evolver" Probability="0.01" />
+		<Mutator Name="ChangeStaffPersonalEmail" Type="Evolver" Probability="0.1" />
+		<Mutator Name="ChangeSectionMediumOfInstruction" Type="Evolver" Probability="0.1" />
+	</MutatorConfig>
+	<BatchSize>0</BatchSize>
+	<TimeConfig>
+		<SchoolCalendar>
+            <StartDate>2016-08-22</StartDate>
+            <EndDate>2017-05-26</EndDate>
+		</SchoolCalendar>
+		<DataClock>
+            <DataPeriod Name="2016-2017 School Year">
+                <StartDate>2016-08-22</StartDate>
+                <EndDate>2017-05-26</EndDate>
+            </DataPeriod>
+		</DataClock>
+	</TimeConfig>

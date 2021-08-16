@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Common;
 using FluentValidation;
@@ -15,6 +15,7 @@ namespace EdFi.SampleDataGenerator.Console
 
             RuleFor(x => x.ConfigXmlPath)
                 .Must((config, path) => File.Exists(path))
+                .When(x => x.ConfigurationType == ConfigurationType.ConfigurationFile)
                 .WithMessage("No config file found at '{0}'", config => config.ConfigXmlPath);
 
             RuleFor(x => x.OutputMode)
@@ -36,6 +37,16 @@ namespace EdFi.SampleDataGenerator.Console
                 .Must((config, mode) => !File.Exists(config.SeedFilePath))
                 .When(x => !x.AllowOverwrite && x.OutputMode == OutputMode.Seed)
                 .WithMessage("Seed file '{0}' exists, but -AllowOverwrite argument not specified", config => config.SeedFilePath);
+
+            RuleFor(x => x.NCESDatabasePath)
+                .Must((config, path) => File.Exists(path))
+                .When(x => x.ConfigurationType == ConfigurationType.Database)
+                .WithMessage("No database file found at '{0}'", config => config.NCESDatabasePath);
+
+            RuleFor(x => x.NCESDistrictId)
+                .Must((config, type) => !string.IsNullOrWhiteSpace(config.NCESDistrictId))
+                .When(x => x.ConfigurationType == ConfigurationType.Database)
+                .WithMessage("District id can not empty");
         }
     }
 }

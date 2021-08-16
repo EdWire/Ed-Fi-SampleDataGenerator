@@ -1,0 +1,6 @@
+		</RaceConfiguration>
+		<SexConfiguration>
+			<Option Value="Male" Frequency="{{profile.male}}" />
+			<Option Value="Female" Frequency="{{profile.female}}" />
+		</SexConfiguration>
+		<EconomicDisadvantageConfiguration>

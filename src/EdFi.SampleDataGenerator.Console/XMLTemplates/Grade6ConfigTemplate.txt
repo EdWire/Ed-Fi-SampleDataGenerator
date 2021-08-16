@@ -1,0 +1,9 @@
+			<GradeProfile GradeName="Sixth grade">
+				<StudentPopulationProfile StudentProfileReference="{{grade.profile}}" InitialStudentCount="{{grade.students}}"  TransfersIn="{{grade.transfersIn}}" TransfersOut="{{grade.transfersOut}}" />
+				<GraduationPlan Name="MiddleSchoolMinimum" />
+				<GraduationPlan Name="MiddleSchoolRecommended" />
+				<GraduationPlan Name="MiddleSchoolDistinguished" />
+				<AssessmentParticipationRate AssessmentTitle="STATE" RegexMatch ="true">
+					<ParticipationRate LowerPerformancePercentile="0.0" UpperPerformancePercentile="1.0" Probability="1.0"/>
+				</AssessmentParticipationRate>
+			</GradeProfile>

@@ -1,0 +1,3 @@
+		<SchoolProfile SchoolName="{{school.name}}" SchoolId="{{school.id}}" CourseLoad="8">
+			<DisciplineProfile TotalExpectedDisciplineEvents="20" TotalExpectedSeriousDisciplineEvents="3" />
+			<SchoolAttendanceProfile AverageAttendanceRate="0.96" AverageTardyRate="0.01" />

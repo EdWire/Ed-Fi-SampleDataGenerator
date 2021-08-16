@@ -1,0 +1,8 @@
+	<DistrictProfile DistrictName="{{district.name}}">
+		<LocationInfo State="{{district.state}}">
+			<City Name="{{district.city}}" County="{{district.county}}">
+				<AreaCode Value="{{district.areaCode}}" />
+				<PostalCode Value="{{district.postalCode}}" />
+			</City>
+		</LocationInfo>
+		<HighPerformingStudentPercentile>0.93</HighPerformingStudentPercentile>

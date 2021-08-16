@@ -1,0 +1,12 @@
+	<GraduationPlanTemplate Name="HighSchoolMinimum" Type="Minimum" TotalCreditsRequired="24" />
+	<GraduationPlanTemplate Name="HighSchoolRecommended" Type="Recommended" TotalCreditsRequired="26" />
+	<GraduationPlanTemplate Name="HighSchoolDistinguished" Type="Distinguished" TotalCreditsRequired="28" />
+	<GraduationPlanTemplate Name="JuniorHighSchoolMinimum" Type="Minimum" TotalCreditsRequired="14" />
+	<GraduationPlanTemplate Name="JuniorHighSchoolRecommended" Type="Recommended" TotalCreditsRequired="14" />
+	<GraduationPlanTemplate Name="JuniorHighSchoolDistinguished" Type="Distinguished" TotalCreditsRequired="14" />
+	<GraduationPlanTemplate Name="MiddleSchoolMinimum" Type="Minimum" TotalCreditsRequired="21" />
+	<GraduationPlanTemplate Name="MiddleSchoolRecommended" Type="Recommended" TotalCreditsRequired="21" />
+	<GraduationPlanTemplate Name="MiddleSchoolDistinguished" Type="Distinguished" TotalCreditsRequired="21" />
+    <GraduationPlanTemplate Name="ElementarySchoolMinimum" Type="Minimum" TotalCreditsRequired="15" />
+	<GraduationPlanTemplate Name="ElementarySchoolRecommended" Type="Recommended" TotalCreditsRequired="15" />
+	<GraduationPlanTemplate Name="ElementarySchoolDistinguished" Type="Distinguished" TotalCreditsRequired="15" />

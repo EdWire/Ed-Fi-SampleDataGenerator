@@ -561,9 +561,6 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\Program.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\School - original.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\School.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -609,12 +606,6 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\FirstName-Hispanic-Male.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\FirstName-NativeHawaiinPacificIslander-Female.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\FirstName-NativeHawaiinPacificIslander-Male.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\FirstName-White-Female.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -651,9 +642,6 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\Surname-Multi.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\Surname-NativeHawaiinPacificIslander.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Surname-White.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -665,6 +653,9 @@
     <Content Include="Samples\SampleDataGenerator\ChangeQueryConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Samples\SampleDataGenerator\NCESBlankConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Samples\SampleDataGenerator\NorthridgeConfig.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -672,4 +663,84 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="XMLTemplates\Grade10ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade11ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade12ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade1ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade2ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade3ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade4ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade5ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade6ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade7ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade8ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\Grade9ConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\GraduationPlanConfigTemplates.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StaffProfileConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartDistrictConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartSchoolConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\EndStudentProfileConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartStudentProfileHomelessTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartStudentProfileEconomicTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StudentProfileEthnicityOptionValue.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLTemplates\StartStudentProfileConfigTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Samples\SampleDataGenerator\DataFiles\FirstName-NativeHawaiianPacificIslander-Female.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Samples\SampleDataGenerator\DataFiles\FirstName-NativeHawaiianPacificIslander-Male.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Samples\SampleDataGenerator\DataFiles\Surname-NativeHawaiianPacificIslander.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
+

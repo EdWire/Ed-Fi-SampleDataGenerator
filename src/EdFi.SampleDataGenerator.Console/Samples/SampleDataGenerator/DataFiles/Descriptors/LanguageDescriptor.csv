@@ -32,12 +32,12 @@ mic,Mi'kmaq,Mi'kmaq,uri://ed-fi.org/LanguageDescriptor
 hmn,Hmong,Hmong,uri://ed-fi.org/LanguageDescriptor
 nav,Navajo,Navajo,uri://ed-fi.org/LanguageDescriptor
 new,Nepal Bhasa,Nepal Bhasa,uri://ed-fi.org/LanguageDescriptor
-nde,"""Ndebele, North""","""Ndebele, North""",uri://ed-fi.org/LanguageDescriptor
-nob,"""Bokmål, Norwegian""","""Bokmål, Norwegian""",uri://ed-fi.org/LanguageDescriptor
+nde,"Ndebele, North","Ndebele, North",uri://ed-fi.org/LanguageDescriptor
+nob,"Bokmål, Norwegian","Bokmål, Norwegian",uri://ed-fi.org/LanguageDescriptor
 iii,Sichuan Yi,Sichuan Yi,uri://ed-fi.org/LanguageDescriptor
 nno,Norwegian Nynorsk,Norwegian Nynorsk,uri://ed-fi.org/LanguageDescriptor
 ile,Interlingue,Interlingue,uri://ed-fi.org/LanguageDescriptor
-pro,"""Provençal, Old (to 1500)""","""Provençal, Old (to 1500)""",uri://ed-fi.org/LanguageDescriptor
+pro,"Provençal, Old (to 1500)","Provençal, Old (to 1500)",uri://ed-fi.org/LanguageDescriptor
 xal,Kalmyk,Kalmyk,uri://ed-fi.org/LanguageDescriptor
 nwc,Classical Newari,Classical Newari,uri://ed-fi.org/LanguageDescriptor
 chu,Church Slavic,Church Slavic,uri://ed-fi.org/LanguageDescriptor
@@ -49,7 +49,7 @@ kho,Khotanese,Khotanese,uri://ed-fi.org/LanguageDescriptor
 gla,Gaelic,Gaelic,uri://ed-fi.org/LanguageDescriptor
 nso,Pedi,Pedi,uri://ed-fi.org/LanguageDescriptor
 sin,Sinhala,Sinhala,uri://ed-fi.org/LanguageDescriptor
-nbl,"""Ndebele, South""","""Ndebele, South""",uri://ed-fi.org/LanguageDescriptor
+nbl,"Ndebele, South","Ndebele, South",uri://ed-fi.org/LanguageDescriptor
 tlh,Klingon,Klingon,uri://ed-fi.org/LanguageDescriptor
 uig,Uighur,Uighur,uri://ed-fi.org/LanguageDescriptor
 cat,Catalan,Catalan,uri://ed-fi.org/LanguageDescriptor
@@ -96,8 +96,8 @@ chr,Cherokee,Cherokee,uri://ed-fi.org/LanguageDescriptor
 chv,Chuvash,Chuvash,uri://ed-fi.org/LanguageDescriptor
 cmc,Chamic languages,Chamic languages,uri://ed-fi.org/LanguageDescriptor
 cor,Cornish,Cornish,uri://ed-fi.org/LanguageDescriptor
-cpe,"""Creoles and pidgins, English based""","""Creoles and pidgins, English based""",uri://ed-fi.org/LanguageDescriptor
-cpp,"""Creoles and pidgins, Portuguese-based""","""Creoles and pidgins, Portuguese-based""",uri://ed-fi.org/LanguageDescriptor
+cpe,"Creoles and pidgins, English based","Creoles and pidgins, English based",uri://ed-fi.org/LanguageDescriptor
+cpp,"Creoles and pidgins, Portuguese-based","Creoles and pidgins, Portuguese-based",uri://ed-fi.org/LanguageDescriptor
 csb,Kashubian,Kashubian,uri://ed-fi.org/LanguageDescriptor
 cze,Czech,Czech,uri://ed-fi.org/LanguageDescriptor
 dan,Danish,Danish,uri://ed-fi.org/LanguageDescriptor
@@ -106,7 +106,7 @@ den,Slave (Athapascan),Slave (Athapascan),uri://ed-fi.org/LanguageDescriptor
 din,Dinka,Dinka,uri://ed-fi.org/LanguageDescriptor
 doi,Dogri,Dogri,uri://ed-fi.org/LanguageDescriptor
 dsb,Lower Sorbian,Lower Sorbian,uri://ed-fi.org/LanguageDescriptor
-dum,"""Dutch, Middle (ca.1050-1350)""","""Dutch, Middle (ca.1050-1350)""",uri://ed-fi.org/LanguageDescriptor
+dum,"Dutch, Middle (ca.1050-1350)","Dutch, Middle (ca.1050-1350)",uri://ed-fi.org/LanguageDescriptor
 dyu,Dyula,Dyula,uri://ed-fi.org/LanguageDescriptor
 efi,Efik,Efik,uri://ed-fi.org/LanguageDescriptor
 eka,Ekajuk,Ekajuk,uri://ed-fi.org/LanguageDescriptor
@@ -117,7 +117,7 @@ fan,Fang,Fang,uri://ed-fi.org/LanguageDescriptor
 fat,Fanti,Fanti,uri://ed-fi.org/LanguageDescriptor
 fiu,Finno-Ugrian languages,Finno-Ugrian languages,uri://ed-fi.org/LanguageDescriptor
 fre,French,French,uri://ed-fi.org/LanguageDescriptor
-fro,"""French, Old (842-ca.1400)""","""French, Old (842-ca.1400)""",uri://ed-fi.org/LanguageDescriptor
+fro,"French, Old (842-ca.1400)","French, Old (842-ca.1400)",uri://ed-fi.org/LanguageDescriptor
 frs,Eastern Frisian,Eastern Frisian,uri://ed-fi.org/LanguageDescriptor
 ful,Fulah,Fulah,uri://ed-fi.org/LanguageDescriptor
 gaa,Ga,Ga,uri://ed-fi.org/LanguageDescriptor
@@ -125,10 +125,10 @@ gba,Gbaya,Gbaya,uri://ed-fi.org/LanguageDescriptor
 geo,Georgian,Georgian,uri://ed-fi.org/LanguageDescriptor
 gez,Geez,Geez,uri://ed-fi.org/LanguageDescriptor
 glg,Galician,Galician,uri://ed-fi.org/LanguageDescriptor
-gmh,"""German, Middle High (ca.1050-1500)""","""German, Middle High (ca.1050-1500)""",uri://ed-fi.org/LanguageDescriptor
+gmh,"German, Middle High (ca.1050-1500)","German, Middle High (ca.1050-1500)",uri://ed-fi.org/LanguageDescriptor
 gon,Gondi,Gondi,uri://ed-fi.org/LanguageDescriptor
 got,Gothic,Gothic,uri://ed-fi.org/LanguageDescriptor
-grc,"""Greek, Ancient (to 1453)""","""Greek, Ancient (to 1453)""",uri://ed-fi.org/LanguageDescriptor
+grc,"Greek, Ancient (to 1453)","Greek, Ancient (to 1453)",uri://ed-fi.org/LanguageDescriptor
 grn,Guarani,Guarani,uri://ed-fi.org/LanguageDescriptor
 guj,Gujarati,Gujarati,uri://ed-fi.org/LanguageDescriptor
 hai,Haida,Haida,uri://ed-fi.org/LanguageDescriptor
@@ -196,7 +196,7 @@ ndo,Ndonga,Ndonga,uri://ed-fi.org/LanguageDescriptor
 nep,Nepali,Nepali,uri://ed-fi.org/LanguageDescriptor
 nia,Nias,Nias,uri://ed-fi.org/LanguageDescriptor
 niu,Niuean,Niuean,uri://ed-fi.org/LanguageDescriptor
-non,"""Norse, Old""","""Norse, Old""",uri://ed-fi.org/LanguageDescriptor
+non,"Norse, Old","Norse, Old",uri://ed-fi.org/LanguageDescriptor
 nqo,N'Ko,N'Ko,uri://ed-fi.org/LanguageDescriptor
 nub,Nubian languages,Nubian languages,uri://ed-fi.org/LanguageDescriptor
 nyn,Nyankole,Nyankole,uri://ed-fi.org/LanguageDescriptor
@@ -206,7 +206,7 @@ orm,Oromo,Oromo,uri://ed-fi.org/LanguageDescriptor
 oto,Otomian languages,Otomian languages,uri://ed-fi.org/LanguageDescriptor
 pag,Pangasinan,Pangasinan,uri://ed-fi.org/LanguageDescriptor
 pap,Papiamento,Papiamento,uri://ed-fi.org/LanguageDescriptor
-peo,"""Persian, Old (ca.600-400 B.C.)""","""Persian, Old (ca.600-400 B.C.)""",uri://ed-fi.org/LanguageDescriptor
+peo,"Persian, Old (ca.600-400 B.C.)","Persian, Old (ca.600-400 B.C.)",uri://ed-fi.org/LanguageDescriptor
 phi,Philippine languages,Philippine languages,uri://ed-fi.org/LanguageDescriptor
 pli,Pali,Pali,uri://ed-fi.org/LanguageDescriptor
 pon,Pohnpeian,Pohnpeian,uri://ed-fi.org/LanguageDescriptor
@@ -232,7 +232,7 @@ smo,Samoan,Samoan,uri://ed-fi.org/LanguageDescriptor
 sna,Shona,Shona,uri://ed-fi.org/LanguageDescriptor
 snk,Soninke,Soninke,uri://ed-fi.org/LanguageDescriptor
 som,Somali,Somali,uri://ed-fi.org/LanguageDescriptor
-sot,"""Sotho, Southern""","""Sotho, Southern""",uri://ed-fi.org/LanguageDescriptor
+sot,"Sotho, Southern","Sotho, Southern",uri://ed-fi.org/LanguageDescriptor
 srd,Sardinian,Sardinian,uri://ed-fi.org/LanguageDescriptor
 srp,Serbian,Serbian,uri://ed-fi.org/LanguageDescriptor
 ssa,Nilo-Saharan languages,Nilo-Saharan languages,uri://ed-fi.org/LanguageDescriptor
@@ -279,7 +279,7 @@ ain,Ainu,Ainu,uri://ed-fi.org/LanguageDescriptor
 akk,Akkadian,Akkadian,uri://ed-fi.org/LanguageDescriptor
 ale,Aleut,Aleut,uri://ed-fi.org/LanguageDescriptor
 alt,Southern Altai,Southern Altai,uri://ed-fi.org/LanguageDescriptor
-ang,"""English, Old (ca.450-1100)""","""English, Old (ca.450-1100)""",uri://ed-fi.org/LanguageDescriptor
+ang,"English, Old (ca.450-1100)","English, Old (ca.450-1100)",uri://ed-fi.org/LanguageDescriptor
 apa,Apache languages,Apache languages,uri://ed-fi.org/LanguageDescriptor
 arm,Armenian,Armenian,uri://ed-fi.org/LanguageDescriptor
 arp,Arapaho,Arapaho,uri://ed-fi.org/LanguageDescriptor
@@ -313,7 +313,7 @@ chn,Chinook jargon,Chinook jargon,uri://ed-fi.org/LanguageDescriptor
 chy,Cheyenne,Cheyenne,uri://ed-fi.org/LanguageDescriptor
 cop,Coptic,Coptic,uri://ed-fi.org/LanguageDescriptor
 cos,Corsican,Corsican,uri://ed-fi.org/LanguageDescriptor
-cpf,"""Creoles and pidgins, French-based""","""Creoles and pidgins, French-based""",uri://ed-fi.org/LanguageDescriptor
+cpf,"Creoles and pidgins, French-based","Creoles and pidgins, French-based",uri://ed-fi.org/LanguageDescriptor
 cre,Cree,Cree,uri://ed-fi.org/LanguageDescriptor
 crp,Creoles and pidgins,Creoles and pidgins,uri://ed-fi.org/LanguageDescriptor
 cus,Cushitic languages,Cushitic languages,uri://ed-fi.org/LanguageDescriptor
@@ -326,14 +326,14 @@ dua,Duala,Duala,uri://ed-fi.org/LanguageDescriptor
 dzo,Dzongkha,Dzongkha,uri://ed-fi.org/LanguageDescriptor
 egy,Egyptian (Ancient),Egyptian (Ancient),uri://ed-fi.org/LanguageDescriptor
 elx,Elamite,Elamite,uri://ed-fi.org/LanguageDescriptor
-enm,"""English, Middle (1100-1500)""","""English, Middle (1100-1500)""",uri://ed-fi.org/LanguageDescriptor
+enm,"English, Middle (1100-1500)","English, Middle (1100-1500)",uri://ed-fi.org/LanguageDescriptor
 est,Estonian,Estonian,uri://ed-fi.org/LanguageDescriptor
 ewo,Ewondo,Ewondo,uri://ed-fi.org/LanguageDescriptor
 fao,Faroese,Faroese,uri://ed-fi.org/LanguageDescriptor
 fij,Fijian,Fijian,uri://ed-fi.org/LanguageDescriptor
 fin,Finnish,Finnish,uri://ed-fi.org/LanguageDescriptor
 fon,Fon,Fon,uri://ed-fi.org/LanguageDescriptor
-frm,"""French, Middle (ca.1400-1600)""","""French, Middle (ca.1400-1600)""",uri://ed-fi.org/LanguageDescriptor
+frm,"French, Middle (ca.1400-1600)","French, Middle (ca.1400-1600)",uri://ed-fi.org/LanguageDescriptor
 frr,Northern Frisian,Northern Frisian,uri://ed-fi.org/LanguageDescriptor
 fry,Western Frisian,Western Frisian,uri://ed-fi.org/LanguageDescriptor
 fur,Friulian,Friulian,uri://ed-fi.org/LanguageDescriptor
@@ -343,10 +343,10 @@ ger,German,German,uri://ed-fi.org/LanguageDescriptor
 gil,Gilbertese,Gilbertese,uri://ed-fi.org/LanguageDescriptor
 gle,Irish,Irish,uri://ed-fi.org/LanguageDescriptor
 glv,Manx,Manx,uri://ed-fi.org/LanguageDescriptor
-goh,"""German, Old High (ca.750-1050)""","""German, Old High (ca.750-1050)""",uri://ed-fi.org/LanguageDescriptor
+goh,"German, Old High (ca.750-1050)","German, Old High (ca.750-1050)",uri://ed-fi.org/LanguageDescriptor
 gor,Gorontalo,Gorontalo,uri://ed-fi.org/LanguageDescriptor
 grb,Grebo,Grebo,uri://ed-fi.org/LanguageDescriptor
-gre,"""Greek, Modern (1453-)""","""Greek, Modern (1453-)""",uri://ed-fi.org/LanguageDescriptor
+gre,"Greek, Modern (1453-)","Greek, Modern (1453-)",uri://ed-fi.org/LanguageDescriptor
 gwi,Gwich'in,Gwich'in,uri://ed-fi.org/LanguageDescriptor
 haw,Hawaiian,Hawaiian,uri://ed-fi.org/LanguageDescriptor
 her,Herero,Herero,uri://ed-fi.org/LanguageDescriptor
@@ -394,7 +394,7 @@ mao,Maori,Maori,uri://ed-fi.org/LanguageDescriptor
 mar,Marathi,Marathi,uri://ed-fi.org/LanguageDescriptor
 may,Malay,Malay,uri://ed-fi.org/LanguageDescriptor
 mdr,Mandar,Mandar,uri://ed-fi.org/LanguageDescriptor
-mga,"""Irish, Middle (900-1200)""","""Irish, Middle (900-1200)""",uri://ed-fi.org/LanguageDescriptor
+mga,"Irish, Middle (900-1200)","Irish, Middle (900-1200)",uri://ed-fi.org/LanguageDescriptor
 min,Minangkabau,Minangkabau,uri://ed-fi.org/LanguageDescriptor
 mkh,Mon-Khmer languages,Mon-Khmer languages,uri://ed-fi.org/LanguageDescriptor
 mlt,Maltese,Maltese,uri://ed-fi.org/LanguageDescriptor
@@ -414,7 +414,7 @@ nyo,Nyoro,Nyoro,uri://ed-fi.org/LanguageDescriptor
 oci,Occitan (post 1500),Occitan (post 1500),uri://ed-fi.org/LanguageDescriptor
 ori,Oriya,Oriya,uri://ed-fi.org/LanguageDescriptor
 osa,Osage,Osage,uri://ed-fi.org/LanguageDescriptor
-ota,"""Turkish, Ottoman (1500-1928)""","""Turkish, Ottoman (1500-1928)""",uri://ed-fi.org/LanguageDescriptor
+ota,"Turkish, Ottoman (1500-1928)","Turkish, Ottoman (1500-1928)",uri://ed-fi.org/LanguageDescriptor
 paa,Papuan languages,Papuan languages,uri://ed-fi.org/LanguageDescriptor
 pal,Pahlavi,Pahlavi,uri://ed-fi.org/LanguageDescriptor
 pau,Palauan,Palauan,uri://ed-fi.org/LanguageDescriptor
@@ -434,7 +434,7 @@ sam,Samaritan Aramaic,Samaritan Aramaic,uri://ed-fi.org/LanguageDescriptor
 sas,Sasak,Sasak,uri://ed-fi.org/LanguageDescriptor
 scn,Sicilian,Sicilian,uri://ed-fi.org/LanguageDescriptor
 sel,Selkup,Selkup,uri://ed-fi.org/LanguageDescriptor
-sga,"""Irish, Old (to 900)""","""Irish, Old (to 900)""",uri://ed-fi.org/LanguageDescriptor
+sga,"Irish, Old (to 900)","Irish, Old (to 900)",uri://ed-fi.org/LanguageDescriptor
 shn,Shan,Shan,uri://ed-fi.org/LanguageDescriptor
 sit,Sino-Tibetan languages,Sino-Tibetan languages,uri://ed-fi.org/LanguageDescriptor
 slo,Slovak,Slovak,uri://ed-fi.org/LanguageDescriptor

@@ -6,7 +6,7 @@ CourtAppointedGuardian,CourtAppointedGuardian,CourtAppointedGuardian,uri://ed-fi
 Cousin,Cousin,Cousin,uri://ed-fi.org/RelationDescriptor
 Daughter,Daughter,Daughter,uri://ed-fi.org/RelationDescriptor
 DaughterInLaw,DaughterInLaw,DaughterInLaw,uri://ed-fi.org/RelationDescriptor
-Emergency,Emergency,Emergency,uri://ed-fi.org/RelationDescriptor
+Emergency,DEPRECATED: Emergency,DEPRECATED: Emergency,uri://ed-fi.org/RelationDescriptor
 Employer,Employer,Employer,uri://ed-fi.org/RelationDescriptor
 Father,Father,Father,uri://ed-fi.org/RelationDescriptor
 "Father, step","Father, step","Father, step",uri://ed-fi.org/RelationDescriptor
@@ -24,7 +24,7 @@ Grandparent,Grandparent,Grandparent,uri://ed-fi.org/RelationDescriptor
 Great aunt,Great aunt,Great aunt,uri://ed-fi.org/RelationDescriptor
 Great Grandparent,Great Grandparent,Great Grandparent,uri://ed-fi.org/RelationDescriptor
 Great uncle,Great uncle,Great uncle,uri://ed-fi.org/RelationDescriptor
-Guardian,Guardian,Guardian,uri://ed-fi.org/RelationDescriptor
+Guardian,DEPRECATED: Guardian,DEPRECATED: Guardian,uri://ed-fi.org/RelationDescriptor
 Husband,Husband,Husband,uri://ed-fi.org/RelationDescriptor
 Mother,Mother,Mother,uri://ed-fi.org/RelationDescriptor
 "Mother, step","Mother, step","Mother, step",uri://ed-fi.org/RelationDescriptor

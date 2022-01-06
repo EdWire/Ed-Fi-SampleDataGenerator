@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ template debug="false" hostspecific="true" language="C#" #>
 <#@ assembly name="System" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="System.Linq" #>
@@ -16,7 +16,7 @@
 <#@ output extension=".cs" #>
 <#
 string ProjectPath = Host.ResolveAssemblyReference("$(ProjectDir)");
-const string DescriptorDirectoryPath = "Entities\\Schema\\v32\\Descriptors\\";
+const string DescriptorDirectoryPath = "Entities\\Schema\\v33\\Descriptors\\";
 #>
 namespace EdFi.SampleDataGenerator.Core.Entities
 {

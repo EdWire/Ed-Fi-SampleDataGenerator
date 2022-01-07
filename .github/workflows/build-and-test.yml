@@ -22,9 +22,9 @@ jobs:
         working-directory: ./src
 
     steps:
-    - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+    - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # v2.4.0
     - name: Setup .NET
-      uses: actions/setup-dotnet@499789684c9a0d41c9b3f0d66a785ba17b1d51ab
+      uses: actions/setup-dotnet@499789684c9a0d41c9b3f0d66a785ba17b1d51ab # v1.9.0
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies

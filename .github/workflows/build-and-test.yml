@@ -8,6 +8,9 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    paths:
+      - 'src/**'
+  workflow_dispatch:
 
 jobs:
   build-test:
@@ -19,9 +22,9 @@ jobs:
         working-directory: ./src
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@499789684c9a0d41c9b3f0d66a785ba17b1d51ab
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies

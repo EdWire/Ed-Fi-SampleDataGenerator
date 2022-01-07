@@ -145,9 +145,9 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
                 Interchange.StudentGradebook
             };
 
-            var manifestPart1 = fileOutputService.GetManifest(".\\ManifestGlobalData-Part 1.xml").ToXml().ToString();
-            var manifestPart2 = fileOutputService.GetManifest(".\\ManifestGlobalData-Part 2.xml").ToXml().ToString();
-            var manifestPart3 = fileOutputService.GetManifest(".\\ManifestGlobalData-Part 3.xml").ToXml().ToString();
+            var manifestPart1 = fileOutputService.GetManifest(GetPath("ManifestGlobalData-Part 1.xml")).ToXml().ToString();
+            var manifestPart2 = fileOutputService.GetManifest(GetPath("ManifestGlobalData-Part 2.xml")).ToXml().ToString();
+            var manifestPart3 = fileOutputService.GetManifest(GetPath("ManifestGlobalData-Part 3.xml")).ToXml().ToString();
 
             foreach (var targetInterchange in targetInterchanges)
             {
@@ -158,41 +158,41 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             fileOutputService.OutputFilePaths.Length.ShouldBe(30);
 
-            fileOutputService.GetOutput<InterchangeDescriptors>(".\\Descriptors-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStandards>(".\\Standards-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrganization>(".\\EducationOrganization-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(".\\EducationOrgCalendar-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeMasterSchedule>(".\\MasterSchedule-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStaffAssociation>(".\\StaffAssociation-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentEnrollment>(".\\StudentEnrollment-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(".\\AssessmentMetadata-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentCohort>(".\\StudentCohort-Part 1.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentGradebook>(".\\StudentGradebook-Part 1.xml").ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeDescriptors>(GetPath("Descriptors-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStandards>(GetPath("Standards-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrganization>(GetPath("EducationOrganization-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(GetPath("EducationOrgCalendar-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeMasterSchedule>(GetPath("MasterSchedule-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStaffAssociation>(GetPath("StaffAssociation-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentEnrollment>(GetPath("StudentEnrollment-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(GetPath("AssessmentMetadata-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentCohort>(GetPath("StudentCohort-Part 1.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentGradebook>(GetPath("StudentGradebook-Part 1.xml")).ShouldNotBeNull();
 
-            fileOutputService.GetOutput<InterchangeDescriptors>(".\\Descriptors-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStandards>(".\\Standards-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrganization>(".\\EducationOrganization-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(".\\EducationOrgCalendar-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeMasterSchedule>(".\\MasterSchedule-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStaffAssociation>(".\\StaffAssociation-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentEnrollment>(".\\StudentEnrollment-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(".\\AssessmentMetadata-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentCohort>(".\\StudentCohort-Part 2.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentGradebook>(".\\StudentGradebook-Part 2.xml").ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeDescriptors>(GetPath("Descriptors-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStandards>(GetPath("Standards-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrganization>(GetPath("EducationOrganization-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(GetPath("EducationOrgCalendar-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeMasterSchedule>(GetPath("MasterSchedule-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStaffAssociation>(GetPath("StaffAssociation-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentEnrollment>(GetPath("StudentEnrollment-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(GetPath("AssessmentMetadata-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentCohort>(GetPath("StudentCohort-Part 2.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentGradebook>(GetPath("StudentGradebook-Part 2.xml")).ShouldNotBeNull();
 
-            fileOutputService.GetOutput<InterchangeDescriptors>(".\\Descriptors-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStandards>(".\\Standards-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrganization>(".\\EducationOrganization-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(".\\EducationOrgCalendar-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeMasterSchedule>(".\\MasterSchedule-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStaffAssociation>(".\\StaffAssociation-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentEnrollment>(".\\StudentEnrollment-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(".\\AssessmentMetadata-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentCohort>(".\\StudentCohort-Part 3.xml").ShouldNotBeNull();
-            fileOutputService.GetOutput<InterchangeStudentGradebook>(".\\StudentGradebook-Part 3.xml").ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeDescriptors>(GetPath("Descriptors-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStandards>(GetPath("Standards-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrganization>(GetPath("EducationOrganization-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeEducationOrgCalendar>(GetPath("EducationOrgCalendar-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeMasterSchedule>(GetPath("MasterSchedule-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStaffAssociation>(GetPath("StaffAssociation-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentEnrollment>(GetPath("StudentEnrollment-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeAssessmentMetadata>(GetPath("AssessmentMetadata-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentCohort>(GetPath("StudentCohort-Part 3.xml")).ShouldNotBeNull();
+            fileOutputService.GetOutput<InterchangeStudentGradebook>(GetPath("StudentGradebook-Part 3.xml")).ShouldNotBeNull();
         }
 
-        private static string ExpectedManifestEntry(Interchange interchange, string dataPeriodName) => 
+        private static string ExpectedManifestEntry(Interchange interchange, string dataPeriodName) =>
 $@"  <Interchange>
     <Filename>{interchange.Name}-{dataPeriodName}.xml</Filename>
     <Type>{interchange.Name}</Type>

@@ -45,7 +45,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration
             var configReader = new GlobalDataGeneratorConfigReader();
 
             var config = configReader.Read(sampleDataGeneratorConfig);
-            config.GraduationPlans = schoolProfiles.SelectMany(sp => 
+            config.GraduationPlans = schoolProfiles.SelectMany(sp =>
                 sp.GradeProfiles.Select(gp => new GraduationPlan
                 {
                     EducationOrganizationReference = sp.GetEducationOrganizationReference(),
@@ -101,7 +101,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration
                 }
             };
             return result;
-        } 
+        }
 
         private static CohortData GetCohortData()
         {
@@ -162,14 +162,14 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration
             {
                 BatchSize = null,
                 DataFilePath = Path.Combine(AssemblyDirectory, "DataFiles"),
-                OutputPath = ".\\",
+                OutputPath = GetPath(""),
                 SeedFilePath = null,
                 OutputMode = OutputMode.Standard,
                 TimeConfig = TestTimeConfig.Default,
                 CreatePerformanceFile = true,
                 DistrictProfiles = new IDistrictProfile[]
                 {
-                    TestDistrictProfile.Default, 
+                    TestDistrictProfile.Default,
                 },
                 StudentProfiles = new IStudentProfile[]
                 {
@@ -215,7 +215,10 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration
         {
             return TestGradeProfile.Default;
         }
-        
+
+        public static string GetPath(string FileName) {
+                return $".{Path.DirectorySeparatorChar}{FileName}";
+        }
 
         public static NameFileData GetNameFileData()
         {

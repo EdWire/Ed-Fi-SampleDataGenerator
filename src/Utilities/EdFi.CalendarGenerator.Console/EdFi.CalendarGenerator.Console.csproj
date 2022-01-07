@@ -1,37 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net452</TargetFramework>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-        <AssemblyTitle>EdFi.CalendarGenerator.Console</AssemblyTitle>
-        <Product>EdFi.CalendarGenerator.Console</Product>
-        <Copyright>Copyright ©  2017</Copyright>
-        <OutputPath>bin\$(Configuration)\</OutputPath>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugType>full</DebugType>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugType>pdbonly</DebugType>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ChocoPack|AnyCPU'">
-        <DefineConstants>TRACE</DefineConstants>
-        <Optimize>true</Optimize>
-        <DebugType>pdbonly</DebugType>
-        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-        <Prefer32Bit>true</Prefer32Bit>
-    </PropertyGroup>
-    <Import Project="$(MSBuildProjectDirectory)\..\..\..\eng\CopyOutputForChocolatey.targets" />
-    <ItemGroup>
-        <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
-        <PackageReference Include="FluentCommandLineParser" Version="1.4.3" />
-    </ItemGroup>
-    <ItemGroup>
-        <Reference Include="System.Data.DataSetExtensions" />
-        <Reference Include="Microsoft.CSharp" />
-        <Reference Include="System.Net.Http" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\..\EdFi.SampleDataGenerator.Core\EdFi.SampleDataGenerator.Core.csproj" />
-    </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net452</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AssemblyTitle>EdFi.CalendarGenerator.Console</AssemblyTitle>
+    <Product>EdFi.CalendarGenerator.Console</Product>
+    <Copyright>Copyright ©  2017</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ChocoPack|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildProjectDirectory)\..\..\..\eng\CopyOutputForChocolatey.targets" />
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
+    <PackageReference Include="FluentCommandLineParser" Version="1.4.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EdFi.SampleDataGenerator.Core\EdFi.SampleDataGenerator.Core.csproj" />
+  </ItemGroup>
 </Project>

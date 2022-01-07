@@ -1,429 +1,429 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
-    <AssemblyTitle>EdFi.SampleDataGenerator.Core</AssemblyTitle>
-    <Product>EdFi.SampleDataGenerator.Core</Product>
-    <Copyright>Copyright ©  2017</Copyright>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ChocoPack|AnyCPU'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="6.1.1" />
-    <PackageReference Include="CloneExtensions" Version="1.4.2" />
-    <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
-    <PackageReference Include="Enumeration.dll" Version="2.0.3" />
-    <PackageReference Include="FluentValidation" Version="6.2.1.0" />
-    <PackageReference Include="log4net" Version="2.0.7" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Net.Http" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="DataGeneration\Common\Interchanges\Interchange.Extensions.cs">
-      <DependentUpon>Interchange.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\Common\Interchanges\InterchangeOrder.Extensions.cs">
-      <DependentUpon>InterchangeOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\AssessmentMetadataEntity.Extensions.cs">
-      <DependentUpon>AssessmentMetadataEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\DescriptorEntity.Extensions.cs">
-      <DependentUpon>DescriptorEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\EducationOrganizationEntity.Extensions.cs">
-      <DependentUpon>EducationOrganizationEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\EducationOrgCalendarEntity.Extensions.cs">
-      <DependentUpon>EducationOrgCalendarEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\InterchangeEntity.Extensions.cs">
-      <DependentUpon>InterchangeEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\MasterScheduleEntity.Extensions.cs">
-      <DependentUpon>MasterScheduleEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\ParentEntity.Extensions.cs">
-      <DependentUpon>ParentEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StaffAssociationEntity.Extensions.cs">
-      <DependentUpon>StaffAssociationEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StandardsEntity.Extensions.cs">
-      <DependentUpon>StandardsEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentAssessmentEntity.Extensions.cs">
-      <DependentUpon>StudentAssessmentEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentAttendanceEntity.Extensions.cs">
-      <DependentUpon>StudentAttendanceEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentCohortEntity.Extensions.cs">
-      <DependentUpon>StudentCohortEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentDisciplineEntity.Extensions.cs">
-      <DependentUpon>StudentDisciplineEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentEnrollmentEntity.Extensions.cs">
-      <DependentUpon>StudentEnrollmentEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentEntity.Extensions.cs">
-      <DependentUpon>StudentEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentGradeEntity.Extensions.cs">
-      <DependentUpon>StudentGradeEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentGradebookEntity.Extensions.cs">
-      <DependentUpon>StudentGradebookEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentProgramEntity.Extensions.cs">
-      <DependentUpon>StudentProgramEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="DataGeneration\InterchangeEntities\StudentTranscriptEntity.Extensions.cs">
-      <DependentUpon>StudentTranscriptEntity.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Entities\Descriptors.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Descriptors.tt</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\AssessmentMetadata\AssessmentCsvClassMap.Extensions.cs">
-      <DependentUpon>AssessmentCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\AccountCodeDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>AccountCodeDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\AssessmentPeriodDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>AssessmentPeriodDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\CompetencyLevelDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>CompetencyLevelDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\CredentialFieldDescriptorClassMap.Extensions.cs">
-      <DependentUpon>CredentialFieldDescriptorClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\DisabilityDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>DisabilityDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\PerformanceLevelDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>PerformanceLevelDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Descriptors\ServiceDescriptorCsvClassMap.Extensions.cs">
-      <DependentUpon>ServiceDescriptorCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\AccountabilityRatingCsvClassMap.Extensions.cs">
-      <DependentUpon>AccountabilityRatingCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\ClassPeriodCsvClassMap.Extensions.cs">
-      <DependentUpon>ClassPeriodCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\CourseCsvClassMap.Extensions.cs">
-      <DependentUpon>CourseCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\StateEducationAgencyCsvClassMap.Extensions.cs">
-      <DependentUpon>StateEducationAgencyCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationNetworkAssociationCsvClassMap.Extensions.cs">
-      <DependentUpon>EducationOrganizationNetworkAssociationCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationNetworkCsvClassMap.Extensions.cs">
-      <DependentUpon>EducationOrganizationNetworkCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationPeerAssociationCsvClassMap.Extensions.cs">
-      <DependentUpon>EducationOrganizationPeerAssociationCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationServiceCenterCsvClassMap.Extensions.cs">
-      <DependentUpon>EducationServiceCenterCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\FeederSchoolAssociationCsvClassMap.Extensions.cs">
-      <DependentUpon>FeederSchoolAssociationCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\LocalEducationAgencyCsvClassMap.Extensions.cs">
-      <DependentUpon>LocalEducationAgencyCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\LocationCsvClassMap.Extensions.cs">
-      <DependentUpon>LocationCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\ProgramCsvClassMap.Extensions.cs">
-      <DependentUpon>ProgramCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrganization\SchoolCsvClassMap.Extensions.cs">
-      <DependentUpon>SchoolCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\CalendarDateCsvClassMap.Extensions.cs">
-      <DependentUpon>CalendarDateCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\GradingPeriodCsvClassMap.Extensions.cs">
-      <DependentUpon>GradingPeriodCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\SessionCsvClassMap.Extensions.cs">
-      <DependentUpon>SessionCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\MasterSchedule\CourseOfferingCsvClassMap.Extensions.cs">
-      <DependentUpon>CourseOfferingCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\MasterSchedule\SectionCsvClassMap.Extensions.cs">
-      <DependentUpon>SectionCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Standards\LearningObjectiveCsvClassMap.Extensions.cs">
-      <DependentUpon>LearningObjectiveCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\CsvHelper\Standards\LearningStandardCsvClassMap.Extensions.cs">
-      <DependentUpon>LearningStandardCsvClassMap.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\AssessmentMetadataData.Extensions.cs">
-      <DependentUpon>AssessmentMetadataData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\DescriptorData.Extensions.cs">
-      <DependentUpon>DescriptorData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\EducationOrganizationData.Extensions.cs">
-      <DependentUpon>EducationOrganizationData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\EducationOrgCalendarData.Extensions.cs">
-      <DependentUpon>EducationOrgCalendarData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\MasterScheduleData.Extensions.cs">
-      <DependentUpon>MasterScheduleData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\ParentData.Extensions.cs">
-      <DependentUpon>ParentData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StaffAssociationData.Extensions.cs">
-      <DependentUpon>StaffAssociationData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StandardsData.Extensions.cs">
-      <DependentUpon>StandardsData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentAssessmentData.Extensions.cs">
-      <DependentUpon>StudentAssessmentData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentCohortData.Extensions.cs">
-      <DependentUpon>StudentCohortData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentGradeData.Extensions.cs">
-      <DependentUpon>StudentGradeData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentGradebookData.Extensions.cs">
-      <DependentUpon>StudentGradebookData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentProgramData.Extensions.cs">
-      <DependentUpon>StudentProgramData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentAttendanceData.Extensions.cs">
-      <DependentUpon>StudentAttendanceData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\GeneratedStudentData.Extensions.cs">
-      <DependentUpon>GeneratedStudentData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentDisciplineData.Extensions.cs">
-      <DependentUpon>StudentDisciplineData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentEnrollmentData.Extensions.cs">
-      <DependentUpon>StudentEnrollmentData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentData.Extensions.cs">
-      <DependentUpon>StudentData.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Serialization\Output\Interchanges\StudentTranscriptData.Extensions.cs">
-      <DependentUpon>StudentTranscriptData.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Entities\Descriptors.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Descriptors.cs</LastGenOutput>
-    </Content>
-    <Content Include="Entities\Schema\v32\Descriptors\AbsenceEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AcademicHonorCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AcademicSubjectDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AccommodationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AccountClassificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AchievementCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdditionalCreditTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AddressTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdministrationEnvironmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdministrativeFundingControlDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentPeriodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentReportingMethodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AttemptStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AttendanceEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\BehaviorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CalendarEventDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CalendarTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CareerPathwayDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CharterApprovalAgencyTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CharterStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CitizenshipStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ClassroomPositionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortScopeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortYearTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CompetencyLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContactTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContentClassDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContinuationOfServicesReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CostRateDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CountryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseAttemptResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseDefinedByDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseGPAApplicabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseLevelCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseRepeatCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CredentialFieldDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CredentialTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CreditTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CTEProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CurriculumUsedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DeliveryMethodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiagnosisDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiplomaLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiplomaTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDesignationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDeterminationSourceTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineActionLengthDifferenceReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineIncidentParticipationCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationalEnvironmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationPlanDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ElectronicMailTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EmploymentStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EntryGradeLevelReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EntryTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EventCircumstanceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ExitWithdrawTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradebookEntryTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradeLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradePointAverageWeightSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradeTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradingPeriodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GraduationPlanTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GunFreeSchoolsActReportingStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\HomelessPrimaryNighttimeResidenceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\HomelessProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\IdentificationDocumentUseDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\IncidentLocationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InstitutionTelephoneNumberTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InteractivityStyleDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InternetAccessDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InterventionClassDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InterventionEffectivenessRatingDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageInstructionProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageUseDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardEquivalenceStrengthDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardScopeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LevelOfEducationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LicenseStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LicenseTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LimitedEnglishProficiencyDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LocaleDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LocalEducationAgencyCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MagnetSpecialProgramEmphasisSchoolDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MediumOfInstructionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MethodCreditEarnedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MigrantEducationProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MonitoredDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NetworkPurposeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OldEthnicityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OperationalStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OtherNameTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ParticipationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ParticipationStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PerformanceBaseConversionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PerformanceLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PersonalInformationVerificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PlatformTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PopulationServedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostingResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryInstitutionLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProficiencyDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramAssignmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramSponsorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgressDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgressLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderProfitabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PublicationStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RaceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReasonExitedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReasonNotTestedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RecognitionTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RelationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RepeatIdentifierDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReporterDescriptionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResidencyStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResponseIndicatorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResponsibilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RestraintEventReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResultDatatypeTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RetestIndicatorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolChoiceImplementStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolFoodServiceProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SectionCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SeparationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SeparationReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SexDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationSettingDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffClassificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffLeaveEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StateAbbreviationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentParticipationCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialBasisDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TechnicalSkillsAssessmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TelephoneNumberTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TermDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAParticipantDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartASchoolDesignationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TribalAffiliationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\VisaDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\WeaponDescriptor.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\AssessmentCategoryDescriptorReferenceTypeCsvClassMap.cs" />
-    <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\AssessmentIdentificationSystemDescriptorReferenceTypeCsvClassMap.cs" />
-    <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\PerformanceLevelDescriptorReferenceTypeCsvClassMap.cs" />
-    <Compile Remove="Serialization\CsvHelper\Descriptors\DescriptorReferenceTypeCsvClassMap.cs" />
-    <Compile Remove="Serialization\CsvHelper\Descriptors\DescriptorReferenceTypes.cs" />
-    <Compile Remove="Serialization\CsvHelper\EducationOrganization\EducationOrganizationIdentificationSystemDescriptorReferenceTypeCsvClassMap.cs" />
-    <Compile Remove="Serialization\CsvHelper\MasterSchedule\LanguageDescriptorReferenceTypeCsvMap.cs" />
-  </ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net452</TargetFramework>
+        <AssemblyTitle>EdFi.SampleDataGenerator.Core</AssemblyTitle>
+        <Product>EdFi.SampleDataGenerator.Core</Product>
+        <Copyright>Copyright ©  2017</Copyright>
+        <OutputPath>bin\$(Configuration)\</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugType>full</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ChocoPack|AnyCPU'">
+        <DefineConstants>TRACE</DefineConstants>
+        <Optimize>true</Optimize>
+        <DebugType>pdbonly</DebugType>
+        <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="6.1.1" />
+        <PackageReference Include="CloneExtensions" Version="1.4.2" />
+        <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
+        <PackageReference Include="Enumeration.dll" Version="2.0.3" />
+        <PackageReference Include="FluentValidation" Version="6.2.1.0" />
+        <PackageReference Include="log4net" Version="2.0.7" />
+        <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="System.Net.Http" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Update="DataGeneration\Common\Interchanges\Interchange.Extensions.cs">
+            <DependentUpon>Interchange.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\Common\Interchanges\InterchangeOrder.Extensions.cs">
+            <DependentUpon>InterchangeOrder.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\AssessmentMetadataEntity.Extensions.cs">
+            <DependentUpon>AssessmentMetadataEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\DescriptorEntity.Extensions.cs">
+            <DependentUpon>DescriptorEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\EducationOrganizationEntity.Extensions.cs">
+            <DependentUpon>EducationOrganizationEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\EducationOrgCalendarEntity.Extensions.cs">
+            <DependentUpon>EducationOrgCalendarEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\InterchangeEntity.Extensions.cs">
+            <DependentUpon>InterchangeEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\MasterScheduleEntity.Extensions.cs">
+            <DependentUpon>MasterScheduleEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\ParentEntity.Extensions.cs">
+            <DependentUpon>ParentEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StaffAssociationEntity.Extensions.cs">
+            <DependentUpon>StaffAssociationEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StandardsEntity.Extensions.cs">
+            <DependentUpon>StandardsEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentAssessmentEntity.Extensions.cs">
+            <DependentUpon>StudentAssessmentEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentAttendanceEntity.Extensions.cs">
+            <DependentUpon>StudentAttendanceEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentCohortEntity.Extensions.cs">
+            <DependentUpon>StudentCohortEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentDisciplineEntity.Extensions.cs">
+            <DependentUpon>StudentDisciplineEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentEnrollmentEntity.Extensions.cs">
+            <DependentUpon>StudentEnrollmentEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentEntity.Extensions.cs">
+            <DependentUpon>StudentEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentGradeEntity.Extensions.cs">
+            <DependentUpon>StudentGradeEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentGradebookEntity.Extensions.cs">
+            <DependentUpon>StudentGradebookEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentProgramEntity.Extensions.cs">
+            <DependentUpon>StudentProgramEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DataGeneration\InterchangeEntities\StudentTranscriptEntity.Extensions.cs">
+            <DependentUpon>StudentTranscriptEntity.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Entities\Descriptors.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Descriptors.tt</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\AssessmentMetadata\AssessmentCsvClassMap.Extensions.cs">
+            <DependentUpon>AssessmentCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\AccountCodeDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>AccountCodeDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\AssessmentPeriodDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>AssessmentPeriodDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\CompetencyLevelDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>CompetencyLevelDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\CredentialFieldDescriptorClassMap.Extensions.cs">
+            <DependentUpon>CredentialFieldDescriptorClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\DisabilityDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>DisabilityDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\PerformanceLevelDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>PerformanceLevelDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Descriptors\ServiceDescriptorCsvClassMap.Extensions.cs">
+            <DependentUpon>ServiceDescriptorCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\AccountabilityRatingCsvClassMap.Extensions.cs">
+            <DependentUpon>AccountabilityRatingCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\ClassPeriodCsvClassMap.Extensions.cs">
+            <DependentUpon>ClassPeriodCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\CourseCsvClassMap.Extensions.cs">
+            <DependentUpon>CourseCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\StateEducationAgencyCsvClassMap.Extensions.cs">
+            <DependentUpon>StateEducationAgencyCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationNetworkAssociationCsvClassMap.Extensions.cs">
+            <DependentUpon>EducationOrganizationNetworkAssociationCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationNetworkCsvClassMap.Extensions.cs">
+            <DependentUpon>EducationOrganizationNetworkCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationOrganizationPeerAssociationCsvClassMap.Extensions.cs">
+            <DependentUpon>EducationOrganizationPeerAssociationCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\EducationServiceCenterCsvClassMap.Extensions.cs">
+            <DependentUpon>EducationServiceCenterCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\FeederSchoolAssociationCsvClassMap.Extensions.cs">
+            <DependentUpon>FeederSchoolAssociationCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\LocalEducationAgencyCsvClassMap.Extensions.cs">
+            <DependentUpon>LocalEducationAgencyCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\LocationCsvClassMap.Extensions.cs">
+            <DependentUpon>LocationCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\ProgramCsvClassMap.Extensions.cs">
+            <DependentUpon>ProgramCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrganization\SchoolCsvClassMap.Extensions.cs">
+            <DependentUpon>SchoolCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\CalendarDateCsvClassMap.Extensions.cs">
+            <DependentUpon>CalendarDateCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\GradingPeriodCsvClassMap.Extensions.cs">
+            <DependentUpon>GradingPeriodCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\EducationOrgCalendar\SessionCsvClassMap.Extensions.cs">
+            <DependentUpon>SessionCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\MasterSchedule\CourseOfferingCsvClassMap.Extensions.cs">
+            <DependentUpon>CourseOfferingCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\MasterSchedule\SectionCsvClassMap.Extensions.cs">
+            <DependentUpon>SectionCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Standards\LearningObjectiveCsvClassMap.Extensions.cs">
+            <DependentUpon>LearningObjectiveCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\CsvHelper\Standards\LearningStandardCsvClassMap.Extensions.cs">
+            <DependentUpon>LearningStandardCsvClassMap.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\AssessmentMetadataData.Extensions.cs">
+            <DependentUpon>AssessmentMetadataData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\DescriptorData.Extensions.cs">
+            <DependentUpon>DescriptorData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\EducationOrganizationData.Extensions.cs">
+            <DependentUpon>EducationOrganizationData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\EducationOrgCalendarData.Extensions.cs">
+            <DependentUpon>EducationOrgCalendarData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\MasterScheduleData.Extensions.cs">
+            <DependentUpon>MasterScheduleData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\ParentData.Extensions.cs">
+            <DependentUpon>ParentData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StaffAssociationData.Extensions.cs">
+            <DependentUpon>StaffAssociationData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StandardsData.Extensions.cs">
+            <DependentUpon>StandardsData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentAssessmentData.Extensions.cs">
+            <DependentUpon>StudentAssessmentData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentCohortData.Extensions.cs">
+            <DependentUpon>StudentCohortData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentGradeData.Extensions.cs">
+            <DependentUpon>StudentGradeData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentGradebookData.Extensions.cs">
+            <DependentUpon>StudentGradebookData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentProgramData.Extensions.cs">
+            <DependentUpon>StudentProgramData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentAttendanceData.Extensions.cs">
+            <DependentUpon>StudentAttendanceData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\GeneratedStudentData.Extensions.cs">
+            <DependentUpon>GeneratedStudentData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentDisciplineData.Extensions.cs">
+            <DependentUpon>StudentDisciplineData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentEnrollmentData.Extensions.cs">
+            <DependentUpon>StudentEnrollmentData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentData.Extensions.cs">
+            <DependentUpon>StudentData.cs</DependentUpon>
+        </Compile>
+        <Compile Update="Serialization\Output\Interchanges\StudentTranscriptData.Extensions.cs">
+            <DependentUpon>StudentTranscriptData.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Entities\Descriptors.tt">
+            <Generator>TextTemplatingFileGenerator</Generator>
+            <LastGenOutput>Descriptors.cs</LastGenOutput>
+        </Content>
+        <Content Include="Entities\Schema\v32\Descriptors\AbsenceEventCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AcademicHonorCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AcademicSubjectDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AccommodationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AccountClassificationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AchievementCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AdditionalCreditTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AddressTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AdministrationEnvironmentDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AdministrativeFundingControlDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentIdentificationSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemResultDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentPeriodDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AssessmentReportingMethodDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AttemptStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\AttendanceEventCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\BehaviorDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CalendarEventDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CalendarTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CareerPathwayDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CharterApprovalAgencyTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CharterStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CitizenshipStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ClassroomPositionDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CohortScopeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CohortTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CohortYearTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CompetencyLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ContactTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ContentClassDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ContinuationOfServicesReasonDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CostRateDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CountryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseAttemptResultDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseDefinedByDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseGPAApplicabilityDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseIdentificationSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseLevelCharacteristicDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CourseRepeatCodeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CredentialFieldDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CredentialTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CreditTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CTEProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\CurriculumUsedDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DeliveryMethodDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DiagnosisDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DiplomaLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DiplomaTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisabilityDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisabilityDesignationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisabilityDeterminationSourceTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisciplineActionLengthDifferenceReasonDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisciplineDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\DisciplineIncidentParticipationCodeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EducationalEnvironmentDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationIdentificationSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EducationPlanDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ElectronicMailTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EmploymentStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EntryGradeLevelReasonDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EntryTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\EventCircumstanceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ExitWithdrawTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GradebookEntryTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GradeLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GradePointAverageWeightSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GradeTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GradingPeriodDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GraduationPlanTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\GunFreeSchoolsActReportingStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\HomelessPrimaryNighttimeResidenceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\HomelessProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\IdentificationDocumentUseDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\IncidentLocationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\InstitutionTelephoneNumberTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\InteractivityStyleDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\InternetAccessDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\InterventionClassDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\InterventionEffectivenessRatingDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LanguageDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LanguageInstructionProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LanguageUseDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LearningStandardCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LearningStandardEquivalenceStrengthDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LearningStandardScopeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LevelOfEducationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LicenseStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LicenseTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LimitedEnglishProficiencyDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LocaleDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\LocalEducationAgencyCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\MagnetSpecialProgramEmphasisSchoolDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\MediumOfInstructionDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\MethodCreditEarnedDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\MigrantEducationProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\MonitoredDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\NetworkPurposeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\OldEthnicityDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\OperationalStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\OtherNameTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ParticipationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ParticipationStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PerformanceBaseConversionDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PerformanceLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PersonalInformationVerificationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PlatformTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PopulationServedDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PostingResultDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryEventCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryInstitutionLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProficiencyDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgramAssignmentDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgramCharacteristicDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgramSponsorDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgramTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgressDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProgressLevelDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProviderCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProviderProfitabilityDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ProviderStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\PublicationStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RaceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ReasonExitedDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ReasonNotTestedDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RecognitionTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RelationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RepeatIdentifierDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ReporterDescriptionDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ResidencyStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ResponseIndicatorDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ResponsibilityDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RestraintEventReasonDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ResultDatatypeTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\RetestIndicatorDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SchoolCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SchoolChoiceImplementStatusDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SchoolFoodServiceProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SchoolTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SectionCharacteristicDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SeparationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SeparationReasonDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\ServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SexDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationSettingDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StaffClassificationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StaffIdentificationSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StaffLeaveEventCategoryDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StateAbbreviationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StudentCharacteristicDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StudentIdentificationSystemDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\StudentParticipationCodeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialBasisDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TechnicalSkillsAssessmentDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TelephoneNumberTypeDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TermDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAParticipantDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAProgramServiceDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TitleIPartASchoolDesignationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\TribalAffiliationDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\VisaDescriptor.xml" />
+        <Content Include="Entities\Schema\v32\Descriptors\WeaponDescriptor.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\AssessmentCategoryDescriptorReferenceTypeCsvClassMap.cs" />
+        <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\AssessmentIdentificationSystemDescriptorReferenceTypeCsvClassMap.cs" />
+        <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\PerformanceLevelDescriptorReferenceTypeCsvClassMap.cs" />
+        <Compile Remove="Serialization\CsvHelper\Descriptors\DescriptorReferenceTypeCsvClassMap.cs" />
+        <Compile Remove="Serialization\CsvHelper\Descriptors\DescriptorReferenceTypes.cs" />
+        <Compile Remove="Serialization\CsvHelper\EducationOrganization\EducationOrganizationIdentificationSystemDescriptorReferenceTypeCsvClassMap.cs" />
+        <Compile Remove="Serialization\CsvHelper\MasterSchedule\LanguageDescriptorReferenceTypeCsvMap.cs" />
+    </ItemGroup>
 </Project>

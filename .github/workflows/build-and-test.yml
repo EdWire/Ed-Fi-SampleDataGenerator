@@ -3,37 +3,30 @@
 # The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 # See the LICENSE and NOTICES files in the project root for more information.
 
-name: Build and Run Unit Tests
+name: Build and Test
 on:
-  pull_request:
-    paths:
-      - 'src/**'
   push:
-    paths:
-      - 'src/**'
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+
 jobs:
-  build-and-test:
-    name: Build and Run Unit Tests
-    runs-on: ubuntu-20.04
+  build-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: ./src
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
-
-      - name: Prepare nuget.exe
-        uses: nuget/setup-nuget@04b0c2b8d1b97922f67eca497d7cf0bf17b8ffe1
-        with:
-          nuget-version: '5.x'
-
-      - name: Restore packages
-        run: nuget restore Ed-Fi-SDG.sln
-
-      - name: Compile
-        run: dotnet build Ed-Fi-SDG.sln
-
-      - name: Run unit tests
-        run: dotnet test Ed-Fi-SDG.sln
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build
+    - name: Run unit tests
+      run: dotnet test

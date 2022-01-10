@@ -1,0 +1,1 @@
+			<Option Value="{{option.name}}" Frequency="{{option.value}}" />

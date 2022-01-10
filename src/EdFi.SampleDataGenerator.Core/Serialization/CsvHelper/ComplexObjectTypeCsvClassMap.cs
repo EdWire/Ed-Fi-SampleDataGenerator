@@ -1,4 +1,4 @@
-﻿using CsvHelper.Configuration;
+using CsvHelper.Configuration;
 using EdFi.SampleDataGenerator.Core.Entities;
 
 namespace EdFi.SampleDataGenerator.Core.Serialization.CsvHelper

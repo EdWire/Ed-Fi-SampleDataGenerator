@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Generators;
 using EdFi.SampleDataGenerator.Core.Entities;
 using System.Linq;
@@ -23,6 +23,7 @@ namespace EdFi.SampleDataGenerator.Core.Helpers
                     + section.SectionIdentifier
                     + section.CourseOfferingReference.CourseOfferingIdentity.SessionReference.SessionIdentity.SessionName
                     + section.SequenceOfCourse
+                    + section.LocationReference.LocationIdentity.ClassroomIdentificationCode
                     ).GetHashCode();
         }
 

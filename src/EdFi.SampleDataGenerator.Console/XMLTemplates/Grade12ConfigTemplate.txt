@@ -1,0 +1,20 @@
+			<GradeProfile GradeName="Twelfth grade">
+				<StudentPopulationProfile StudentProfileReference="{{grade.profile}}" InitialStudentCount="{{grade.students}}" TransfersIn="{{grade.transfersIn}}" TransfersOut="{{grade.transfersOut}}" />
+				<GraduationPlan Name="HighSchoolMinimum" />
+				<GraduationPlan Name="HighSchoolRecommended" />
+				<GraduationPlan Name="HighSchoolDistinguished" />
+			  <AssessmentParticipationRate AssessmentTitle="rSAT-MostRecent">
+				<ParticipationRate LowerPerformancePercentile="0.75" UpperPerformancePercentile="1.0" Probability="0.99"/>
+				<ParticipationRate LowerPerformancePercentile="0.5" UpperPerformancePercentile="0.75" Probability="0.9"/>
+				<ParticipationRate LowerPerformancePercentile="0.4" UpperPerformancePercentile="0.5" Probability="0.1"/>
+			  </AssessmentParticipationRate>
+			  <AssessmentParticipationRate AssessmentTitle="ACT">
+				<ParticipationRate LowerPerformancePercentile="0.75" UpperPerformancePercentile="1" Probability="0.99"/>
+				<ParticipationRate LowerPerformancePercentile="0.5" UpperPerformancePercentile="0.75" Probability="0.9"/>
+				<ParticipationRate LowerPerformancePercentile="0.4" UpperPerformancePercentile="0.5" Probability="0.1"/>
+			  </AssessmentParticipationRate>
+			  <AssessmentParticipationRate AssessmentTitle="STATE" RegexMatch ="true">
+				<ParticipationRate LowerPerformancePercentile="0" UpperPerformancePercentile="0.5" Probability="0.9"/>
+				<ParticipationRate LowerPerformancePercentile="0.5" UpperPerformancePercentile="1.0" Probability="1.0"/>
+			  </AssessmentParticipationRate>
+			</GradeProfile>

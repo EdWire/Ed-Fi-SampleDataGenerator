@@ -1,4 +1,4 @@
-﻿using System.Xml.Serialization;
+using System.Xml.Serialization;
 using EdFi.SampleDataGenerator.Core.Config;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Common;
 using EdFi.SampleDataGenerator.Core.Entities;
@@ -40,7 +40,7 @@ namespace EdFi.SampleDataGenerator.Console.Config
             new EthnicityMapping {Ethnicity = "Asian", EdFiRaceType = RaceDescriptor.Asian.CodeValue},
             new EthnicityMapping {Ethnicity = "Black", EdFiRaceType = RaceDescriptor.BlackAfricanAmerican.CodeValue},
             new EthnicityMapping {Ethnicity = "Hispanic", EdFiRaceType = RaceDescriptor.White.CodeValue, HispanicLatinoEthnicity = true},
-            new EthnicityMapping {Ethnicity = "NativeHawaiinPacificIslander", EdFiRaceType = RaceDescriptor.NativeHawaiianPacificIslander.CodeValue},
+            new EthnicityMapping {Ethnicity = "NativeHawaiianPacificIslander", EdFiRaceType = RaceDescriptor.NativeHawaiianPacificIslander.CodeValue},
             new EthnicityMapping {Ethnicity = "White", EdFiRaceType = RaceDescriptor.White.CodeValue}
         };
         IEthnicityMapping[] ISampleDataGeneratorConfig.EthnicityMappings => EthnicityMappings;

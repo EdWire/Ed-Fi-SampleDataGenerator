@@ -1,0 +1,2 @@
+	<StudentProfile Name="{{profile.name}}">
+		<RaceConfiguration>

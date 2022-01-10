@@ -1,0 +1,5 @@
+CodeValue,ShortDescription,Description,Namespace
+School,School,School,uri://ed-fi.org/SourceSystemDescriptor
+District,District,District,uri://ed-fi.org/SourceSystemDescriptor
+State,State,State,uri://ed-fi.org/SourceSystemDescriptor
+Federal,Federal,Federal,uri://ed-fi.org/SourceSystemDescriptor

@@ -1,4 +1,4 @@
-ï»¿namespace EdFi.SampleDataGenerator.Core.Entities
+namespace EdFi.SampleDataGenerator.Core.Entities
 {
 	public partial class AbsenceEventCategoryDescriptor
 	{
@@ -250,6 +250,14 @@
 
 	public partial class AcademicSubjectDescriptor
 	{
+		public static readonly AcademicSubjectDescriptor CareerAndTechnicalEducation = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Career and Technical Education",
+			ShortDescription = "Career and Technical Education",
+			Description = "Career and Technical Education",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
 		public static readonly AcademicSubjectDescriptor Composite = new AcademicSubjectDescriptor
 		{
 			CodeValue = "Composite",
@@ -263,6 +271,14 @@
 			CodeValue = "Critical Reading",
 			ShortDescription = "Critical Reading",
 			Description = "Critical Reading",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor CrossSubject = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Cross Subject",
+			ShortDescription = "Cross Subject",
+			Description = "Cross Subject",
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
@@ -282,11 +298,19 @@
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
-		public static readonly AcademicSubjectDescriptor Reading = new AcademicSubjectDescriptor
+		public static readonly AcademicSubjectDescriptor FineAndPerformingArts = new AcademicSubjectDescriptor
 		{
-			CodeValue = "Reading",
-			ShortDescription = "Reading",
-			Description = "Reading",
+			CodeValue = "Fine and Performing Arts",
+			ShortDescription = "Fine and Performing Arts",
+			Description = "Fine and Performing Arts",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor ForeignLanguageAndLiterature = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Foreign Language and Literature",
+			ShortDescription = "Foreign Language and Literature",
+			Description = "Foreign Language and Literature",
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
@@ -303,6 +327,46 @@
 			CodeValue = "Life and Physical Sciences",
 			ShortDescription = "Life and Physical Sciences",
 			Description = "Life and Physical Sciences",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor MilitaryScience = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Military Science",
+			ShortDescription = "Military Science",
+			Description = "Military Science",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor Other = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor PhysicalHealthAndSafetyEducation = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Physical, Health, and Safety Education",
+			ShortDescription = "Physical, Health, and Safety Education",
+			Description = "Physical, Health, and Safety Education",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor Reading = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Reading",
+			ShortDescription = "Reading",
+			Description = "Reading",
+			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
+		};
+
+		public static readonly AcademicSubjectDescriptor ReligiousEducationAndTheology = new AcademicSubjectDescriptor
+		{
+			CodeValue = "Religious Education and Theology",
+			ShortDescription = "Religious Education and Theology",
+			Description = "Religious Education and Theology",
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
@@ -330,75 +394,11 @@
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
-		public static readonly AcademicSubjectDescriptor FineAndPerformingArts = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Fine and Performing Arts",
-			ShortDescription = "Fine and Performing Arts",
-			Description = "Fine and Performing Arts",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor ForeignLanguageAndLiterature = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Foreign Language and Literature",
-			ShortDescription = "Foreign Language and Literature",
-			Description = "Foreign Language and Literature",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
 		public static readonly AcademicSubjectDescriptor Writing = new AcademicSubjectDescriptor
 		{
 			CodeValue = "Writing",
 			ShortDescription = "Writing",
 			Description = "Writing",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor PhysicalHealthAndSafetyEducation = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Physical, Health, and Safety Education",
-			ShortDescription = "Physical, Health, and Safety Education",
-			Description = "Physical, Health, and Safety Education",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor CareerAndTechnicalEducation = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Career and Technical Education",
-			ShortDescription = "Career and Technical Education",
-			Description = "Career and Technical Education",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor ReligiousEducationAndTheology = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Religious Education and Theology",
-			ShortDescription = "Religious Education and Theology",
-			Description = "Religious Education and Theology",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor MilitaryScience = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Military Science",
-			ShortDescription = "Military Science",
-			Description = "Military Science",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor Other = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Other",
-			ShortDescription = "Other",
-			Description = "Other",
-			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
-		};
-
-		public static readonly AcademicSubjectDescriptor CrossSubject = new AcademicSubjectDescriptor
-		{
-			CodeValue = "Cross Subject",
-			ShortDescription = "Cross Subject",
-			Description = "Cross Subject",
 			Namespace = "uri://ed-fi.org/AcademicSubjectDescriptor",
 		};
 
@@ -2722,51 +2722,11 @@
 
 	public partial class CohortYearTypeDescriptor
 	{
-		public static readonly CohortYearTypeDescriptor EighthGrade = new CohortYearTypeDescriptor
-		{
-			CodeValue = "Eighth grade",
-			ShortDescription = "Eighth grade",
-			Description = "Eighth grade",
-			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
-		};
-
-		public static readonly CohortYearTypeDescriptor EleventhGrade = new CohortYearTypeDescriptor
-		{
-			CodeValue = "Eleventh grade",
-			ShortDescription = "Eleventh grade",
-			Description = "Eleventh grade",
-			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
-		};
-
-		public static readonly CohortYearTypeDescriptor FifthGrade = new CohortYearTypeDescriptor
-		{
-			CodeValue = "Fifth grade",
-			ShortDescription = "Fifth grade",
-			Description = "Fifth grade",
-			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
-		};
-
 		public static readonly CohortYearTypeDescriptor FirstGrade = new CohortYearTypeDescriptor
 		{
 			CodeValue = "First grade",
 			ShortDescription = "First grade",
 			Description = "First grade",
-			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
-		};
-
-		public static readonly CohortYearTypeDescriptor FourthGrade = new CohortYearTypeDescriptor
-		{
-			CodeValue = "Fourth grade",
-			ShortDescription = "Fourth grade",
-			Description = "Fourth grade",
-			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
-		};
-
-		public static readonly CohortYearTypeDescriptor NinthGrade = new CohortYearTypeDescriptor
-		{
-			CodeValue = "Ninth grade",
-			ShortDescription = "Ninth grade",
-			Description = "Ninth grade",
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
@@ -2778,11 +2738,27 @@
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
-		public static readonly CohortYearTypeDescriptor SeventhGrade = new CohortYearTypeDescriptor
+		public static readonly CohortYearTypeDescriptor ThirdGrade = new CohortYearTypeDescriptor
 		{
-			CodeValue = "Seventh grade",
-			ShortDescription = "Seventh grade",
-			Description = "Seventh grade",
+			CodeValue = "Third grade",
+			ShortDescription = "Third grade",
+			Description = "Third grade",
+			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
+		};
+
+		public static readonly CohortYearTypeDescriptor FourthGrade = new CohortYearTypeDescriptor
+		{
+			CodeValue = "Fourth grade",
+			ShortDescription = "Fourth grade",
+			Description = "Fourth grade",
+			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
+		};
+
+		public static readonly CohortYearTypeDescriptor FifthGrade = new CohortYearTypeDescriptor
+		{
+			CodeValue = "Fifth grade",
+			ShortDescription = "Fifth grade",
+			Description = "Fifth grade",
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
@@ -2794,6 +2770,30 @@
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
+		public static readonly CohortYearTypeDescriptor SeventhGrade = new CohortYearTypeDescriptor
+		{
+			CodeValue = "Seventh grade",
+			ShortDescription = "Seventh grade",
+			Description = "Seventh grade",
+			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
+		};
+
+		public static readonly CohortYearTypeDescriptor EighthGrade = new CohortYearTypeDescriptor
+		{
+			CodeValue = "Eighth grade",
+			ShortDescription = "Eighth grade",
+			Description = "Eighth grade",
+			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
+		};
+
+		public static readonly CohortYearTypeDescriptor NinthGrade = new CohortYearTypeDescriptor
+		{
+			CodeValue = "Ninth grade",
+			ShortDescription = "Ninth grade",
+			Description = "Ninth grade",
+			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
+		};
+
 		public static readonly CohortYearTypeDescriptor TenthGrade = new CohortYearTypeDescriptor
 		{
 			CodeValue = "Tenth grade",
@@ -2802,11 +2802,11 @@
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
-		public static readonly CohortYearTypeDescriptor ThirdGrade = new CohortYearTypeDescriptor
+		public static readonly CohortYearTypeDescriptor EleventhGrade = new CohortYearTypeDescriptor
 		{
-			CodeValue = "Third grade",
-			ShortDescription = "Third grade",
-			Description = "Third grade",
+			CodeValue = "Eleventh grade",
+			ShortDescription = "Eleventh grade",
+			Description = "Eleventh grade",
 			Namespace = "uri://ed-fi.org/CohortYearTypeDescriptor",
 		};
 
@@ -3101,8 +3101,8 @@
 		public static readonly CountryDescriptor AlandIslands = new CountryDescriptor
 		{
 			CodeValue = "AX",
-			ShortDescription = "Ã…land Islands",
-			Description = "Ã…land Islands",
+			ShortDescription = "Åland Islands",
+			Description = "Åland Islands",
 			Namespace = "uri://ed-fi.org/CountryDescriptor",
 		};
 
@@ -3189,8 +3189,8 @@
 		public static readonly CountryDescriptor SaintBarthelemy = new CountryDescriptor
 		{
 			CodeValue = "BL",
-			ShortDescription = "Saint BarthÃ©lemy",
-			Description = "Saint BarthÃ©lemy",
+			ShortDescription = "Saint Barthélemy",
+			Description = "Saint Barthélemy",
 			Namespace = "uri://ed-fi.org/CountryDescriptor",
 		};
 
@@ -3333,8 +3333,8 @@
 		public static readonly CountryDescriptor CoteDIvoire = new CountryDescriptor
 		{
 			CodeValue = "CI",
-			ShortDescription = "CÃ´te d'Ivoire",
-			Description = "CÃ´te d'Ivoire",
+			ShortDescription = "Côte d'Ivoire",
+			Description = "Côte d'Ivoire",
 			Namespace = "uri://ed-fi.org/CountryDescriptor",
 		};
 
@@ -3405,8 +3405,8 @@
 		public static readonly CountryDescriptor Curacao = new CountryDescriptor
 		{
 			CodeValue = "CW",
-			ShortDescription = "CuraÃ§ao",
-			Description = "CuraÃ§ao",
+			ShortDescription = "Curaçao",
+			Description = "Curaçao",
 			Namespace = "uri://ed-fi.org/CountryDescriptor",
 		};
 
@@ -4485,8 +4485,8 @@
 		public static readonly CountryDescriptor Reunion = new CountryDescriptor
 		{
 			CodeValue = "RE",
-			ShortDescription = "RÃ©union",
-			Description = "RÃ©union",
+			ShortDescription = "Réunion",
+			Description = "Réunion",
 			Namespace = "uri://ed-fi.org/CountryDescriptor",
 		};
 
@@ -6610,6 +6610,22 @@
 			Namespace = "uri://ed-fi.org/DisciplineDescriptor",
 		};
 
+		public static readonly DisciplineDescriptor ExpulsionUnderGunsFreeSchoolAct = new DisciplineDescriptor
+		{
+			CodeValue = "Expulsion under Guns Free School Act",
+			ShortDescription = "Expulsion under Guns Free School Act",
+			Description = "Expulsion under Guns Free School Act",
+			Namespace = "uri://ed-fi.org/DisciplineDescriptor",
+		};
+
+		public static readonly DisciplineDescriptor ExpulsionUnderGunsFreeSchoolActWithServices = new DisciplineDescriptor
+		{
+			CodeValue = "Expulsion under Guns Free School Act with Services",
+			ShortDescription = "Expulsion under Guns Free School Act with Services",
+			Description = "Expulsion under Guns Free School Act with Services",
+			Namespace = "uri://ed-fi.org/DisciplineDescriptor",
+		};
+
 	}
 
 	public partial class DisciplineIncidentParticipationCodeDescriptor
@@ -6811,6 +6827,14 @@
 			CodeValue = "Post Secondary Institution",
 			ShortDescription = "Post Secondary Institution",
 			Description = "Post Secondary Institution",
+			Namespace = "uri://ed-fi.org/EducationOrganizationCategoryDescriptor",
+		};
+
+		public static readonly EducationOrganizationCategoryDescriptor OrganizationDepartment = new EducationOrganizationCategoryDescriptor
+		{
+			CodeValue = "Organization Department",
+			ShortDescription = "Organization Department",
+			Description = "An organizational unit of another education organization, often devoted to a particular academic discipline, area of study, or organization function.",
 			Namespace = "uri://ed-fi.org/EducationOrganizationCategoryDescriptor",
 		};
 
@@ -7734,11 +7758,11 @@
 
 	public partial class GradeLevelDescriptor
 	{
-		public static readonly GradeLevelDescriptor AdultEducation = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor InfantToddler = new GradeLevelDescriptor
 		{
-			CodeValue = "Adult Education",
-			ShortDescription = "Adult Education",
-			Description = "Adult Education",
+			CodeValue = "Infant/toddler",
+			ShortDescription = "Infant/toddler",
+			Description = "Infant/toddler",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7750,59 +7774,11 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
-		public static readonly GradeLevelDescriptor EighthGrade = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor PreschoolPrekindergarten = new GradeLevelDescriptor
 		{
-			CodeValue = "Eighth grade",
-			ShortDescription = "Eighth grade",
-			Description = "Eighth grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor EleventhGrade = new GradeLevelDescriptor
-		{
-			CodeValue = "Eleventh grade",
-			ShortDescription = "Eleventh grade",
-			Description = "Eleventh grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor FifthGrade = new GradeLevelDescriptor
-		{
-			CodeValue = "Fifth grade",
-			ShortDescription = "Fifth grade",
-			Description = "Fifth grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor FirstGrade = new GradeLevelDescriptor
-		{
-			CodeValue = "First grade",
-			ShortDescription = "First grade",
-			Description = "First grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor FourthGrade = new GradeLevelDescriptor
-		{
-			CodeValue = "Fourth grade",
-			ShortDescription = "Fourth grade",
-			Description = "Fourth grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor Grade13 = new GradeLevelDescriptor
-		{
-			CodeValue = "Grade 13",
-			ShortDescription = "Grade 13",
-			Description = "Grade 13",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor InfantToddler = new GradeLevelDescriptor
-		{
-			CodeValue = "Infant/toddler",
-			ShortDescription = "Infant/toddler",
-			Description = "Infant/toddler",
+			CodeValue = "Preschool/Prekindergarten",
+			ShortDescription = "Preschool/Prekindergarten",
+			Description = "Preschool/Prekindergarten",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7814,35 +7790,11 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
-		public static readonly GradeLevelDescriptor NinthGrade = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor FirstGrade = new GradeLevelDescriptor
 		{
-			CodeValue = "Ninth grade",
-			ShortDescription = "Ninth grade",
-			Description = "Ninth grade",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor Other = new GradeLevelDescriptor
-		{
-			CodeValue = "Other",
-			ShortDescription = "Other",
-			Description = "Other",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor Postsecondary = new GradeLevelDescriptor
-		{
-			CodeValue = "Postsecondary",
-			ShortDescription = "Postsecondary",
-			Description = "Postsecondary",
-			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
-		};
-
-		public static readonly GradeLevelDescriptor PreschoolPrekindergarten = new GradeLevelDescriptor
-		{
-			CodeValue = "Preschool/Prekindergarten",
-			ShortDescription = "Preschool/Prekindergarten",
-			Description = "Preschool/Prekindergarten",
+			CodeValue = "First grade",
+			ShortDescription = "First grade",
+			Description = "First grade",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7854,11 +7806,27 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
-		public static readonly GradeLevelDescriptor SeventhGrade = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor ThirdGrade = new GradeLevelDescriptor
 		{
-			CodeValue = "Seventh grade",
-			ShortDescription = "Seventh grade",
-			Description = "Seventh grade",
+			CodeValue = "Third grade",
+			ShortDescription = "Third grade",
+			Description = "Third grade",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor FourthGrade = new GradeLevelDescriptor
+		{
+			CodeValue = "Fourth grade",
+			ShortDescription = "Fourth grade",
+			Description = "Fourth grade",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor FifthGrade = new GradeLevelDescriptor
+		{
+			CodeValue = "Fifth grade",
+			ShortDescription = "Fifth grade",
+			Description = "Fifth grade",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7870,6 +7838,30 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
+		public static readonly GradeLevelDescriptor SeventhGrade = new GradeLevelDescriptor
+		{
+			CodeValue = "Seventh grade",
+			ShortDescription = "Seventh grade",
+			Description = "Seventh grade",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor EighthGrade = new GradeLevelDescriptor
+		{
+			CodeValue = "Eighth grade",
+			ShortDescription = "Eighth grade",
+			Description = "Eighth grade",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor NinthGrade = new GradeLevelDescriptor
+		{
+			CodeValue = "Ninth grade",
+			ShortDescription = "Ninth grade",
+			Description = "Ninth grade",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
 		public static readonly GradeLevelDescriptor TenthGrade = new GradeLevelDescriptor
 		{
 			CodeValue = "Tenth grade",
@@ -7878,11 +7870,11 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
-		public static readonly GradeLevelDescriptor ThirdGrade = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor EleventhGrade = new GradeLevelDescriptor
 		{
-			CodeValue = "Third grade",
-			ShortDescription = "Third grade",
-			Description = "Third grade",
+			CodeValue = "Eleventh grade",
+			ShortDescription = "Eleventh grade",
+			Description = "Eleventh grade",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7894,11 +7886,27 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
-		public static readonly GradeLevelDescriptor Ungraded = new GradeLevelDescriptor
+		public static readonly GradeLevelDescriptor Grade13 = new GradeLevelDescriptor
 		{
-			CodeValue = "Ungraded",
-			ShortDescription = "Ungraded",
-			Description = "Ungraded",
+			CodeValue = "Grade 13",
+			ShortDescription = "Grade 13",
+			Description = "Grade 13",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor Postsecondary = new GradeLevelDescriptor
+		{
+			CodeValue = "Postsecondary",
+			ShortDescription = "Postsecondary",
+			Description = "Postsecondary",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor AdultEducation = new GradeLevelDescriptor
+		{
+			CodeValue = "Adult Education",
+			ShortDescription = "Adult Education",
+			Description = "Adult Education",
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
@@ -7910,24 +7918,40 @@
 			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
 		};
 
+		public static readonly GradeLevelDescriptor Other = new GradeLevelDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
+		public static readonly GradeLevelDescriptor Ungraded = new GradeLevelDescriptor
+		{
+			CodeValue = "Ungraded",
+			ShortDescription = "Ungraded",
+			Description = "Ungraded",
+			Namespace = "uri://ed-fi.org/GradeLevelDescriptor",
+		};
+
 	}
 
-	public partial class GradePointAverageWeightSystemDescriptor
+	public partial class GradePointAverageTypeDescriptor
 	{
-		public static readonly GradePointAverageWeightSystemDescriptor Weighted = new GradePointAverageWeightSystemDescriptor
+		public static readonly GradePointAverageTypeDescriptor Weighted = new GradePointAverageTypeDescriptor
 		{
 			CodeValue = "Weighted",
 			ShortDescription = "Weighted",
 			Description = "Weighted",
-			Namespace = "uri://ed-fi.org/GradePointAverageWeightSystemDescriptor",
+			Namespace = "uri://ed-fi.org/GradePointAverageTypeDescriptor",
 		};
 
-		public static readonly GradePointAverageWeightSystemDescriptor Unweighted = new GradePointAverageWeightSystemDescriptor
+		public static readonly GradePointAverageTypeDescriptor Unweighted = new GradePointAverageTypeDescriptor
 		{
 			CodeValue = "Unweighted",
 			ShortDescription = "Unweighted",
 			Description = "Unweighted",
-			Namespace = "uri://ed-fi.org/GradePointAverageWeightSystemDescriptor",
+			Namespace = "uri://ed-fi.org/GradePointAverageTypeDescriptor",
 		};
 
 	}
@@ -7994,83 +8018,11 @@
 
 	public partial class GradingPeriodDescriptor
 	{
-		public static readonly GradingPeriodDescriptor EndOfYear = new GradingPeriodDescriptor
-		{
-			CodeValue = "End of Year",
-			ShortDescription = "End of Year",
-			Description = "End of Year",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FifthSixWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "Fifth Six Weeks",
-			ShortDescription = "Fifth Six Weeks",
-			Description = "Fifth Six Weeks",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FirstNineWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "First Nine Weeks",
-			ShortDescription = "First Nine Weeks",
-			Description = "First Nine Weeks",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
 		public static readonly GradingPeriodDescriptor FirstSemester = new GradingPeriodDescriptor
 		{
 			CodeValue = "First Semester",
 			ShortDescription = "First Semester",
 			Description = "First Semester",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FirstSixWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "First Six Weeks",
-			ShortDescription = "First Six Weeks",
-			Description = "First Six Weeks",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FirstSummerSession = new GradingPeriodDescriptor
-		{
-			CodeValue = "First Summer Session",
-			ShortDescription = "First Summer Session",
-			Description = "First Summer Session",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FirstTrimester = new GradingPeriodDescriptor
-		{
-			CodeValue = "First Trimester",
-			ShortDescription = "First Trimester",
-			Description = "First Trimester",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FourthNineWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "Fourth Nine Weeks",
-			ShortDescription = "Fourth Nine Weeks",
-			Description = "Fourth Nine Weeks",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor FourthSixWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "Fourth Six Weeks",
-			ShortDescription = "Fourth Six Weeks",
-			Description = "Fourth Six Weeks",
-			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
-		};
-
-		public static readonly GradingPeriodDescriptor SecondNineWeeks = new GradingPeriodDescriptor
-		{
-			CodeValue = "Second Nine Weeks",
-			ShortDescription = "Second Nine Weeks",
-			Description = "Second Nine Weeks",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
@@ -8082,11 +8034,19 @@
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
-		public static readonly GradingPeriodDescriptor SecondSixWeeks = new GradingPeriodDescriptor
+		public static readonly GradingPeriodDescriptor SummerSemester = new GradingPeriodDescriptor
 		{
-			CodeValue = "Second Six Weeks",
-			ShortDescription = "Second Six Weeks",
-			Description = "Second Six Weeks",
+			CodeValue = "Summer Semester",
+			ShortDescription = "Summer Semester",
+			Description = "Summer Semester",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor FirstSummerSession = new GradingPeriodDescriptor
+		{
+			CodeValue = "First Summer Session",
+			ShortDescription = "First Summer Session",
+			Description = "First Summer Session",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
@@ -8098,6 +8058,22 @@
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
+		public static readonly GradingPeriodDescriptor ThirdSummerSession = new GradingPeriodDescriptor
+		{
+			CodeValue = "Third Summer Session",
+			ShortDescription = "Third Summer Session",
+			Description = "Third Summer Session",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor FirstTrimester = new GradingPeriodDescriptor
+		{
+			CodeValue = "First Trimester",
+			ShortDescription = "First Trimester",
+			Description = "First Trimester",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
 		public static readonly GradingPeriodDescriptor SecondTrimester = new GradingPeriodDescriptor
 		{
 			CodeValue = "Second Trimester",
@@ -8106,19 +8082,27 @@
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
-		public static readonly GradingPeriodDescriptor SixthSixWeeks = new GradingPeriodDescriptor
+		public static readonly GradingPeriodDescriptor ThirdTrimester = new GradingPeriodDescriptor
 		{
-			CodeValue = "Sixth Six Weeks",
-			ShortDescription = "Sixth Six Weeks",
-			Description = "Sixth Six Weeks",
+			CodeValue = "Third Trimester",
+			ShortDescription = "Third Trimester",
+			Description = "Third Trimester",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
-		public static readonly GradingPeriodDescriptor SummerSemester = new GradingPeriodDescriptor
+		public static readonly GradingPeriodDescriptor FirstNineWeeks = new GradingPeriodDescriptor
 		{
-			CodeValue = "Summer Semester",
-			ShortDescription = "Summer Semester",
-			Description = "Summer Semester",
+			CodeValue = "First Nine Weeks",
+			ShortDescription = "First Nine Weeks",
+			Description = "First Nine Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor SecondNineWeeks = new GradingPeriodDescriptor
+		{
+			CodeValue = "Second Nine Weeks",
+			ShortDescription = "Second Nine Weeks",
+			Description = "Second Nine Weeks",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
@@ -8130,6 +8114,30 @@
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
+		public static readonly GradingPeriodDescriptor FourthNineWeeks = new GradingPeriodDescriptor
+		{
+			CodeValue = "Fourth Nine Weeks",
+			ShortDescription = "Fourth Nine Weeks",
+			Description = "Fourth Nine Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor FirstSixWeeks = new GradingPeriodDescriptor
+		{
+			CodeValue = "First Six Weeks",
+			ShortDescription = "First Six Weeks",
+			Description = "First Six Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor SecondSixWeeks = new GradingPeriodDescriptor
+		{
+			CodeValue = "Second Six Weeks",
+			ShortDescription = "Second Six Weeks",
+			Description = "Second Six Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
 		public static readonly GradingPeriodDescriptor ThirdSixWeeks = new GradingPeriodDescriptor
 		{
 			CodeValue = "Third Six Weeks",
@@ -8138,19 +8146,35 @@
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
-		public static readonly GradingPeriodDescriptor ThirdSummerSession = new GradingPeriodDescriptor
+		public static readonly GradingPeriodDescriptor FourthSixWeeks = new GradingPeriodDescriptor
 		{
-			CodeValue = "Third Summer Session",
-			ShortDescription = "Third Summer Session",
-			Description = "Third Summer Session",
+			CodeValue = "Fourth Six Weeks",
+			ShortDescription = "Fourth Six Weeks",
+			Description = "Fourth Six Weeks",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
-		public static readonly GradingPeriodDescriptor ThirdTrimester = new GradingPeriodDescriptor
+		public static readonly GradingPeriodDescriptor FifthSixWeeks = new GradingPeriodDescriptor
 		{
-			CodeValue = "Third Trimester",
-			ShortDescription = "Third Trimester",
-			Description = "Third Trimester",
+			CodeValue = "Fifth Six Weeks",
+			ShortDescription = "Fifth Six Weeks",
+			Description = "Fifth Six Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor SixthSixWeeks = new GradingPeriodDescriptor
+		{
+			CodeValue = "Sixth Six Weeks",
+			ShortDescription = "Sixth Six Weeks",
+			Description = "Sixth Six Weeks",
+			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
+		};
+
+		public static readonly GradingPeriodDescriptor EndOfYear = new GradingPeriodDescriptor
+		{
+			CodeValue = "End of Year",
+			ShortDescription = "End of Year",
+			Description = "End of Year",
 			Namespace = "uri://ed-fi.org/GradingPeriodDescriptor",
 		};
 
@@ -9061,16 +9085,16 @@
 		public static readonly LanguageDescriptor NdebeleNorth_nde = new LanguageDescriptor
 		{
 			CodeValue = "nde",
-			ShortDescription = "\"Ndebele, North\"",
-			Description = "\"Ndebele, North\"",
+			ShortDescription = "Ndebele, North",
+			Description = "Ndebele, North",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
 		public static readonly LanguageDescriptor BokmalNorwegian_nob = new LanguageDescriptor
 		{
 			CodeValue = "nob",
-			ShortDescription = "\"BokmÃ¥l, Norwegian\"",
-			Description = "\"BokmÃ¥l, Norwegian\"",
+			ShortDescription = "Bokmål, Norwegian",
+			Description = "Bokmål, Norwegian",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9101,8 +9125,8 @@
 		public static readonly LanguageDescriptor ProvencalOldTo1500_pro = new LanguageDescriptor
 		{
 			CodeValue = "pro",
-			ShortDescription = "\"ProvenÃ§al, Old (to 1500)\"",
-			Description = "\"ProvenÃ§al, Old (to 1500)\"",
+			ShortDescription = "Provençal, Old (to 1500)",
+			Description = "Provençal, Old (to 1500)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9197,8 +9221,8 @@
 		public static readonly LanguageDescriptor NdebeleSouth_nbl = new LanguageDescriptor
 		{
 			CodeValue = "nbl",
-			ShortDescription = "\"Ndebele, South\"",
-			Description = "\"Ndebele, South\"",
+			ShortDescription = "Ndebele, South",
+			Description = "Ndebele, South",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9573,16 +9597,16 @@
 		public static readonly LanguageDescriptor CreolesAndPidginsEnglishBased_cpe = new LanguageDescriptor
 		{
 			CodeValue = "cpe",
-			ShortDescription = "\"Creoles and pidgins, English based\"",
-			Description = "\"Creoles and pidgins, English based\"",
+			ShortDescription = "Creoles and pidgins, English based",
+			Description = "Creoles and pidgins, English based",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
 		public static readonly LanguageDescriptor CreolesAndPidginsPortugueseBased_cpp = new LanguageDescriptor
 		{
 			CodeValue = "cpp",
-			ShortDescription = "\"Creoles and pidgins, Portuguese-based\"",
-			Description = "\"Creoles and pidgins, Portuguese-based\"",
+			ShortDescription = "Creoles and pidgins, Portuguese-based",
+			Description = "Creoles and pidgins, Portuguese-based",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9653,8 +9677,8 @@
 		public static readonly LanguageDescriptor DutchMiddleCa10501350_dum = new LanguageDescriptor
 		{
 			CodeValue = "dum",
-			ShortDescription = "\"Dutch, Middle (ca.1050-1350)\"",
-			Description = "\"Dutch, Middle (ca.1050-1350)\"",
+			ShortDescription = "Dutch, Middle (ca.1050-1350)",
+			Description = "Dutch, Middle (ca.1050-1350)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9741,8 +9765,8 @@
 		public static readonly LanguageDescriptor FrenchOld842Ca1400_fro = new LanguageDescriptor
 		{
 			CodeValue = "fro",
-			ShortDescription = "\"French, Old (842-ca.1400)\"",
-			Description = "\"French, Old (842-ca.1400)\"",
+			ShortDescription = "French, Old (842-ca.1400)",
+			Description = "French, Old (842-ca.1400)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9805,8 +9829,8 @@
 		public static readonly LanguageDescriptor GermanMiddleHighCa10501500_gmh = new LanguageDescriptor
 		{
 			CodeValue = "gmh",
-			ShortDescription = "\"German, Middle High (ca.1050-1500)\"",
-			Description = "\"German, Middle High (ca.1050-1500)\"",
+			ShortDescription = "German, Middle High (ca.1050-1500)",
+			Description = "German, Middle High (ca.1050-1500)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -9829,8 +9853,8 @@
 		public static readonly LanguageDescriptor GreekAncientTo1453_grc = new LanguageDescriptor
 		{
 			CodeValue = "grc",
-			ShortDescription = "\"Greek, Ancient (to 1453)\"",
-			Description = "\"Greek, Ancient (to 1453)\"",
+			ShortDescription = "Greek, Ancient (to 1453)",
+			Description = "Greek, Ancient (to 1453)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -10373,8 +10397,8 @@
 		public static readonly LanguageDescriptor NorseOld_non = new LanguageDescriptor
 		{
 			CodeValue = "non",
-			ShortDescription = "\"Norse, Old\"",
-			Description = "\"Norse, Old\"",
+			ShortDescription = "Norse, Old",
+			Description = "Norse, Old",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -10453,8 +10477,8 @@
 		public static readonly LanguageDescriptor PersianOldCa600400BC_peo = new LanguageDescriptor
 		{
 			CodeValue = "peo",
-			ShortDescription = "\"Persian, Old (ca.600-400 B.C.)\"",
-			Description = "\"Persian, Old (ca.600-400 B.C.)\"",
+			ShortDescription = "Persian, Old (ca.600-400 B.C.)",
+			Description = "Persian, Old (ca.600-400 B.C.)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -10661,8 +10685,8 @@
 		public static readonly LanguageDescriptor SothoSouthern_sot = new LanguageDescriptor
 		{
 			CodeValue = "sot",
-			ShortDescription = "\"Sotho, Southern\"",
-			Description = "\"Sotho, Southern\"",
+			ShortDescription = "Sotho, Southern",
+			Description = "Sotho, Southern",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -10893,8 +10917,8 @@
 		public static readonly LanguageDescriptor Volapuk_vol = new LanguageDescriptor
 		{
 			CodeValue = "vol",
-			ShortDescription = "VolapÃ¼k",
-			Description = "VolapÃ¼k",
+			ShortDescription = "Volapük",
+			Description = "Volapük",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11037,8 +11061,8 @@
 		public static readonly LanguageDescriptor EnglishOldCa4501100_ang = new LanguageDescriptor
 		{
 			CodeValue = "ang",
-			ShortDescription = "\"English, Old (ca.450-1100)\"",
-			Description = "\"English, Old (ca.450-1100)\"",
+			ShortDescription = "English, Old (ca.450-1100)",
+			Description = "English, Old (ca.450-1100)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11309,8 +11333,8 @@
 		public static readonly LanguageDescriptor CreolesAndPidginsFrenchBased_cpf = new LanguageDescriptor
 		{
 			CodeValue = "cpf",
-			ShortDescription = "\"Creoles and pidgins, French-based\"",
-			Description = "\"Creoles and pidgins, French-based\"",
+			ShortDescription = "Creoles and pidgins, French-based",
+			Description = "Creoles and pidgins, French-based",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11413,8 +11437,8 @@
 		public static readonly LanguageDescriptor EnglishMiddle11001500_enm = new LanguageDescriptor
 		{
 			CodeValue = "enm",
-			ShortDescription = "\"English, Middle (1100-1500)\"",
-			Description = "\"English, Middle (1100-1500)\"",
+			ShortDescription = "English, Middle (1100-1500)",
+			Description = "English, Middle (1100-1500)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11469,8 +11493,8 @@
 		public static readonly LanguageDescriptor FrenchMiddleCa14001600_frm = new LanguageDescriptor
 		{
 			CodeValue = "frm",
-			ShortDescription = "\"French, Middle (ca.1400-1600)\"",
-			Description = "\"French, Middle (ca.1400-1600)\"",
+			ShortDescription = "French, Middle (ca.1400-1600)",
+			Description = "French, Middle (ca.1400-1600)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11549,8 +11573,8 @@
 		public static readonly LanguageDescriptor GermanOldHighCa7501050_goh = new LanguageDescriptor
 		{
 			CodeValue = "goh",
-			ShortDescription = "\"German, Old High (ca.750-1050)\"",
-			Description = "\"German, Old High (ca.750-1050)\"",
+			ShortDescription = "German, Old High (ca.750-1050)",
+			Description = "German, Old High (ca.750-1050)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11573,8 +11597,8 @@
 		public static readonly LanguageDescriptor GreekModern1453_gre = new LanguageDescriptor
 		{
 			CodeValue = "gre",
-			ShortDescription = "\"Greek, Modern (1453-)\"",
-			Description = "\"Greek, Modern (1453-)\"",
+			ShortDescription = "Greek, Modern (1453-)",
+			Description = "Greek, Modern (1453-)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -11957,8 +11981,8 @@
 		public static readonly LanguageDescriptor IrishMiddle9001200_mga = new LanguageDescriptor
 		{
 			CodeValue = "mga",
-			ShortDescription = "\"Irish, Middle (900-1200)\"",
-			Description = "\"Irish, Middle (900-1200)\"",
+			ShortDescription = "Irish, Middle (900-1200)",
+			Description = "Irish, Middle (900-1200)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -12117,8 +12141,8 @@
 		public static readonly LanguageDescriptor TurkishOttoman15001928_ota = new LanguageDescriptor
 		{
 			CodeValue = "ota",
-			ShortDescription = "\"Turkish, Ottoman (1500-1928)\"",
-			Description = "\"Turkish, Ottoman (1500-1928)\"",
+			ShortDescription = "Turkish, Ottoman (1500-1928)",
+			Description = "Turkish, Ottoman (1500-1928)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -12277,8 +12301,8 @@
 		public static readonly LanguageDescriptor IrishOldTo900_sga = new LanguageDescriptor
 		{
 			CodeValue = "sga",
-			ShortDescription = "\"Irish, Old (to 900)\"",
-			Description = "\"Irish, Old (to 900)\"",
+			ShortDescription = "Irish, Old (to 900)",
+			Description = "Irish, Old (to 900)",
 			Namespace = "uri://ed-fi.org/LanguageDescriptor",
 		};
 
@@ -14572,18 +14596,6 @@
 
 	}
 
-	public partial class ProgramCharacteristicDescriptor
-	{
-		public static readonly ProgramCharacteristicDescriptor AMcKinneyVentoProgramForHomelessness = new ProgramCharacteristicDescriptor
-		{
-			CodeValue = "A McKinney-Vento Program for Homelessness",
-			ShortDescription = "A McKinney-Vento Program for Homelessness",
-			Description = "A McKinney-Vento Program for Homelessness",
-			Namespace = "uri://ed-fi.org/ProgramCharacteristicDescriptor",
-		};
-
-	}
-
 	public partial class ProgramSponsorDescriptor
 	{
 		public static readonly ProgramSponsorDescriptor Business = new ProgramSponsorDescriptor
@@ -15392,6 +15404,74 @@
 
 	}
 
+	public partial class QuestionFormDescriptor
+	{
+		public static readonly QuestionFormDescriptor RadioBox = new QuestionFormDescriptor
+		{
+			CodeValue = "Radio box",
+			ShortDescription = "Radio box",
+			Description = "Radio box",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor Checkbox = new QuestionFormDescriptor
+		{
+			CodeValue = "Checkbox",
+			ShortDescription = "Checkbox",
+			Description = "Checkbox",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor Dropdown = new QuestionFormDescriptor
+		{
+			CodeValue = "Dropdown",
+			ShortDescription = "Dropdown",
+			Description = "Dropdown",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor MatrixOfNumericRatings = new QuestionFormDescriptor
+		{
+			CodeValue = "Matrix of numeric ratings",
+			ShortDescription = "Matrix of numeric ratings",
+			Description = "Matrix of numeric ratings",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor MatrixOfDropdowns = new QuestionFormDescriptor
+		{
+			CodeValue = "Matrix of dropdowns",
+			ShortDescription = "Matrix of dropdowns",
+			Description = "Matrix of dropdowns",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor Ranking = new QuestionFormDescriptor
+		{
+			CodeValue = "Ranking",
+			ShortDescription = "Ranking",
+			Description = "Ranking",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor Textbox = new QuestionFormDescriptor
+		{
+			CodeValue = "Textbox",
+			ShortDescription = "Textbox",
+			Description = "Textbox",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+		public static readonly QuestionFormDescriptor MatrixOfTextboxes = new QuestionFormDescriptor
+		{
+			CodeValue = "Matrix of textboxes",
+			ShortDescription = "Matrix of textboxes",
+			Description = "Matrix of textboxes",
+			Namespace = "uri://ed-fi.org/QuestionFormDescriptor",
+		};
+
+	}
+
 	public partial class RaceDescriptor
 	{
 		public static readonly RaceDescriptor AmericanIndianAlaskaNative = new RaceDescriptor
@@ -15818,11 +15898,11 @@
 			Namespace = "uri://ed-fi.org/RelationDescriptor",
 		};
 
-		public static readonly RelationDescriptor Emergency = new RelationDescriptor
+		public static readonly RelationDescriptor DEPRECATEDEmergency = new RelationDescriptor
 		{
 			CodeValue = "Emergency",
-			ShortDescription = "Emergency",
-			Description = "Emergency",
+			ShortDescription = "DEPRECATED: Emergency",
+			Description = "DEPRECATED: Emergency",
 			Namespace = "uri://ed-fi.org/RelationDescriptor",
 		};
 
@@ -15962,11 +16042,11 @@
 			Namespace = "uri://ed-fi.org/RelationDescriptor",
 		};
 
-		public static readonly RelationDescriptor Guardian = new RelationDescriptor
+		public static readonly RelationDescriptor DEPRECATEDGuardian = new RelationDescriptor
 		{
 			CodeValue = "Guardian",
-			ShortDescription = "Guardian",
-			Description = "Guardian",
+			ShortDescription = "DEPRECATED: Guardian",
+			Description = "DEPRECATED: Guardian",
 			Namespace = "uri://ed-fi.org/RelationDescriptor",
 		};
 
@@ -16419,6 +16499,14 @@
 			CodeValue = "Transportation",
 			ShortDescription = "Transportation",
 			Description = "Transportation",
+			Namespace = "uri://ed-fi.org/ResponsibilityDescriptor",
+		};
+
+		public static readonly ResponsibilityDescriptor Residency = new ResponsibilityDescriptor
+		{
+			CodeValue = "Residency",
+			ShortDescription = "Residency",
+			Description = "Residency",
 			Namespace = "uri://ed-fi.org/ResponsibilityDescriptor",
 		};
 
@@ -17150,12 +17238,56 @@
 			Namespace = "uri://ed-fi.org/SexDescriptor",
 		};
 
+		public static readonly SexDescriptor NonBinary = new SexDescriptor
+		{
+			CodeValue = "Non-binary",
+			ShortDescription = "Non-binary",
+			Description = "Non-binary",
+			Namespace = "uri://ed-fi.org/SexDescriptor",
+		};
+
 		public static readonly SexDescriptor NotSelected = new SexDescriptor
 		{
 			CodeValue = "Not Selected",
 			ShortDescription = "Not Selected",
 			Description = "Not Selected",
 			Namespace = "uri://ed-fi.org/SexDescriptor",
+		};
+
+	}
+
+	public partial class SourceSystemDescriptor
+	{
+		public static readonly SourceSystemDescriptor School = new SourceSystemDescriptor
+		{
+			CodeValue = "School",
+			ShortDescription = "School",
+			Description = "School",
+			Namespace = "uri://ed-fi.org/SourceSystemDescriptor",
+		};
+
+		public static readonly SourceSystemDescriptor District = new SourceSystemDescriptor
+		{
+			CodeValue = "District",
+			ShortDescription = "District",
+			Description = "District",
+			Namespace = "uri://ed-fi.org/SourceSystemDescriptor",
+		};
+
+		public static readonly SourceSystemDescriptor State = new SourceSystemDescriptor
+		{
+			CodeValue = "State",
+			ShortDescription = "State",
+			Description = "State",
+			Namespace = "uri://ed-fi.org/SourceSystemDescriptor",
+		};
+
+		public static readonly SourceSystemDescriptor Federal = new SourceSystemDescriptor
+		{
+			CodeValue = "Federal",
+			ShortDescription = "Federal",
+			Description = "Federal",
+			Namespace = "uri://ed-fi.org/SourceSystemDescriptor",
 		};
 
 	}
@@ -17330,59 +17462,11 @@
 
 	public partial class StaffClassificationDescriptor
 	{
-		public static readonly StaffClassificationDescriptor InstructionalAide = new StaffClassificationDescriptor
+		public static readonly StaffClassificationDescriptor AllOtherSupportStaff = new StaffClassificationDescriptor
 		{
-			CodeValue = "Instructional Aide",
-			ShortDescription = "Instructional Aide",
-			Description = "Instructional Aide",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor SchoolAdministrator = new StaffClassificationDescriptor
-		{
-			CodeValue = "School Administrator",
-			ShortDescription = "School Administrator",
-			Description = "School Administrator",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor LibrariansMediaSpecialists = new StaffClassificationDescriptor
-		{
-			CodeValue = "Librarians/Media Specialists",
-			ShortDescription = "Librarians/Media Specialists",
-			Description = "Librarians/Media Specialists",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor SubstituteTeacher = new StaffClassificationDescriptor
-		{
-			CodeValue = "Substitute Teacher",
-			ShortDescription = "Substitute Teacher",
-			Description = "Substitute Teacher",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor Counselor = new StaffClassificationDescriptor
-		{
-			CodeValue = "Counselor",
-			ShortDescription = "Counselor",
-			Description = "Counselor",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor Principal = new StaffClassificationDescriptor
-		{
-			CodeValue = "Principal",
-			ShortDescription = "Principal",
-			Description = "Principal",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor Teacher = new StaffClassificationDescriptor
-		{
-			CodeValue = "Teacher",
-			ShortDescription = "Teacher",
-			Description = "Teacher",
+			CodeValue = "All Other Support Staff",
+			ShortDescription = "All Other Support Staff",
+			Description = "All Other Support Staff",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
@@ -17394,19 +17478,51 @@
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
-		public static readonly StaffClassificationDescriptor OperationalSupport = new StaffClassificationDescriptor
+		public static readonly StaffClassificationDescriptor AssistantSuperintendent = new StaffClassificationDescriptor
 		{
-			CodeValue = "Operational Support",
-			ShortDescription = "Operational Support",
-			Description = "Operational Support",
+			CodeValue = "Assistant Superintendent",
+			ShortDescription = "Assistant Superintendent",
+			Description = "Assistant Superintendent",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
-		public static readonly StaffClassificationDescriptor Superintendent = new StaffClassificationDescriptor
+		public static readonly StaffClassificationDescriptor Counselor = new StaffClassificationDescriptor
 		{
-			CodeValue = "Superintendent",
-			ShortDescription = "Superintendent",
-			Description = "Superintendent",
+			CodeValue = "Counselor",
+			ShortDescription = "Counselor",
+			Description = "Counselor",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor ElementarySchoolCounselors = new StaffClassificationDescriptor
+		{
+			CodeValue = "Elementary School Counselors",
+			ShortDescription = "Elementary School Counselors",
+			Description = "Elementary School Counselors",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor ElementaryTeachers = new StaffClassificationDescriptor
+		{
+			CodeValue = "Elementary Teachers",
+			ShortDescription = "Elementary Teachers",
+			Description = "Elementary Teachers",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor InstructionalAide = new StaffClassificationDescriptor
+		{
+			CodeValue = "Instructional Aide",
+			ShortDescription = "Instructional Aide",
+			Description = "Instructional Aide",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor InstructionalCoordinatorsAndSupervisorsToTheStaff = new StaffClassificationDescriptor
+		{
+			CodeValue = "Instr Coordinators and Supervisors to the Staff",
+			ShortDescription = "Instructional Coordinators and Supervisors to the Staff",
+			Description = "Instructional Coordinators and Supervisors to the Staff",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
@@ -17418,51 +17534,11 @@
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
-		public static readonly StaffClassificationDescriptor SchoolLeader = new StaffClassificationDescriptor
+		public static readonly StaffClassificationDescriptor KindergartenTeachers = new StaffClassificationDescriptor
 		{
-			CodeValue = "School Leader",
-			ShortDescription = "School Leader",
-			Description = "School Leader",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor AssistantSuperintendent = new StaffClassificationDescriptor
-		{
-			CodeValue = "Assistant Superintendent",
-			ShortDescription = "Assistant Superintendent",
-			Description = "Assistant Superintendent",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor Other = new StaffClassificationDescriptor
-		{
-			CodeValue = "Other",
-			ShortDescription = "Other",
-			Description = "Other",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor SupportServicesStaff = new StaffClassificationDescriptor
-		{
-			CodeValue = "Support Services Staff",
-			ShortDescription = "Support Services Staff",
-			Description = "Support Services Staff",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor LEASpecialist = new StaffClassificationDescriptor
-		{
-			CodeValue = "LEA Specialist",
-			ShortDescription = "LEA Specialist",
-			Description = "LEA Specialist",
-			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
-		};
-
-		public static readonly StaffClassificationDescriptor StateAdministrator = new StaffClassificationDescriptor
-		{
-			CodeValue = "State Administrator",
-			ShortDescription = "State Administrator",
-			Description = "State Administrator",
+			CodeValue = "Kindergarten Teachers",
+			ShortDescription = "Kindergarten Teachers",
+			Description = "Kindergarten Teachers",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
@@ -17474,11 +17550,19 @@
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
-		public static readonly StaffClassificationDescriptor SchoolSpecialist = new StaffClassificationDescriptor
+		public static readonly StaffClassificationDescriptor LEAAdministrativeSupportStaff = new StaffClassificationDescriptor
 		{
-			CodeValue = "School Specialist",
-			ShortDescription = "School Specialist",
-			Description = "School Specialist",
+			CodeValue = "LEA Administrative Support Staff",
+			ShortDescription = "LEA Administrative Support Staff",
+			Description = "LEA Administrative Support Staff",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor LEASpecialist = new StaffClassificationDescriptor
+		{
+			CodeValue = "LEA Specialist",
+			ShortDescription = "LEA Specialist",
+			Description = "LEA Specialist",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
@@ -17487,6 +17571,182 @@
 			CodeValue = "LEA System Administrator",
 			ShortDescription = "LEA System Administrator",
 			Description = "LEA System Administrator",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor LibrariansMediaSpecialists = new StaffClassificationDescriptor
+		{
+			CodeValue = "Librarians/Media Specialists",
+			ShortDescription = "Librarians/Media Specialists",
+			Description = "Librarians/Media Specialists",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor LibraryMediaSupportStaff = new StaffClassificationDescriptor
+		{
+			CodeValue = "Library/Media Support Staff",
+			ShortDescription = "Library/Media Support Staff",
+			Description = "Library/Media Support Staff",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor OperationalSupport = new StaffClassificationDescriptor
+		{
+			CodeValue = "Operational Support",
+			ShortDescription = "Operational Support",
+			Description = "Operational Support",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor Other = new StaffClassificationDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor ParaprofessionalsInstructionalAides = new StaffClassificationDescriptor
+		{
+			CodeValue = "Paraprofessionals/Instructional Aides",
+			ShortDescription = "Paraprofessionals/Instructional Aides",
+			Description = "Paraprofessionals/Instructional Aides",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor PreKindergartenTeachers = new StaffClassificationDescriptor
+		{
+			CodeValue = "Pre-Kindergarten Teachers",
+			ShortDescription = "Pre-Kindergarten Teachers",
+			Description = "Pre-Kindergarten Teachers",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor Principal = new StaffClassificationDescriptor
+		{
+			CodeValue = "Principal",
+			ShortDescription = "Principal",
+			Description = "Principal",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolAdministrativeSupportStaff = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Administrative Support Staff",
+			ShortDescription = "School Administrative Support Staff",
+			Description = "School Administrative Support Staff",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolAdministrator = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Administrator",
+			ShortDescription = "School Administrator",
+			Description = "School Administrator",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolCounselors = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Counselors",
+			ShortDescription = "School Counselors",
+			Description = "School Counselors",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolLeader = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Leader",
+			ShortDescription = "School Leader",
+			Description = "School Leader",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolPsychologist = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Psychologist",
+			ShortDescription = "School Psychologist",
+			Description = "School Psychologist",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SchoolSpecialist = new StaffClassificationDescriptor
+		{
+			CodeValue = "School Specialist",
+			ShortDescription = "School Specialist",
+			Description = "School Specialist",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SecondarySchoolCounselors = new StaffClassificationDescriptor
+		{
+			CodeValue = "Secondary School Counselors",
+			ShortDescription = "Secondary School Counselors",
+			Description = "Secondary School Counselors",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SecondaryTeachers = new StaffClassificationDescriptor
+		{
+			CodeValue = "Secondary Teachers",
+			ShortDescription = "Secondary Teachers",
+			Description = "Secondary Teachers",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor StateAdministrator = new StaffClassificationDescriptor
+		{
+			CodeValue = "State Administrator",
+			ShortDescription = "State Administrator",
+			Description = "State Administrator",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor StudentSupportServicesStaffWOPsychology = new StaffClassificationDescriptor
+		{
+			CodeValue = "Student Support Services Staff (w/o Psychology)",
+			ShortDescription = "Student Support Services Staff (w/o Psychology)",
+			Description = "Student Support Services Staff (w/o Psychology)",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SubstituteTeacher = new StaffClassificationDescriptor
+		{
+			CodeValue = "Substitute Teacher",
+			ShortDescription = "Substitute Teacher",
+			Description = "Substitute Teacher",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor Superintendent = new StaffClassificationDescriptor
+		{
+			CodeValue = "Superintendent",
+			ShortDescription = "Superintendent",
+			Description = "Superintendent",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor SupportServicesStaff = new StaffClassificationDescriptor
+		{
+			CodeValue = "Support Services Staff",
+			ShortDescription = "Support Services Staff",
+			Description = "Support Services Staff",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor Teacher = new StaffClassificationDescriptor
+		{
+			CodeValue = "Teacher",
+			ShortDescription = "Teacher",
+			Description = "Teacher",
+			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
+		};
+
+		public static readonly StaffClassificationDescriptor UngradedTeachers = new StaffClassificationDescriptor
+		{
+			CodeValue = "Ungraded Teachers",
+			ShortDescription = "Ungraded Teachers",
+			Description = "Ungraded Teachers",
 			Namespace = "uri://ed-fi.org/StaffClassificationDescriptor",
 		};
 
@@ -18512,6 +18772,294 @@
 			ShortDescription = "Witness",
 			Description = "Witness",
 			Namespace = "uri://ed-fi.org/StudentParticipationCodeDescriptor",
+		};
+
+	}
+
+	public partial class SurveyCategoryDescriptor
+	{
+		public static readonly SurveyCategoryDescriptor Administrator = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Administrator",
+			ShortDescription = "Administrator",
+			Description = "Administrator",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Applicant = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Applicant",
+			ShortDescription = "Applicant",
+			Description = "Applicant",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Community = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Community",
+			ShortDescription = "Community",
+			Description = "Community",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor District = new SurveyCategoryDescriptor
+		{
+			CodeValue = "District",
+			ShortDescription = "District",
+			Description = "District",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Exit = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Exit",
+			ShortDescription = "Exit",
+			Description = "Exiting staff",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Other = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Parent = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Parent",
+			ShortDescription = "Parent",
+			Description = "Parent",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Principal = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Principal",
+			ShortDescription = "Principal",
+			Description = "Principal",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Student = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Student",
+			ShortDescription = "Student",
+			Description = "Student",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+		public static readonly SurveyCategoryDescriptor Teacher = new SurveyCategoryDescriptor
+		{
+			CodeValue = "Teacher",
+			ShortDescription = "Teacher",
+			Description = "Teacher",
+			Namespace = "uri://ed-fi.org/SurveyCategoryDescriptor",
+		};
+
+	}
+
+	public partial class SurveyLevelDescriptor
+	{
+		public static readonly SurveyLevelDescriptor InfantToddler = new SurveyLevelDescriptor
+		{
+			CodeValue = "Infant/toddler",
+			ShortDescription = "Infant/toddler",
+			Description = "Infant/toddler",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor EarlyEducation = new SurveyLevelDescriptor
+		{
+			CodeValue = "Early Education",
+			ShortDescription = "Early Education",
+			Description = "Early Education",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor PreschoolPrekindergarten = new SurveyLevelDescriptor
+		{
+			CodeValue = "Preschool/Prekindergarten",
+			ShortDescription = "Preschool/Prekindergarten",
+			Description = "Preschool/Prekindergarten",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Kindergarten = new SurveyLevelDescriptor
+		{
+			CodeValue = "Kindergarten",
+			ShortDescription = "Kindergarten",
+			Description = "Kindergarten",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor FirstGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "First grade",
+			ShortDescription = "First grade",
+			Description = "First grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor SecondGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Second grade",
+			ShortDescription = "Second grade",
+			Description = "Second grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor ThirdGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Third grade",
+			ShortDescription = "Third grade",
+			Description = "Third grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor FourthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Fourth grade",
+			ShortDescription = "Fourth grade",
+			Description = "Fourth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor FifthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Fifth grade",
+			ShortDescription = "Fifth grade",
+			Description = "Fifth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor SixthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Sixth grade",
+			ShortDescription = "Sixth grade",
+			Description = "Sixth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor SeventhGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Seventh grade",
+			ShortDescription = "Seventh grade",
+			Description = "Seventh grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor EighthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Eighth grade",
+			ShortDescription = "Eighth grade",
+			Description = "Eighth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor NinthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Ninth grade",
+			ShortDescription = "Ninth grade",
+			Description = "Ninth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor TenthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Tenth grade",
+			ShortDescription = "Tenth grade",
+			Description = "Tenth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor EleventhGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Eleventh grade",
+			ShortDescription = "Eleventh grade",
+			Description = "Eleventh grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor TwelfthGrade = new SurveyLevelDescriptor
+		{
+			CodeValue = "Twelfth grade",
+			ShortDescription = "Twelfth grade",
+			Description = "Twelfth grade",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Grade13 = new SurveyLevelDescriptor
+		{
+			CodeValue = "Grade 13",
+			ShortDescription = "Grade 13",
+			Description = "Grade 13",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Postsecondary = new SurveyLevelDescriptor
+		{
+			CodeValue = "Postsecondary",
+			ShortDescription = "Postsecondary",
+			Description = "Postsecondary",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Undergraduate = new SurveyLevelDescriptor
+		{
+			CodeValue = "Undergraduate",
+			ShortDescription = "Undergraduate",
+			Description = "Undergraduate",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor MasterS = new SurveyLevelDescriptor
+		{
+			CodeValue = "Master's",
+			ShortDescription = "Master's",
+			Description = "Master's",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor ProfessionalCertification = new SurveyLevelDescriptor
+		{
+			CodeValue = "Professional Certification",
+			ShortDescription = "Professional Certification",
+			Description = "Professional Certification",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor AdultEducation = new SurveyLevelDescriptor
+		{
+			CodeValue = "Adult Education",
+			ShortDescription = "Adult Education",
+			Description = "Adult Education",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor NoGradeLevel = new SurveyLevelDescriptor
+		{
+			CodeValue = "No grade level",
+			ShortDescription = "No grade level",
+			Description = "No grade level",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Other = new SurveyLevelDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
+		};
+
+		public static readonly SurveyLevelDescriptor Ungraded = new SurveyLevelDescriptor
+		{
+			CodeValue = "Ungraded",
+			ShortDescription = "Ungraded",
+			Description = "Ungraded",
+			Namespace = "uri://ed-fi.org/SurveyLevelDescriptor",
 		};
 
 	}

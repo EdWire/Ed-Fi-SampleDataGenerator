@@ -1,0 +1,11 @@
+CodeValue,ShortDescription,Description,Namespace
+Administrator,Administrator,Administrator,uri://ed-fi.org/SurveyCategoryDescriptor
+Applicant,Applicant,Applicant,uri://ed-fi.org/SurveyCategoryDescriptor
+Community,Community,Community,uri://ed-fi.org/SurveyCategoryDescriptor
+District,District,District,uri://ed-fi.org/SurveyCategoryDescriptor
+Exit,Exit,Exiting staff,uri://ed-fi.org/SurveyCategoryDescriptor
+Other,Other,Other,uri://ed-fi.org/SurveyCategoryDescriptor
+Parent,Parent,Parent,uri://ed-fi.org/SurveyCategoryDescriptor
+Principal,Principal,Principal,uri://ed-fi.org/SurveyCategoryDescriptor
+Student,Student,Student,uri://ed-fi.org/SurveyCategoryDescriptor
+Teacher,Teacher,Teacher,uri://ed-fi.org/SurveyCategoryDescriptor

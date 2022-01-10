@@ -1,0 +1,9 @@
+CodeValue,ShortDescription,Description,Namespace
+Radio box,Radio box,Radio box,uri://ed-fi.org/QuestionFormDescriptor
+Checkbox,Checkbox,Checkbox,uri://ed-fi.org/QuestionFormDescriptor
+Dropdown,Dropdown,Dropdown,uri://ed-fi.org/QuestionFormDescriptor
+Matrix of numeric ratings,Matrix of numeric ratings,Matrix of numeric ratings,uri://ed-fi.org/QuestionFormDescriptor
+Matrix of dropdowns,Matrix of dropdowns,Matrix of dropdowns,uri://ed-fi.org/QuestionFormDescriptor
+Ranking,Ranking,Ranking,uri://ed-fi.org/QuestionFormDescriptor
+Textbox,Textbox,Textbox,uri://ed-fi.org/QuestionFormDescriptor
+Matrix of textboxes,Matrix of textboxes,Matrix of textboxes,uri://ed-fi.org/QuestionFormDescriptor

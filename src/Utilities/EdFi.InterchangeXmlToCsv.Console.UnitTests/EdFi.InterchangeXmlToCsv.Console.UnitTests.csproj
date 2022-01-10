@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <AssemblyTitle>EdFi.InterchangeXmlToCsv.Console.UnitTests</AssemblyTitle>
@@ -155,7 +155,7 @@
     <None Include="Expected CSV Output\Descriptors\GradeLevelDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected CSV Output\Descriptors\GradePointAverageWeightSystemDescriptor.csv" />
+    <None Include="Expected CSV Output\Descriptors\GradePointAverageTypeDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\GradeTypeDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\GradingPeriodDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -218,9 +218,6 @@
     <None Include="Expected CSV Output\Descriptors\ProgramAssignmentDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Expected CSV Output\Descriptors\ProgramCharacteristicDescriptor.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Expected CSV Output\Descriptors\ProgramSponsorDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\ProgramTypeDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\ProgressDescriptor.csv" />
@@ -229,6 +226,7 @@
     <None Include="Expected CSV Output\Descriptors\ProviderProfitabilityDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\ProviderStatusDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\PublicationStatusDescriptor.csv" />
+    <None Include="Expected CSV Output\Descriptors\QuestionFormDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\RaceDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\ReasonExitedDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -265,6 +263,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Expected CSV Output\Descriptors\SexDescriptor.csv" />
+    <None Include="Expected CSV Output\Descriptors\SourceSystemDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\SpecialEducationProgramServiceDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\SpecialEducationSettingDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -284,6 +283,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Expected CSV Output\Descriptors\StudentParticipationCodeDescriptor.csv" />
+    <None Include="Expected CSV Output\Descriptors\SurveyCategoryDescriptor.csv" />
+    <None Include="Expected CSV Output\Descriptors\SurveyLevelDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\TeachingCredentialBasisDescriptor.csv" />
     <None Include="Expected CSV Output\Descriptors\TeachingCredentialDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -399,9 +400,6 @@
     <None Include="Sample XML\Descriptors\ProgramAssignmentDescriptor.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Sample XML\Descriptors\ProgramCharacteristicDescriptor.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Sample XML\Descriptors\ReasonExitedDescriptor.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -447,9 +445,24 @@
     <None Include="Sample XML\Descriptors\WeaponDescriptor.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Sample XML\Descriptors\GradePointAverageTypeDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\QuestionFormDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\SourceSystemDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\SurveyCategoryDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\SurveyLevelDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Sample XML\Standards\Standards.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </None>   
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sample XML\Descriptors\AbsenceEventCategoryDescriptor.xml" />
@@ -496,7 +509,7 @@
     <Content Include="Sample XML\Descriptors\EntryGradeLevelReasonDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\EventCircumstanceDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\GradebookEntryTypeDescriptor.xml" />
-    <Content Include="Sample XML\Descriptors\GradePointAverageWeightSystemDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\GradePointAverageTypeDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\GradeTypeDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\GunFreeSchoolsActReportingStatusDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\HomelessPrimaryNighttimeResidenceDescriptor.xml" />
@@ -546,6 +559,7 @@
     <Content Include="Sample XML\Descriptors\ProviderProfitabilityDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\ProviderStatusDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\PublicationStatusDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\QuestionFormDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\RaceDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\ReasonNotTestedDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\RecognitionTypeDescriptor.xml" />
@@ -561,10 +575,13 @@
     <Content Include="Sample XML\Descriptors\SchoolTypeDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\SeparationDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\SexDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\SourceSystemDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\SpecialEducationProgramServiceDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\StaffLeaveEventCategoryDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\StateAbbreviationDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\StudentParticipationCodeDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\SurveyCategoryDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\SurveyLevelDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\TeachingCredentialBasisDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\TechnicalSkillsAssessmentDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\TelephoneNumberTypeDescriptor.xml" />

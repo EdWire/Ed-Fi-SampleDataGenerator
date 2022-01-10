@@ -1,0 +1,26 @@
+CodeValue,ShortDescription,Description,Namespace
+Infant/toddler,Infant/toddler,Infant/toddler,uri://ed-fi.org/SurveyLevelDescriptor
+Early Education,Early Education,Early Education,uri://ed-fi.org/SurveyLevelDescriptor
+Preschool/Prekindergarten,Preschool/Prekindergarten,Preschool/Prekindergarten,uri://ed-fi.org/SurveyLevelDescriptor
+Kindergarten,Kindergarten,Kindergarten,uri://ed-fi.org/SurveyLevelDescriptor
+First grade,First grade,First grade,uri://ed-fi.org/SurveyLevelDescriptor
+Second grade,Second grade,Second grade,uri://ed-fi.org/SurveyLevelDescriptor
+Third grade,Third grade,Third grade,uri://ed-fi.org/SurveyLevelDescriptor
+Fourth grade,Fourth grade,Fourth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Fifth grade,Fifth grade,Fifth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Sixth grade,Sixth grade,Sixth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Seventh grade,Seventh grade,Seventh grade,uri://ed-fi.org/SurveyLevelDescriptor
+Eighth grade,Eighth grade,Eighth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Ninth grade,Ninth grade,Ninth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Tenth grade,Tenth grade,Tenth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Eleventh grade,Eleventh grade,Eleventh grade,uri://ed-fi.org/SurveyLevelDescriptor
+Twelfth grade,Twelfth grade,Twelfth grade,uri://ed-fi.org/SurveyLevelDescriptor
+Grade 13,Grade 13,Grade 13,uri://ed-fi.org/SurveyLevelDescriptor
+Postsecondary,Postsecondary,Postsecondary,uri://ed-fi.org/SurveyLevelDescriptor
+Undergraduate,Undergraduate,Undergraduate,uri://ed-fi.org/SurveyLevelDescriptor
+Master's,Master's,Master's,uri://ed-fi.org/SurveyLevelDescriptor
+Professional Certification,Professional Certification,Professional Certification,uri://ed-fi.org/SurveyLevelDescriptor
+Adult Education,Adult Education,Adult Education,uri://ed-fi.org/SurveyLevelDescriptor
+No grade level,No grade level,No grade level,uri://ed-fi.org/SurveyLevelDescriptor
+Other,Other,Other,uri://ed-fi.org/SurveyLevelDescriptor
+Ungraded,Ungraded,Ungraded,uri://ed-fi.org/SurveyLevelDescriptor

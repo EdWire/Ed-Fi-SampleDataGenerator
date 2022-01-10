@@ -242,9 +242,9 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\GradeLevelDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\GradePointAverageWeightSystemDescriptor.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\GradePointAverageTypeDescriptor.csv">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\GradeTypeDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -389,9 +389,6 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\ProgramAssignmentDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\ProgramCharacteristicDescriptor.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\ProgramSponsorDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -415,6 +412,9 @@
     </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\PublicationStatusDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\QuestionFormDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\RaceDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -482,6 +482,9 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\SexDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\SourceSystemDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\SpecialEducationProgramServiceDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -508,6 +511,12 @@
     </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\StudentParticipationCodeDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\SurveyCategoryDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\SurveyLevelDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\TeachingCredentialBasisDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

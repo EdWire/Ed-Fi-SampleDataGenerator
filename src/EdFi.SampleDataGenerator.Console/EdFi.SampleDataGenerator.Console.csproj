@@ -551,6 +551,24 @@
     <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\WeaponDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\BarrierToInternetAccessInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\InternetAccessTypeInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\InternetPerformanceInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\PrimaryLearningDeviceAccessDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\PrimaryLearningDeviceAwayFromSchoolDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Samples\SampleDataGenerator\DataFiles\Descriptors\PrimaryLearningDeviceProviderDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Samples\SampleDataGenerator\DataFiles\EducationOrganization\AccountabilityRating.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,0 +1,8 @@
+CodeValue,ShortDescription,Description,Namespace
+Desktop Computer,Desktop Computer,A desktop computer is the type of device the student uses most often to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+Laptop Computer,Laptop Computer,A Laptop Computer is the type of device the student uses most often to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+Tablet,Tablet,A Tablet is the type of device the student uses most often to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+Chromebook,Chromebook,A Chromebook is the type of device the student uses most often to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+Smartphone,Smartphone,A Smartphone is the type of device the student uses most often to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+None,None,There is not a device the student uses to complete learning activities away from school.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor
+Other,Other,The type of device the student uses most often to complete learning activities away from school is not yet defined.,uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor

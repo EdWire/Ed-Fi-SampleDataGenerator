@@ -1,8 +1,22 @@
 CodeValue,ShortDescription,Description,Namespace
-Center-EC with SA,Center-EC with SA,Center-EC with SA,uri://ed-fi.org/ProviderCategoryDescriptor
-Center-EC,Center-EC,Center-EC,uri://ed-fi.org/ProviderCategoryDescriptor
-Center-SA Only,Center-SA Only,Center-SA Only,uri://ed-fi.org/ProviderCategoryDescriptor
-Licensed Day Care Center,Licensed Day Care Center,Licensed Day Care Center,uri://ed-fi.org/ProviderCategoryDescriptor
-Licensed Family Child Care,Licensed Family Child Care,Licensed Family Child Care,uri://ed-fi.org/ProviderCategoryDescriptor
-Licensed Large Family Child Care,Licensed Large Family Child Care,Licensed Large Family Child Care,uri://ed-fi.org/ProviderCategoryDescriptor
-Not Applicable,Not Applicable,Not Applicable,uri://ed-fi.org/ProviderCategoryDescriptor
+Care in your own home,Care in your own home,Care in your own home,uri://ed-fi.org/ProviderCategoryDescriptor
+Child care center,Child care center,Child care center,uri://ed-fi.org/ProviderCategoryDescriptor
+Community care,Community care,Community care,uri://ed-fi.org/ProviderCategoryDescriptor
+Family child care home,Family child care home,Family child care home,uri://ed-fi.org/ProviderCategoryDescriptor
+Family child care home - large,Family child care home - large,Family child care home - large,uri://ed-fi.org/ProviderCategoryDescriptor
+Head Start and Early Head Start,Head Start and Early Head Start,Head Start and Early Head Start,uri://ed-fi.org/ProviderCategoryDescriptor
+Ministry care,Ministry care,Ministry care,uri://ed-fi.org/ProviderCategoryDescriptor
+On-premise child care,On-premise child care,On-premise child care,uri://ed-fi.org/ProviderCategoryDescriptor
+Other,Other,Other,uri://ed-fi.org/ProviderCategoryDescriptor
+Preschool,Preschool,Preschool,uri://ed-fi.org/ProviderCategoryDescriptor
+Resident camps,Resident camps,Resident camps,uri://ed-fi.org/ProviderCategoryDescriptor
+Residential treatment care,Residential treatment care,Residential treatment care,uri://ed-fi.org/ProviderCategoryDescriptor
+School-age child care,School-age child care,School-age child care,uri://ed-fi.org/ProviderCategoryDescriptor
+School-based child care,School-based child care,School-based child care,uri://ed-fi.org/ProviderCategoryDescriptor
+Center-EC,DEPRECATED: Center-EC,DEPRECATED: Center-EC,uri://ed-fi.org/ProviderCategoryDescriptor
+Center-EC with SA,DEPRECATED: Center-EC with SA,DEPRECATED: Center-EC with SA,uri://ed-fi.org/ProviderCategoryDescriptor
+Center-SA Only,DEPRECATED: Center-SA Only,DEPRECATED: Center-SA Only,uri://ed-fi.org/ProviderCategoryDescriptor
+Licensed Day Care Center,DEPRECATED: Licensed Day Care Center,DEPRECATED: Licensed Day Care Center,uri://ed-fi.org/ProviderCategoryDescriptor
+Licensed Family Child Care,DEPRECATED: Licensed Family Child Care,DEPRECATED: Licensed Family Child Care,uri://ed-fi.org/ProviderCategoryDescriptor
+Licensed Large Family Child Care,DEPRECATED: Licensed Large Family Child Care,DEPRECATED: Licensed Large Family Child Care,uri://ed-fi.org/ProviderCategoryDescriptor
+Not Applicable,DEPRECATED: Not Applicable,DEPRECATED: Not Applicable,uri://ed-fi.org/ProviderCategoryDescriptor

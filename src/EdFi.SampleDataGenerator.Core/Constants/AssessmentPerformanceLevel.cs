@@ -1,4 +1,4 @@
-﻿using EdFi.SampleDataGenerator.Core.Entities;
+using EdFi.SampleDataGenerator.Core.Entities;
 using EdFi.SampleDataGenerator.Core.Helpers;
 
 namespace EdFi.SampleDataGenerator.Core.Constants
@@ -9,7 +9,6 @@ namespace EdFi.SampleDataGenerator.Core.Constants
         {
             PerformanceLevelDescriptor.Pass.GetStructuredCodeValue(),
             PerformanceLevelDescriptor.Basic.GetStructuredCodeValue(),
-            PerformanceLevelDescriptor.Proficient.GetStructuredCodeValue(),
             PerformanceLevelDescriptor.Advanced.GetStructuredCodeValue(),
         };
 

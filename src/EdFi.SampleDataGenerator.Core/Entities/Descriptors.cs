@@ -2096,6 +2096,42 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 
 	}
 
+	public partial class BarrierToInternetAccessInResidenceDescriptor
+	{
+		public static readonly BarrierToInternetAccessInResidenceDescriptor NotAvailable = new BarrierToInternetAccessInResidenceDescriptor
+		{
+			CodeValue = "Not Available",
+			ShortDescription = "Not Available",
+			Description = "The student cannot access the internet in their primary place of residence because internet service is not available.",
+			Namespace = "uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor",
+		};
+
+		public static readonly BarrierToInternetAccessInResidenceDescriptor NotAffordable = new BarrierToInternetAccessInResidenceDescriptor
+		{
+			CodeValue = "Not Affordable",
+			ShortDescription = "Not Affordable",
+			Description = "The student cannot access the internet in their primary place of residence because internet service is not affordable.",
+			Namespace = "uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor",
+		};
+
+		public static readonly BarrierToInternetAccessInResidenceDescriptor NotDesired = new BarrierToInternetAccessInResidenceDescriptor
+		{
+			CodeValue = "Not Desired",
+			ShortDescription = "Not Desired",
+			Description = "The student cannot access the internet in their primary place of residence because the parent or guardian chooses not to subscribe to internet service.",
+			Namespace = "uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor",
+		};
+
+		public static readonly BarrierToInternetAccessInResidenceDescriptor Other = new BarrierToInternetAccessInResidenceDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "The reason why a student cannot access the internet in their primary place of residence is not yet defined.",
+			Namespace = "uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor",
+		};
+
+	}
+
 	public partial class BehaviorDescriptor
 	{
 		public static readonly BehaviorDescriptor StateOffense = new BehaviorDescriptor
@@ -8720,6 +8756,110 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 
 	}
 
+	public partial class InternetAccessTypeInResidenceDescriptor
+	{
+		public static readonly InternetAccessTypeInResidenceDescriptor ResidentialBroadband = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Residential Broadband",
+			ShortDescription = "Residential Broadband",
+			Description = "The type of internet service used in the student’s primary place of residence is residential broadband.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor CellularNetwork = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Cellular Network",
+			ShortDescription = "Cellular Network",
+			Description = "The type of internet service used in the student’s primary place of residence is a cellular network that creates a hot spot using a cell phone for additional device access or access to the internet is only available through a cellular device.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor HotSpot = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Hot Spot",
+			ShortDescription = "Hot Spot",
+			Description = "The type of internet service used in the student’s primary place of residence is a standalone hot spot device that is not a cell phone that allows for additional device access.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor CommunityProvidedWiFi = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Community Provided Wi-Fi",
+			ShortDescription = "Community Provided Wi-Fi",
+			Description = "The type of internet service used in the student’s primary place of residence is community provided Wi-Fi.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor Satellite = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Satellite",
+			ShortDescription = "Satellite",
+			Description = "The type of internet service used in the student’s primary place of residence is satellite.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor DialUp = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Dial-up",
+			ShortDescription = "Dial-up",
+			Description = "The type of internet service used in the student’s primary place of residence is dial-up.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor Other = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "The type of internet service used in the student’s primary place of residence is not yet defined.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor None = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "None",
+			ShortDescription = "None",
+			Description = "There is no internet service in the student’s primary place of residence.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+		public static readonly InternetAccessTypeInResidenceDescriptor Unknown = new InternetAccessTypeInResidenceDescriptor
+		{
+			CodeValue = "Unknown",
+			ShortDescription = "Unknown",
+			Description = "It is not known whether there is internet service in the student’s primary place of residence.",
+			Namespace = "uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor",
+		};
+
+	}
+
+	public partial class InternetPerformanceInResidenceDescriptor
+	{
+		public static readonly InternetPerformanceInResidenceDescriptor Yes = new InternetPerformanceInResidenceDescriptor
+		{
+			CodeValue = "Yes",
+			ShortDescription = "Yes",
+			Description = "The student experiences very few or no interruptions in learning activities caused by poor internet performance in their primary place of residence.",
+			Namespace = "uri://ed-fi.org/InternetPerformanceInResidenceDescriptor",
+		};
+
+		public static readonly InternetPerformanceInResidenceDescriptor Sometimes = new InternetPerformanceInResidenceDescriptor
+		{
+			CodeValue = "Sometimes",
+			ShortDescription = "Sometimes",
+			Description = "The student regularly experiences interruptions in learning activities caused by poor internet performance in their primary place of residence.",
+			Namespace = "uri://ed-fi.org/InternetPerformanceInResidenceDescriptor",
+		};
+
+		public static readonly InternetPerformanceInResidenceDescriptor No = new InternetPerformanceInResidenceDescriptor
+		{
+			CodeValue = "No",
+			ShortDescription = "No",
+			Description = "The student is unable to complete learning activities due to poor internet performance in their primary place of residence.",
+			Namespace = "uri://ed-fi.org/InternetPerformanceInResidenceDescriptor",
+		};
+
+	}
+
 	public partial class InterventionClassDescriptor
 	{
 		public static readonly InterventionClassDescriptor Curriculum = new InterventionClassDescriptor
@@ -14066,30 +14206,6 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor Fail = new PerformanceLevelDescriptor
-		{
-			CodeValue = "Fail",
-			ShortDescription = "Fail",
-			Description = "Fail",
-			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
-		};
-
-		public static readonly PerformanceLevelDescriptor Pass = new PerformanceLevelDescriptor
-		{
-			CodeValue = "Pass",
-			ShortDescription = "Pass",
-			Description = "Pass",
-			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
-		};
-
-		public static readonly PerformanceLevelDescriptor Proficient = new PerformanceLevelDescriptor
-		{
-			CodeValue = "Proficient",
-			ShortDescription = "Proficient",
-			Description = "Proficient",
-			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
-		};
-
 		public static readonly PerformanceLevelDescriptor WellBelowBasic = new PerformanceLevelDescriptor
 		{
 			CodeValue = "Well Below Basic",
@@ -14106,43 +14222,75 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor AboveBenchmark = new PerformanceLevelDescriptor
+		public static readonly PerformanceLevelDescriptor DidNotMeetStandard = new PerformanceLevelDescriptor
 		{
-			CodeValue = "Above Benchmark",
-			ShortDescription = "Above Benchmark",
-			Description = "Above Benchmark",
+			CodeValue = "Did Not Meet Standard",
+			ShortDescription = "Did Not Meet Standard",
+			Description = "Did Not Meet Standard",
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor CommendedPerformance = new PerformanceLevelDescriptor
+		public static readonly PerformanceLevelDescriptor Pass = new PerformanceLevelDescriptor
+		{
+			CodeValue = "Pass",
+			ShortDescription = "Pass",
+			Description = "Pass",
+			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
+		};
+
+		public static readonly PerformanceLevelDescriptor Fail = new PerformanceLevelDescriptor
+		{
+			CodeValue = "Fail",
+			ShortDescription = "Fail",
+			Description = "Fail",
+			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
+		};
+
+		public static readonly PerformanceLevelDescriptor DEPRECATEDCommendedPerformance = new PerformanceLevelDescriptor
 		{
 			CodeValue = "Commended Performance",
-			ShortDescription = "Commended Performance",
-			Description = "Commended Performance",
+			ShortDescription = "DEPRECATED: Commended Performance",
+			Description = "DEPRECATED: Commended Performance",
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor Satisfactory = new PerformanceLevelDescriptor
+		public static readonly PerformanceLevelDescriptor DEPRECATEDAboveBenchmark = new PerformanceLevelDescriptor
 		{
-			CodeValue = "Satisfactory",
-			ShortDescription = "Satisfactory",
-			Description = "Satisfactory",
+			CodeValue = "Above Benchmark",
+			ShortDescription = "DEPRECATED: Above Benchmark",
+			Description = "DEPRECATED: Above Benchmark",
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor Minimum = new PerformanceLevelDescriptor
+		public static readonly PerformanceLevelDescriptor DEPRECATEDProficient = new PerformanceLevelDescriptor
+		{
+			CodeValue = "Proficient",
+			ShortDescription = "DEPRECATED: Proficient",
+			Description = "DEPRECATED: Proficient",
+			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
+		};
+
+		public static readonly PerformanceLevelDescriptor DEPRECATEDMinimum = new PerformanceLevelDescriptor
 		{
 			CodeValue = "Minimum",
-			ShortDescription = "Minimum",
-			Description = "Minimum",
+			ShortDescription = "DEPRECATED: Minimum",
+			Description = "DEPRECATED: Minimum",
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
-		public static readonly PerformanceLevelDescriptor Unsatisfactory = new PerformanceLevelDescriptor
+		public static readonly PerformanceLevelDescriptor DEPRECATEDSatisfactory = new PerformanceLevelDescriptor
+		{
+			CodeValue = "Satisfactory",
+			ShortDescription = "DEPRECATED: Satisfactory",
+			Description = "DEPRECATED: Satisfactory",
+			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
+		};
+
+		public static readonly PerformanceLevelDescriptor DEPRECATEDUnsatisfactory = new PerformanceLevelDescriptor
 		{
 			CodeValue = "Unsatisfactory",
-			ShortDescription = "Unsatisfactory",
-			Description = "Unsatisfactory",
+			ShortDescription = "DEPRECATED: Unsatisfactory",
+			Description = "DEPRECATED: Unsatisfactory",
 			Namespace = "uri://ed-fi.org/PerformanceLevelDescriptor",
 		};
 
@@ -14520,6 +14668,122 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 			ShortDescription = "Less than 2 years (below associate)",
 			Description = "Less than 2 years (below associate)",
 			Namespace = "uri://ed-fi.org/PostSecondaryInstitutionLevelDescriptor",
+		};
+
+	}
+
+	public partial class PrimaryLearningDeviceAccessDescriptor
+	{
+		public static readonly PrimaryLearningDeviceAccessDescriptor Shared = new PrimaryLearningDeviceAccessDescriptor
+		{
+			CodeValue = "Shared",
+			ShortDescription = "Shared",
+			Description = "The primary learning device is shared with another individual.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAccessDescriptor NotShared = new PrimaryLearningDeviceAccessDescriptor
+		{
+			CodeValue = "Not Shared",
+			ShortDescription = "Not Shared",
+			Description = "The primary learning device is not shared with another individual.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAccessDescriptor Unknown = new PrimaryLearningDeviceAccessDescriptor
+		{
+			CodeValue = "Unknown",
+			ShortDescription = "Unknown",
+			Description = "It is not known whether the primary learning device is shared with another individual.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor",
+		};
+
+	}
+
+	public partial class PrimaryLearningDeviceAwayFromSchoolDescriptor
+	{
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor DesktopComputer = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Desktop Computer",
+			ShortDescription = "Desktop Computer",
+			Description = "A desktop computer is the type of device the student uses most often to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor LaptopComputer = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Laptop Computer",
+			ShortDescription = "Laptop Computer",
+			Description = "A Laptop Computer is the type of device the student uses most often to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor Tablet = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Tablet",
+			ShortDescription = "Tablet",
+			Description = "A Tablet is the type of device the student uses most often to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor Chromebook = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Chromebook",
+			ShortDescription = "Chromebook",
+			Description = "A Chromebook is the type of device the student uses most often to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor Smartphone = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Smartphone",
+			ShortDescription = "Smartphone",
+			Description = "A Smartphone is the type of device the student uses most often to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor None = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "None",
+			ShortDescription = "None",
+			Description = "There is not a device the student uses to complete learning activities away from school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceAwayFromSchoolDescriptor Other = new PrimaryLearningDeviceAwayFromSchoolDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "The type of device the student uses most often to complete learning activities away from school is not yet defined.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceAwayFromSchoolDescriptor",
+		};
+
+	}
+
+	public partial class PrimaryLearningDeviceProviderDescriptor
+	{
+		public static readonly PrimaryLearningDeviceProviderDescriptor Personal = new PrimaryLearningDeviceProviderDescriptor
+		{
+			CodeValue = "Personal",
+			ShortDescription = "Personal",
+			Description = "The provider of the primary learning device is the student or guardian.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceProviderDescriptor School = new PrimaryLearningDeviceProviderDescriptor
+		{
+			CodeValue = "School",
+			ShortDescription = "School",
+			Description = "The provider of the primary learning device is the school.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor",
+		};
+
+		public static readonly PrimaryLearningDeviceProviderDescriptor Other = new PrimaryLearningDeviceProviderDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "The provider of the primary learning device is not yet defined.",
+			Namespace = "uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor",
 		};
 
 	}
@@ -15246,59 +15510,171 @@ namespace EdFi.SampleDataGenerator.Core.Entities
 
 	public partial class ProviderCategoryDescriptor
 	{
-		public static readonly ProviderCategoryDescriptor CenterECWithSA = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor CareInYourOwnHome = new ProviderCategoryDescriptor
 		{
-			CodeValue = "Center-EC with SA",
-			ShortDescription = "Center-EC with SA",
-			Description = "Center-EC with SA",
+			CodeValue = "Care in your own home",
+			ShortDescription = "Care in your own home",
+			Description = "Care in your own home",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor CenterEC = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor ChildCareCenter = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Child care center",
+			ShortDescription = "Child care center",
+			Description = "Child care center",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor CommunityCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Community care",
+			ShortDescription = "Community care",
+			Description = "Community care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor FamilyChildCareHome = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Family child care home",
+			ShortDescription = "Family child care home",
+			Description = "Family child care home",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor FamilyChildCareHomeLarge = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Family child care home - large",
+			ShortDescription = "Family child care home - large",
+			Description = "Family child care home - large",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor HeadStartAndEarlyHeadStart = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Head Start and Early Head Start",
+			ShortDescription = "Head Start and Early Head Start",
+			Description = "Head Start and Early Head Start",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor MinistryCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Ministry care",
+			ShortDescription = "Ministry care",
+			Description = "Ministry care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor OnPremiseChildCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "On-premise child care",
+			ShortDescription = "On-premise child care",
+			Description = "On-premise child care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor Other = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Other",
+			ShortDescription = "Other",
+			Description = "Other",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor Preschool = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Preschool",
+			ShortDescription = "Preschool",
+			Description = "Preschool",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor ResidentCamps = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Resident camps",
+			ShortDescription = "Resident camps",
+			Description = "Resident camps",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor ResidentialTreatmentCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Residential treatment care",
+			ShortDescription = "Residential treatment care",
+			Description = "Residential treatment care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor SchoolAgeChildCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "School-age child care",
+			ShortDescription = "School-age child care",
+			Description = "School-age child care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor SchoolBasedChildCare = new ProviderCategoryDescriptor
+		{
+			CodeValue = "School-based child care",
+			ShortDescription = "School-based child care",
+			Description = "School-based child care",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor DEPRECATEDCenterEC = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Center-EC",
-			ShortDescription = "Center-EC",
-			Description = "Center-EC",
+			ShortDescription = "DEPRECATED: Center-EC",
+			Description = "DEPRECATED: Center-EC",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor CenterSAOnly = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor DEPRECATEDCenterECWithSA = new ProviderCategoryDescriptor
+		{
+			CodeValue = "Center-EC with SA",
+			ShortDescription = "DEPRECATED: Center-EC with SA",
+			Description = "DEPRECATED: Center-EC with SA",
+			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
+		};
+
+		public static readonly ProviderCategoryDescriptor DEPRECATEDCenterSAOnly = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Center-SA Only",
-			ShortDescription = "Center-SA Only",
-			Description = "Center-SA Only",
+			ShortDescription = "DEPRECATED: Center-SA Only",
+			Description = "DEPRECATED: Center-SA Only",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor LicensedDayCareCenter = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor DEPRECATEDLicensedDayCareCenter = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Licensed Day Care Center",
-			ShortDescription = "Licensed Day Care Center",
-			Description = "Licensed Day Care Center",
+			ShortDescription = "DEPRECATED: Licensed Day Care Center",
+			Description = "DEPRECATED: Licensed Day Care Center",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor LicensedFamilyChildCare = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor DEPRECATEDLicensedFamilyChildCare = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Licensed Family Child Care",
-			ShortDescription = "Licensed Family Child Care",
-			Description = "Licensed Family Child Care",
+			ShortDescription = "DEPRECATED: Licensed Family Child Care",
+			Description = "DEPRECATED: Licensed Family Child Care",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor LicensedLargeFamilyChildCare = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor DEPRECATEDLicensedLargeFamilyChildCare = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Licensed Large Family Child Care",
-			ShortDescription = "Licensed Large Family Child Care",
-			Description = "Licensed Large Family Child Care",
+			ShortDescription = "DEPRECATED: Licensed Large Family Child Care",
+			Description = "DEPRECATED: Licensed Large Family Child Care",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 
-		public static readonly ProviderCategoryDescriptor NotApplicable = new ProviderCategoryDescriptor
+		public static readonly ProviderCategoryDescriptor DEPRECATEDNotApplicable = new ProviderCategoryDescriptor
 		{
 			CodeValue = "Not Applicable",
-			ShortDescription = "Not Applicable",
-			Description = "Not Applicable",
+			ShortDescription = "DEPRECATED: Not Applicable",
+			Description = "DEPRECATED: Not Applicable",
 			Namespace = "uri://ed-fi.org/ProviderCategoryDescriptor",
 		};
 

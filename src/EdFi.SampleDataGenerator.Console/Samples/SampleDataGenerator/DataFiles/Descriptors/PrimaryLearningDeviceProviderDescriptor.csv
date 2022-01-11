@@ -1,0 +1,4 @@
+CodeValue,ShortDescription,Description,Namespace
+Personal,Personal,The provider of the primary learning device is the student or guardian.,uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor
+School,School,The provider of the primary learning device is the school.,uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor
+Other,Other,The provider of the primary learning device is not yet defined.,uri://ed-fi.org/PrimaryLearningDeviceProviderDescriptor

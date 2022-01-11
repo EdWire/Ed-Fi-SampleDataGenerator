@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -74,7 +74,6 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators.StudentAssessm
             if (performanceLevel.PerformanceLevel == PerformanceLevelDescriptor.BelowBasic.GetStructuredCodeValue()) return -1;
             if (performanceLevel.PerformanceLevel == PerformanceLevelDescriptor.Basic.GetStructuredCodeValue()) return 0;
             if (performanceLevel.PerformanceLevel == PerformanceLevelDescriptor.Pass.GetStructuredCodeValue()) return 0;
-            if (performanceLevel.PerformanceLevel == PerformanceLevelDescriptor.Proficient.GetStructuredCodeValue()) return 1;
             if (performanceLevel.PerformanceLevel == PerformanceLevelDescriptor.Advanced.GetStructuredCodeValue()) return 2;
 
             throw new ArgumentException($"AssessmentPerformanceLevel '{performanceLevel.PerformanceLevel}' not currently supported");

@@ -20,8 +20,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeAssessmentMetadata {
         
         private object[] itemsField;
@@ -48,7 +48,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Assessment : ComplexObjectType {
         
         private string assessmentIdentifierField;
@@ -383,7 +383,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentIdentificationCode {
         
         private string identificationCodeField;
@@ -428,7 +428,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentIndicator {
         
         private string indicatorGroupField;
@@ -498,7 +498,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Period {
         
         private System.DateTime beginDateField;
@@ -546,12 +546,14 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortYear {
         
         private SchoolYearType schoolYearField;
         
         private string cohortYearTypeField;
+        
+        private string termField;
         
         /// <remarks/>
         public SchoolYearType SchoolYear {
@@ -572,12 +574,22 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
                 this.cohortYearTypeField = value;
             }
         }
+        
+        /// <remarks/>
+        public string Term {
+            get {
+                return this.termField;
+            }
+            set {
+                this.termField = value;
+            }
+        }
     }
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public enum SchoolYearType {
         
         /// <remarks/>
@@ -826,7 +838,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramParticipation {
         
         private string programTypeField;
@@ -924,7 +936,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCharacteristic {
         
         private string studentCharacteristic1Field;
@@ -971,7 +983,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentIdentificationCode {
         
         private string identificationCodeField;
@@ -1016,7 +1028,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EmploymentPeriod {
         
         private System.DateTime hireDateField;
@@ -1088,7 +1100,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TitleIPartAProgramService {
         
         private string titleIPartAProgramService1Field;
@@ -1187,7 +1199,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SpecialEducationProgramService {
         
         private string specialEducationProgramService1Field;
@@ -1299,7 +1311,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ServiceProvider {
         
         private StaffReferenceType staffReferenceField;
@@ -1345,7 +1357,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffReferenceType : ReferenceType {
         
         private StaffIdentityType staffIdentityField;
@@ -1378,7 +1390,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffIdentityType {
         
         private string staffUniqueIdField;
@@ -1399,7 +1411,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffLookupType {
         
         private string staffUniqueIdField;
@@ -1567,7 +1579,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffIdentificationCode {
         
         private string identificationCodeField;
@@ -1612,7 +1624,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Name {
         
         private string personalTitlePrefixField;
@@ -1706,7 +1718,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IdentificationDocument {
         
         private string documentTitleField;
@@ -1813,7 +1825,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OtherName {
         
         private string personalTitlePrefixField;
@@ -1894,7 +1906,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Telephone {
         
         private string telephoneNumberField;
@@ -2002,7 +2014,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ElectronicMail {
         
         private string electronicMailAddressField;
@@ -2085,7 +2097,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationReferenceType : ReferenceType {
         
         private EducationOrganizationIdentityType educationOrganizationIdentityField;
@@ -2118,7 +2130,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationIdentityType {
         
         private int educationOrganizationIdField;
@@ -2139,7 +2151,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationLookupType {
         
         private int educationOrganizationIdField;
@@ -2209,7 +2221,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationIdentificationCode {
         
         private string identificationCodeField;
@@ -2357,7 +2369,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReferenceType {
         
         private string idField;
@@ -2392,7 +2404,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseStaffTargetAssociationReferenceType : ReferenceType {
         
         private SurveySectionResponseStaffTargetAssociationIdentityType surveySectionResponseStaffTargetAssociationIdentityField;
@@ -2413,7 +2425,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseStaffTargetAssociationIdentityType {
         
         private SurveySectionResponseReferenceType surveySectionResponseReferenceField;
@@ -2446,7 +2458,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseReferenceType : ReferenceType {
         
         private SurveySectionResponseIdentityType surveySectionResponseIdentityField;
@@ -2467,7 +2479,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseIdentityType {
         
         private SurveySectionReferenceType surveySectionReferenceField;
@@ -2500,7 +2512,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionReferenceType : ReferenceType {
         
         private SurveySectionIdentityType surveySectionIdentityField;
@@ -2521,7 +2533,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionIdentityType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -2554,7 +2566,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyReferenceType : ReferenceType {
         
         private SurveyIdentityType surveyIdentityField;
@@ -2575,7 +2587,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyIdentityType {
         
         private string surveyIdentifierField;
@@ -2608,7 +2620,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseReferenceType : ReferenceType {
         
         private SurveyResponseIdentityType surveyResponseIdentityField;
@@ -2629,7 +2641,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseIdentityType {
         
         private string surveyResponseIdentifierField;
@@ -2662,7 +2674,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseEducationOrganizationTargetAssociationReferenceType : ReferenceType {
         
         private SurveySectionResponseEducationOrganizationTargetAssociationIdentityType surveySectionResponseEducationOrganizationTargetAssociationIdentityField;
@@ -2683,7 +2695,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseEducationOrganizationTargetAssociationIdentityType {
         
         private SurveySectionResponseReferenceType surveySectionResponseReferenceField;
@@ -2716,7 +2728,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionAssociationReferenceType : ReferenceType {
         
         private SurveySectionAssociationIdentityType surveySectionAssociationIdentityField;
@@ -2737,7 +2749,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionAssociationIdentityType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -2770,7 +2782,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionReferenceType : ReferenceType {
         
         private SectionIdentityType sectionIdentityField;
@@ -2803,7 +2815,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionIdentityType {
         
         private string sectionIdentifierField;
@@ -2836,7 +2848,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseOfferingReferenceType : ReferenceType {
         
         private CourseOfferingIdentityType courseOfferingIdentityField;
@@ -2857,7 +2869,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseOfferingIdentityType {
         
         private string localCourseCodeField;
@@ -2902,7 +2914,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolReferenceType : ReferenceType {
         
         private SchoolIdentityType schoolIdentityField;
@@ -2935,7 +2947,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolIdentityType {
         
         private int schoolIdField;
@@ -2956,7 +2968,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolLookupType {
         
         private int schoolIdField;
@@ -3026,7 +3038,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SessionReferenceType : ReferenceType {
         
         private SessionIdentityType sessionIdentityField;
@@ -3059,7 +3071,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SessionIdentityType {
         
         private string sessionNameField;
@@ -3104,7 +3116,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SessionLookupType {
         
         private string sessionNameField;
@@ -3174,7 +3186,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionLookupType {
         
         private string sectionIdentifierField;
@@ -3207,7 +3219,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseStaffTargetAssociationReferenceType : ReferenceType {
         
         private SurveyResponseStaffTargetAssociationIdentityType surveyResponseStaffTargetAssociationIdentityField;
@@ -3228,7 +3240,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseStaffTargetAssociationIdentityType {
         
         private SurveyResponseReferenceType surveyResponseReferenceField;
@@ -3261,7 +3273,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseEducationOrganizationTargetAssociationReferenceType : ReferenceType {
         
         private SurveyResponseEducationOrganizationTargetAssociationIdentityType surveyResponseEducationOrganizationTargetAssociationIdentityField;
@@ -3282,7 +3294,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseEducationOrganizationTargetAssociationIdentityType {
         
         private SurveyResponseReferenceType surveyResponseReferenceField;
@@ -3315,7 +3327,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionResponseReferenceType : ReferenceType {
         
         private SurveyQuestionResponseIdentityType surveyQuestionResponseIdentityField;
@@ -3336,7 +3348,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionResponseIdentityType {
         
         private SurveyQuestionReferenceType surveyQuestionReferenceField;
@@ -3369,7 +3381,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionReferenceType : ReferenceType {
         
         private SurveyQuestionIdentityType surveyQuestionIdentityField;
@@ -3390,7 +3402,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionIdentityType {
         
         private string questionCodeField;
@@ -3423,7 +3435,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyProgramAssociationReferenceType : ReferenceType {
         
         private SurveyProgramAssociationIdentityType surveyProgramAssociationIdentityField;
@@ -3444,7 +3456,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyProgramAssociationIdentityType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -3477,7 +3489,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramReferenceType : ReferenceType {
         
         private ProgramIdentityType programIdentityField;
@@ -3510,7 +3522,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -3555,7 +3567,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramLookupType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -3612,7 +3624,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyCourseAssociationReferenceType : ReferenceType {
         
         private SurveyCourseAssociationIdentityType surveyCourseAssociationIdentityField;
@@ -3633,7 +3645,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyCourseAssociationIdentityType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -3666,7 +3678,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseReferenceType : ReferenceType {
         
         private CourseIdentityType courseIdentityField;
@@ -3699,7 +3711,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseIdentityType {
         
         private string courseCodeField;
@@ -3732,7 +3744,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseLookupType {
         
         private string courseCodeField;
@@ -3789,7 +3801,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseIdentificationCode {
         
         private string identificationCodeField;
@@ -3846,7 +3858,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentTitleIPartAProgramAssociationReferenceType : ReferenceType {
         
         private StudentTitleIPartAProgramAssociationIdentityType studentTitleIPartAProgramAssociationIdentityField;
@@ -3867,7 +3879,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentTitleIPartAProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -3925,7 +3937,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentReferenceType : ReferenceType {
         
         private StudentIdentityType studentIdentityField;
@@ -3958,7 +3970,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentIdentityType {
         
         private string studentUniqueIdField;
@@ -3979,7 +3991,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLookupType {
         
         private string studentUniqueIdField;
@@ -4048,7 +4060,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BirthData {
         
         private System.DateTime birthDateField;
@@ -4181,7 +4193,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSpecialEducationProgramAssociationReferenceType : ReferenceType {
         
         private StudentSpecialEducationProgramAssociationIdentityType studentSpecialEducationProgramAssociationIdentityField;
@@ -4202,7 +4214,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSpecialEducationProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4260,7 +4272,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAttendanceEventReferenceType : ReferenceType {
         
         private StudentSectionAttendanceEventIdentityType studentSectionAttendanceEventIdentityField;
@@ -4281,7 +4293,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAttendanceEventIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4339,7 +4351,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolFoodServiceProgramAssociationReferenceType : ReferenceType {
         
         private StudentSchoolFoodServiceProgramAssociationIdentityType studentSchoolFoodServiceProgramAssociationIdentityField;
@@ -4360,7 +4372,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolFoodServiceProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4418,7 +4430,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAttendanceEventReferenceType : ReferenceType {
         
         private StudentSchoolAttendanceEventIdentityType studentSchoolAttendanceEventIdentityField;
@@ -4439,7 +4451,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAttendanceEventIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4509,7 +4521,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAssociationReferenceType : ReferenceType {
         
         private StudentSchoolAssociationIdentityType studentSchoolAssociationIdentityField;
@@ -4530,7 +4542,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4576,7 +4588,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAttendanceEventReferenceType : ReferenceType {
         
         private StudentProgramAttendanceEventIdentityType studentProgramAttendanceEventIdentityField;
@@ -4597,7 +4609,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAttendanceEventIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4667,7 +4679,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAssociationReferenceType : ReferenceType {
         
         private StudentProgramAssociationIdentityType studentProgramAssociationIdentityField;
@@ -4688,7 +4700,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4746,7 +4758,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentParentAssociationReferenceType : ReferenceType {
         
         private StudentParentAssociationIdentityType studentParentAssociationIdentityField;
@@ -4767,7 +4779,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentParentAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -4800,7 +4812,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParentReferenceType : ReferenceType {
         
         private ParentIdentityType parentIdentityField;
@@ -4833,7 +4845,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParentIdentityType {
         
         private string parentUniqueIdField;
@@ -4854,7 +4866,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParentLookupType {
         
         private string parentUniqueIdField;
@@ -4959,7 +4971,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Address {
         
         private string streetNumberNameField;
@@ -5162,7 +5174,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentNeglectedOrDelinquentProgramAssociationReferenceType : ReferenceType {
         
         private StudentNeglectedOrDelinquentProgramAssociationIdentityType studentNeglectedOrDelinquentProgramAssociationIdentityField;
@@ -5183,7 +5195,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentNeglectedOrDelinquentProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5241,7 +5253,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentMigrantEducationProgramAssociationReferenceType : ReferenceType {
         
         private StudentMigrantEducationProgramAssociationIdentityType studentMigrantEducationProgramAssociationIdentityField;
@@ -5262,7 +5274,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentMigrantEducationProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5320,7 +5332,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLearningObjectiveReferenceType : ReferenceType {
         
         private StudentLearningObjectiveIdentityType studentLearningObjectiveIdentityField;
@@ -5341,7 +5353,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLearningObjectiveIdentityType {
         
         private LearningObjectiveReferenceType learningObjectiveReferenceField;
@@ -5386,7 +5398,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningObjectiveReferenceType : ReferenceType {
         
         private LearningObjectiveIdentityType learningObjectiveIdentityField;
@@ -5407,7 +5419,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningObjectiveIdentityType {
         
         private string learningObjectiveIdField;
@@ -5440,7 +5452,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradingPeriodReferenceType : ReferenceType {
         
         private GradingPeriodIdentityType gradingPeriodIdentityField;
@@ -5461,7 +5473,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradingPeriodIdentityType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -5518,7 +5530,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLanguageInstructionProgramAssociationReferenceType : ReferenceType {
         
         private StudentLanguageInstructionProgramAssociationIdentityType studentLanguageInstructionProgramAssociationIdentityField;
@@ -5539,7 +5551,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLanguageInstructionProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5597,7 +5609,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAttendanceEventReferenceType : ReferenceType {
         
         private StudentInterventionAttendanceEventIdentityType studentInterventionAttendanceEventIdentityField;
@@ -5618,7 +5630,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAttendanceEventIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5676,7 +5688,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionReferenceType : ReferenceType {
         
         private InterventionIdentityType interventionIdentityField;
@@ -5697,7 +5709,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -5730,7 +5742,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAssociationReferenceType : ReferenceType {
         
         private StudentInterventionAssociationIdentityType studentInterventionAssociationIdentityField;
@@ -5751,7 +5763,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5784,7 +5796,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentHomelessProgramAssociationReferenceType : ReferenceType {
         
         private StudentHomelessProgramAssociationIdentityType studentHomelessProgramAssociationIdentityField;
@@ -5805,7 +5817,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentHomelessProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5863,7 +5875,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentGradebookEntryReferenceType : ReferenceType {
         
         private StudentGradebookEntryIdentityType studentGradebookEntryIdentityField;
@@ -5884,7 +5896,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentGradebookEntryIdentityType {
         
         private StudentSectionAssociationReferenceType studentSectionAssociationReferenceField;
@@ -5917,7 +5929,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAssociationReferenceType : ReferenceType {
         
         private StudentSectionAssociationIdentityType studentSectionAssociationIdentityField;
@@ -5938,7 +5950,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -5984,7 +5996,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradebookEntryReferenceType : ReferenceType {
         
         private GradebookEntryIdentityType gradebookEntryIdentityField;
@@ -6017,7 +6029,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradebookEntryIdentityType {
         
         private string gradebookEntryTitleField;
@@ -6063,7 +6075,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradebookEntryLookupType {
         
         private string gradebookEntryTitleField;
@@ -6146,7 +6158,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationResponsibilityAssociationReferenceType : ReferenceType {
         
         private StudentEducationOrganizationResponsibilityAssociationIdentityType studentEducationOrganizationResponsibilityAssociationIdentityField;
@@ -6167,7 +6179,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationResponsibilityAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6225,7 +6237,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationAssociationReferenceType : ReferenceType {
         
         private StudentEducationOrganizationAssociationIdentityType studentEducationOrganizationAssociationIdentityField;
@@ -6246,7 +6258,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6279,7 +6291,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentNonOffenderAssociationReferenceType : ReferenceType {
         
         private StudentDisciplineIncidentNonOffenderAssociationIdentityType studentDisciplineIncidentNonOffenderAssociationIdentityField;
@@ -6300,7 +6312,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentNonOffenderAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6333,7 +6345,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineIncidentReferenceType : ReferenceType {
         
         private DisciplineIncidentIdentityType disciplineIncidentIdentityField;
@@ -6354,7 +6366,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineIncidentIdentityType {
         
         private string incidentIdentifierField;
@@ -6387,7 +6399,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentBehaviorAssociationReferenceType : ReferenceType {
         
         private StudentDisciplineIncidentBehaviorAssociationIdentityType studentDisciplineIncidentBehaviorAssociationIdentityField;
@@ -6408,7 +6420,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentBehaviorAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6453,7 +6465,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentAssociationReferenceType : ReferenceType {
         
         private StudentDisciplineIncidentAssociationIdentityType studentDisciplineIncidentAssociationIdentityField;
@@ -6474,7 +6486,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6507,7 +6519,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCTEProgramAssociationReferenceType : ReferenceType {
         
         private StudentCTEProgramAssociationIdentityType studentCTEProgramAssociationIdentityField;
@@ -6528,7 +6540,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCTEProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6586,7 +6598,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCompetencyObjectiveReferenceType : ReferenceType {
         
         private StudentCompetencyObjectiveIdentityType studentCompetencyObjectiveIdentityField;
@@ -6607,7 +6619,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCompetencyObjectiveIdentityType {
         
         private CompetencyObjectiveReferenceType competencyObjectiveReferenceField;
@@ -6652,7 +6664,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CompetencyObjectiveReferenceType : ReferenceType {
         
         private CompetencyObjectiveIdentityType competencyObjectiveIdentityField;
@@ -6673,7 +6685,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CompetencyObjectiveIdentityType {
         
         private string objectiveField;
@@ -6718,7 +6730,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCohortAssociationReferenceType : ReferenceType {
         
         private StudentCohortAssociationIdentityType studentCohortAssociationIdentityField;
@@ -6739,7 +6751,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCohortAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -6785,7 +6797,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortReferenceType : ReferenceType {
         
         private CohortIdentityType cohortIdentityField;
@@ -6806,7 +6818,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortIdentityType {
         
         private string cohortIdentifierField;
@@ -6839,7 +6851,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAssessmentReferenceType : ReferenceType {
         
         private StudentAssessmentIdentityType studentAssessmentIdentityField;
@@ -6860,7 +6872,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAssessmentIdentityType {
         
         private string studentAssessmentIdentifierField;
@@ -6905,7 +6917,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentReferenceType : ReferenceType {
         
         private AssessmentIdentityType assessmentIdentityField;
@@ -6938,7 +6950,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentIdentityType {
         
         private string assessmentIdentifierField;
@@ -6971,7 +6983,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentLookupType {
     }
     
@@ -6980,7 +6992,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgencyReferenceType : ReferenceType {
         
         private StateEducationAgencyIdentityType stateEducationAgencyIdentityField;
@@ -7013,7 +7025,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgencyIdentityType {
         
         private int stateEducationAgencyIdField;
@@ -7034,7 +7046,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgencyLookupType {
         
         private int stateEducationAgencyIdField;
@@ -7104,7 +7116,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSectionAssociationReferenceType : ReferenceType {
         
         private StaffSectionAssociationIdentityType staffSectionAssociationIdentityField;
@@ -7125,7 +7137,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSectionAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7158,7 +7170,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSchoolAssociationReferenceType : ReferenceType {
         
         private StaffSchoolAssociationIdentityType staffSchoolAssociationIdentityField;
@@ -7179,7 +7191,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSchoolAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7224,7 +7236,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffProgramAssociationReferenceType : ReferenceType {
         
         private StaffProgramAssociationIdentityType staffProgramAssociationIdentityField;
@@ -7245,7 +7257,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffProgramAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7291,7 +7303,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffLeaveReferenceType : ReferenceType {
         
         private StaffLeaveIdentityType staffLeaveIdentityField;
@@ -7312,7 +7324,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffLeaveIdentityType {
         
         private System.DateTime beginDateField;
@@ -7358,7 +7370,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationEmploymentAssociationReferenceType : ReferenceType {
         
         private StaffEducationOrganizationEmploymentAssociationIdentityType staffEducationOrganizationEmploymentAssociationIdentityField;
@@ -7379,7 +7391,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationEmploymentAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7437,7 +7449,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationContactAssociationReferenceType : ReferenceType {
         
         private StaffEducationOrganizationContactAssociationIdentityType staffEducationOrganizationContactAssociationIdentityField;
@@ -7458,7 +7470,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationContactAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7503,7 +7515,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationAssignmentAssociationReferenceType : ReferenceType {
         
         private StaffEducationOrganizationAssignmentAssociationIdentityType staffEducationOrganizationAssignmentAssociationIdentityField;
@@ -7524,7 +7536,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationAssignmentAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7582,7 +7594,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffDisciplineIncidentAssociationReferenceType : ReferenceType {
         
         private StaffDisciplineIncidentAssociationIdentityType staffDisciplineIncidentAssociationIdentityField;
@@ -7603,7 +7615,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffDisciplineIncidentAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7636,7 +7648,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffCohortAssociationReferenceType : ReferenceType {
         
         private StaffCohortAssociationIdentityType staffCohortAssociationIdentityField;
@@ -7657,7 +7669,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffCohortAssociationIdentityType {
         
         private StaffReferenceType staffReferenceField;
@@ -7703,7 +7715,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffAbsenceEventReferenceType : ReferenceType {
         
         private StaffAbsenceEventIdentityType staffAbsenceEventIdentityField;
@@ -7724,7 +7736,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffAbsenceEventIdentityType {
         
         private System.DateTime eventDateField;
@@ -7770,7 +7782,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionAttendanceTakenEventReferenceType : ReferenceType {
         
         private SectionAttendanceTakenEventIdentityType sectionAttendanceTakenEventIdentityField;
@@ -7791,7 +7803,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionAttendanceTakenEventIdentityType {
         
         private SectionReferenceType sectionReferenceField;
@@ -7824,7 +7836,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarDateReferenceType : ReferenceType {
         
         private CalendarDateIdentityType calendarDateIdentityField;
@@ -7845,7 +7857,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarDateIdentityType {
         
         private System.DateTime dateField;
@@ -7879,7 +7891,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarReferenceType : ReferenceType {
         
         private CalendarIdentityType calendarIdentityField;
@@ -7900,7 +7912,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarIdentityType {
         
         private string calendarCodeField;
@@ -7945,7 +7957,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RestraintEventReferenceType : ReferenceType {
         
         private RestraintEventIdentityType restraintEventIdentityField;
@@ -7966,7 +7978,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RestraintEventIdentityType {
         
         private string restraintEventIdentifierField;
@@ -8011,7 +8023,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReportCardReferenceType : ReferenceType {
         
         private ReportCardIdentityType reportCardIdentityField;
@@ -8032,7 +8044,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReportCardIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -8077,7 +8089,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryInstitutionReferenceType : ReferenceType {
         
         private PostSecondaryInstitutionIdentityType postSecondaryInstitutionIdentityField;
@@ -8098,7 +8110,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryInstitutionIdentityType {
         
         private int postSecondaryInstitutionIdField;
@@ -8119,7 +8131,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryEventReferenceType : ReferenceType {
         
         private PostSecondaryEventIdentityType postSecondaryEventIdentityField;
@@ -8140,7 +8152,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryEventIdentityType {
         
         private System.DateTime eventDateField;
@@ -8186,7 +8198,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PersonReferenceType : ReferenceType {
         
         private PersonIdentityType personIdentityField;
@@ -8207,7 +8219,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PersonIdentityType {
         
         private string personIdField;
@@ -8240,7 +8252,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PayrollReferenceType : ReferenceType {
         
         private PayrollIdentityType payrollIdentityField;
@@ -8261,7 +8273,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PayrollIdentityType {
         
         private System.DateTime asOfDateField;
@@ -8307,7 +8319,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountReferenceType : ReferenceType {
         
         private AccountIdentityType accountIdentityField;
@@ -8328,7 +8340,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountIdentityType {
         
         private string accountIdentifierField;
@@ -8373,7 +8385,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OrganizationDepartmentReferenceType : ReferenceType {
         
         private OrganizationDepartmentIdentityType organizationDepartmentIdentityField;
@@ -8394,7 +8406,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OrganizationDepartmentIdentityType {
         
         private int organizationDepartmentIdField;
@@ -8415,7 +8427,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OpenStaffPositionReferenceType : ReferenceType {
         
         private OpenStaffPositionIdentityType openStaffPositionIdentityField;
@@ -8436,7 +8448,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OpenStaffPositionIdentityType {
         
         private string requisitionNumberField;
@@ -8469,7 +8481,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ObjectiveAssessmentReferenceType : ReferenceType {
         
         private ObjectiveAssessmentIdentityType objectiveAssessmentIdentityField;
@@ -8490,7 +8502,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ObjectiveAssessmentIdentityType {
         
         private string identificationCodeField;
@@ -8523,7 +8535,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocationReferenceType : ReferenceType {
         
         private LocationIdentityType locationIdentityField;
@@ -8544,7 +8556,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocationIdentityType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -8577,7 +8589,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyReferenceType : ReferenceType {
         
         private LocalEducationAgencyIdentityType localEducationAgencyIdentityField;
@@ -8610,7 +8622,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyIdentityType {
         
         private int localEducationAgencyIdField;
@@ -8631,7 +8643,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyLookupType {
         
         private int localEducationAgencyIdField;
@@ -8701,7 +8713,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardReferenceType : ReferenceType {
         
         private LearningStandardIdentityType learningStandardIdentityField;
@@ -8734,7 +8746,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardIdentityType {
         
         private string learningStandardIdField;
@@ -8755,7 +8767,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardLookupType {
         
         private string learningStandardIdField;
@@ -8824,7 +8836,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardIdentificationCode {
         
         private string identificationCodeField;
@@ -8857,7 +8869,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContentStandard {
         
         private string titleField;
@@ -9005,7 +9017,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardEquivalenceAssociationReferenceType : ReferenceType {
         
         private LearningStandardEquivalenceAssociationIdentityType learningStandardEquivalenceAssociationIdentityField;
@@ -9026,7 +9038,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardEquivalenceAssociationIdentityType {
         
         private LearningStandardReferenceType sourceLearningStandardReferenceField;
@@ -9071,7 +9083,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionStudyReferenceType : ReferenceType {
         
         private InterventionStudyIdentityType interventionStudyIdentityField;
@@ -9092,7 +9104,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionStudyIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -9125,7 +9137,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GraduationPlanReferenceType : ReferenceType {
         
         private GraduationPlanIdentityType graduationPlanIdentityField;
@@ -9146,7 +9158,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GraduationPlanIdentityType {
         
         private string graduationPlanTypeField;
@@ -9191,7 +9203,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradeReferenceType : ReferenceType {
         
         private GradeIdentityType gradeIdentityField;
@@ -9212,7 +9224,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradeIdentityType {
         
         private string gradeTypeField;
@@ -9257,7 +9269,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GeneralStudentProgramAssociationReferenceType : ReferenceType {
         
         private GeneralStudentProgramAssociationIdentityType generalStudentProgramAssociationIdentityField;
@@ -9278,7 +9290,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GeneralStudentProgramAssociationIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -9336,7 +9348,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class FeederSchoolAssociationReferenceType : ReferenceType {
         
         private FeederSchoolAssociationIdentityType feederSchoolAssociationIdentityField;
@@ -9357,7 +9369,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class FeederSchoolAssociationIdentityType {
         
         private SchoolReferenceType feederSchoolReferenceField;
@@ -9403,7 +9415,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationServiceCenterReferenceType : ReferenceType {
         
         private EducationServiceCenterIdentityType educationServiceCenterIdentityField;
@@ -9436,7 +9448,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationServiceCenterIdentityType {
         
         private int educationServiceCenterIdField;
@@ -9457,7 +9469,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationServiceCenterLookupType {
         
         private int educationServiceCenterIdField;
@@ -9527,7 +9539,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationPeerAssociationReferenceType : ReferenceType {
         
         private EducationOrganizationPeerAssociationIdentityType educationOrganizationPeerAssociationIdentityField;
@@ -9548,7 +9560,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationPeerAssociationIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -9581,7 +9593,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkReferenceType : ReferenceType {
         
         private EducationOrganizationNetworkIdentityType educationOrganizationNetworkIdentityField;
@@ -9614,7 +9626,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkIdentityType {
         
         private int educationOrganizationNetworkIdField;
@@ -9635,7 +9647,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkLookupType {
         
         private int educationOrganizationNetworkIdField;
@@ -9705,7 +9717,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkAssociationReferenceType : ReferenceType {
         
         private EducationOrganizationNetworkAssociationIdentityType educationOrganizationNetworkAssociationIdentityField;
@@ -9726,7 +9738,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkAssociationIdentityType {
         
         private EducationOrganizationNetworkReferenceType educationOrganizationNetworkReferenceField;
@@ -9759,7 +9771,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionPrescriptionReferenceType : ReferenceType {
         
         private InterventionPrescriptionIdentityType interventionPrescriptionIdentityField;
@@ -9780,7 +9792,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionPrescriptionIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -9813,7 +9825,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationInterventionPrescriptionAssociationReferenceType : ReferenceType {
         
         private EducationOrganizationInterventionPrescriptionAssociationIdentityType educationOrganizationInterventionPrescriptionAssociationIdentityField;
@@ -9834,7 +9846,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationInterventionPrescriptionAssociationIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -9867,7 +9879,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationContentReferenceType : ReferenceType {
         
         private EducationContentIdentityType educationContentIdentityField;
@@ -9888,7 +9900,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationContentIdentityType {
         
         private string contentIdentifierField;
@@ -9909,7 +9921,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineActionReferenceType : ReferenceType {
         
         private DisciplineActionIdentityType disciplineActionIdentityField;
@@ -9930,7 +9942,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineActionIdentityType {
         
         private string disciplineActionIdentifierField;
@@ -9976,7 +9988,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CredentialReferenceType : ReferenceType {
         
         private CredentialIdentityType credentialIdentityField;
@@ -9997,7 +10009,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CredentialIdentityType {
         
         private string credentialIdentifierField;
@@ -10030,7 +10042,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAcademicRecordReferenceType : ReferenceType {
         
         private StudentAcademicRecordIdentityType studentAcademicRecordIdentityField;
@@ -10051,7 +10063,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAcademicRecordIdentityType {
         
         private StudentReferenceType studentReferenceField;
@@ -10108,7 +10120,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseTranscriptReferenceType : ReferenceType {
         
         private CourseTranscriptIdentityType courseTranscriptIdentityField;
@@ -10129,7 +10141,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseTranscriptIdentityType {
         
         private string courseAttemptResultField;
@@ -10174,7 +10186,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContractedStaffReferenceType : ReferenceType {
         
         private ContractedStaffIdentityType contractedStaffIdentityField;
@@ -10195,7 +10207,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContractedStaffIdentityType {
         
         private System.DateTime asOfDateField;
@@ -10241,7 +10253,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProviderReferenceType : ReferenceType {
         
         private CommunityProviderIdentityType communityProviderIdentityField;
@@ -10262,7 +10274,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProviderIdentityType {
         
         private int communityProviderIdField;
@@ -10283,7 +10295,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProviderLicenseReferenceType : ReferenceType {
         
         private CommunityProviderLicenseIdentityType communityProviderLicenseIdentityField;
@@ -10304,7 +10316,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProviderLicenseIdentityType {
         
         private CommunityProviderReferenceType communityProviderReferenceField;
@@ -10349,7 +10361,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityOrganizationReferenceType : ReferenceType {
         
         private CommunityOrganizationIdentityType communityOrganizationIdentityField;
@@ -10370,7 +10382,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityOrganizationIdentityType {
         
         private int communityOrganizationIdField;
@@ -10391,7 +10403,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ClassPeriodReferenceType : ReferenceType {
         
         private ClassPeriodIdentityType classPeriodIdentityField;
@@ -10412,7 +10424,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ClassPeriodIdentityType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -10445,7 +10457,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BudgetReferenceType : ReferenceType {
         
         private BudgetIdentityType budgetIdentityField;
@@ -10466,7 +10478,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BudgetIdentityType {
         
         private System.DateTime asOfDateField;
@@ -10500,7 +10512,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BellScheduleReferenceType : ReferenceType {
         
         private BellScheduleIdentityType bellScheduleIdentityField;
@@ -10521,7 +10533,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BellScheduleIdentityType {
         
         private string bellScheduleNameField;
@@ -10554,7 +10566,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentScoreRangeLearningStandardReferenceType : ReferenceType {
         
         private AssessmentScoreRangeLearningStandardIdentityType assessmentScoreRangeLearningStandardIdentityField;
@@ -10575,7 +10587,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentScoreRangeLearningStandardIdentityType {
         
         private AssessmentReferenceType assessmentReferenceField;
@@ -10608,7 +10620,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentItemReferenceType : ReferenceType {
         
         private AssessmentItemIdentityType assessmentItemIdentityField;
@@ -10629,7 +10641,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentItemIdentityType {
         
         private string identificationCodeField;
@@ -10662,7 +10674,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ActualReferenceType : ReferenceType {
         
         private ActualIdentityType actualIdentityField;
@@ -10683,7 +10695,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ActualIdentityType {
         
         private System.DateTime asOfDateField;
@@ -10717,7 +10729,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountCodeReferenceType : ReferenceType {
         
         private AccountCodeIdentityType accountCodeIdentityField;
@@ -10738,7 +10750,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountCodeIdentityType {
         
         private string accountCodeNumberField;
@@ -10795,7 +10807,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountabilityRatingReferenceType : ReferenceType {
         
         private AccountabilityRatingIdentityType accountabilityRatingIdentityField;
@@ -10816,7 +10828,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountabilityRatingIdentityType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -10861,7 +10873,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicWeekReferenceType : ReferenceType {
         
         private AcademicWeekIdentityType academicWeekIdentityField;
@@ -10882,7 +10894,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicWeekIdentityType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -10915,7 +10927,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Disability {
         
         private string disability1Field;
@@ -10999,7 +11011,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolFoodServiceProgramService {
         
         private string schoolFoodServiceProgramService1Field;
@@ -11098,7 +11110,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class NeglectedOrDelinquentProgramService {
         
         private string neglectedOrDelinquentProgramService1Field;
@@ -11197,7 +11209,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MigrantEducationProgramService {
         
         private string migrantEducationProgramService1Field;
@@ -11296,7 +11308,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LanguageInstructionProgramService {
         
         private string languageInstructionProgramService1Field;
@@ -11395,7 +11407,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EnglishLanguageProficiencyAssessment {
         
         private SchoolYearType schoolYearField;
@@ -11464,7 +11476,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class HomelessProgramService {
         
         private string homelessProgramService1Field;
@@ -11563,7 +11575,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CTEProgramService {
         
         private string cTEProgramService1Field;
@@ -11674,7 +11686,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Service {
         
         private string service1Field;
@@ -11773,7 +11785,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CTEProgram {
         
         private string careerPathwayField;
@@ -11856,7 +11868,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramParticipationStatus {
         
         private string participationStatusField;
@@ -11928,7 +11940,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParticipationStatus {
         
         private string participationStatus1Field;
@@ -12014,7 +12026,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionMatrixElementResponse {
         
         private string matrixElementField;
@@ -12147,7 +12159,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionResponseValue {
         
         private int surveyQuestionResponseValueIdentifierField;
@@ -12205,7 +12217,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Matrix {
         
         private string matrixElementField;
@@ -12276,7 +12288,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ResponseChoice {
         
         private int sortOrderField;
@@ -12334,7 +12346,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AttendanceEvent {
         
         private System.DateTime eventDateField;
@@ -12417,7 +12429,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentObjectiveAssessment {
         
         private ScoreResult[] scoreResultField;
@@ -12464,7 +12476,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ScoreResult {
         
         private string resultField;
@@ -12509,7 +12521,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PerformanceLevel {
         
         private bool performanceLevelMetField;
@@ -12555,7 +12567,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAssessmentItem {
         
         private string assessmentResponseField;
@@ -12662,7 +12674,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Diploma {
         
         private Achievement achievementField;
@@ -12783,7 +12795,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Achievement {
         
         private string achievementTitleField;
@@ -12900,7 +12912,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicHonor {
         
         private Achievement achievementField;
@@ -12997,7 +13009,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ClassRanking {
         
         private int classRankField;
@@ -13081,7 +13093,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Recognition {
         
         private Achievement achievementField;
@@ -13178,7 +13190,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Citizenship {
         
         private string citizenshipStatusField;
@@ -13225,7 +13237,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradePointAverage {
         
         private string gradePointAverageTypeField;
@@ -13308,7 +13320,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Language {
         
         private string language1Field;
@@ -13343,7 +13355,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionEffectiveness {
         
         private string diagnosisField;
@@ -13425,7 +13437,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RequiredAssessment {
         
         private AssessmentReferenceType assessmentReferenceField;
@@ -13471,7 +13483,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentScore {
         
         private string assessmentReportingMethodField;
@@ -13528,7 +13540,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentPerformanceLevel {
         
         private string performanceLevelField;
@@ -13597,7 +13609,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CreditsByCreditCategory {
         
         private string creditCategoryField;
@@ -13630,7 +13642,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Credits {
         
         private decimal credits1Field;
@@ -13689,7 +13701,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CreditsByCourse {
         
         private string courseSetNameField;
@@ -13747,7 +13759,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CreditsBySubject {
         
         private string academicSubjectField;
@@ -13780,7 +13792,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardGrade {
         
         private LearningStandardReferenceType learningStandardReferenceField;
@@ -13862,7 +13874,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgencyFederalFunds {
         
         private int fiscalYearField;
@@ -13908,7 +13920,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgencyAccountability {
         
         private SchoolYearType schoolYearField;
@@ -13954,7 +13966,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyFederalFunds {
         
         private int fiscalYearField;
@@ -14175,7 +14187,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyAccountability {
         
         private SchoolYearType schoolYearField;
@@ -14220,7 +14232,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationIndicator {
         
         private string indicatorField;
@@ -14302,7 +14314,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InstitutionTelephone {
         
         private string telephoneNumberField;
@@ -14335,7 +14347,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InternationalAddress {
         
         private string addressTypeField;
@@ -14492,7 +14504,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationContentSource {
         
         private EducationContentReferenceType[] educationContentReferenceField;
@@ -14540,7 +14552,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningResource {
         
         private string shortDescriptionField;
@@ -14761,7 +14773,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineIncidentExternalParticipant {
         
         private string firstNameField;
@@ -14806,7 +14818,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Behavior {
         
         private string behaviorDetailedDescriptionField;
@@ -14840,7 +14852,77 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class PartialCourseTranscriptAwards {
+        
+        private System.DateTime awardDateField;
+        
+        private decimal earnedCreditsField;
+        
+        private string methodCreditEarnedField;
+        
+        private string letterGradeEarnedField;
+        
+        private string numericGradeEarnedField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        public System.DateTime AwardDate {
+            get {
+                return this.awardDateField;
+            }
+            set {
+                this.awardDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal EarnedCredits {
+            get {
+                return this.earnedCreditsField;
+            }
+            set {
+                this.earnedCreditsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string MethodCreditEarned {
+            get {
+                return this.methodCreditEarnedField;
+            }
+            set {
+                this.methodCreditEarnedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string LetterGradeEarned {
+            get {
+                return this.letterGradeEarnedField;
+            }
+            set {
+                this.letterGradeEarnedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string NumericGradeEarned {
+            get {
+                return this.numericGradeEarnedField;
+            }
+            set {
+                this.numericGradeEarnedField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AdditionalCredits {
         
         private decimal creditsField;
@@ -14873,7 +14955,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class License {
         
         private string licenseIdentifierField;
@@ -15070,7 +15152,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MeetingTime {
         
         private System.DateTime startTimeField;
@@ -15105,7 +15187,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PossibleResponse {
         
         private string responseValueField;
@@ -15163,7 +15245,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentPeriod {
         
         private string assessmentPeriod1Field;
@@ -15291,6 +15373,9 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProgramCharacteristicDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProgramAssignmentDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProficiencyDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceProviderDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceAwayFromSchoolDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceAccessDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostSecondaryInstitutionLevelDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostSecondaryEventCategoryDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostingResultDescriptor))]
@@ -15326,6 +15411,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LanguageDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterventionEffectivenessRatingDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterventionClassDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetPerformanceInResidenceDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetAccessTypeInResidenceDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetAccessDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InteractivityStyleDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstitutionTelephoneNumberTypeDescriptor))]
@@ -15392,6 +15479,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CalendarTypeDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CalendarEventDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BehaviorDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BarrierToInternetAccessInResidenceDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttendanceEventCategoryDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttemptStatusDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssessmentReportingMethodDescriptor))]
@@ -15530,7 +15618,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public abstract partial class ComplexObjectType {
         
         private string idField;
@@ -15605,6 +15693,9 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProgramCharacteristicDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProgramAssignmentDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProficiencyDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceProviderDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceAwayFromSchoolDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryLearningDeviceAccessDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostSecondaryInstitutionLevelDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostSecondaryEventCategoryDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PostingResultDescriptor))]
@@ -15640,6 +15731,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LanguageDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterventionEffectivenessRatingDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InterventionClassDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetPerformanceInResidenceDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetAccessTypeInResidenceDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InternetAccessDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InteractivityStyleDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstitutionTelephoneNumberTypeDescriptor))]
@@ -15706,6 +15799,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CalendarTypeDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CalendarEventDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BehaviorDescriptor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BarrierToInternetAccessInResidenceDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttendanceEventCategoryDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttemptStatusDescriptor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AssessmentReportingMethodDescriptor))]
@@ -15729,7 +15823,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public abstract partial class DescriptorType : ComplexObjectType {
         
         private string codeValueField;
@@ -15850,7 +15944,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class WeaponDescriptor : DescriptorType {
     }
     
@@ -15859,7 +15953,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class VisaDescriptor : DescriptorType {
     }
     
@@ -15868,7 +15962,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TribalAffiliationDescriptor : DescriptorType {
     }
     
@@ -15877,7 +15971,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TitleIPartASchoolDesignationDescriptor : DescriptorType {
     }
     
@@ -15886,7 +15980,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TitleIPartAProgramServiceDescriptor : DescriptorType {
     }
     
@@ -15895,7 +15989,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TitleIPartAParticipantDescriptor : DescriptorType {
     }
     
@@ -15904,7 +15998,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TermDescriptor : DescriptorType {
     }
     
@@ -15913,7 +16007,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TelephoneNumberTypeDescriptor : DescriptorType {
     }
     
@@ -15922,7 +16016,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TechnicalSkillsAssessmentDescriptor : DescriptorType {
     }
     
@@ -15931,7 +16025,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TeachingCredentialDescriptor : DescriptorType {
     }
     
@@ -15940,7 +16034,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class TeachingCredentialBasisDescriptor : DescriptorType {
     }
     
@@ -15949,7 +16043,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyLevelDescriptor : DescriptorType {
     }
     
@@ -15958,7 +16052,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyCategoryDescriptor : DescriptorType {
     }
     
@@ -15967,7 +16061,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentParticipationCodeDescriptor : DescriptorType {
     }
     
@@ -15976,7 +16070,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentIdentificationSystemDescriptor : DescriptorType {
     }
     
@@ -15985,7 +16079,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCharacteristicDescriptor : DescriptorType {
     }
     
@@ -15994,7 +16088,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateAbbreviationDescriptor : DescriptorType {
     }
     
@@ -16003,7 +16097,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffLeaveEventCategoryDescriptor : DescriptorType {
     }
     
@@ -16012,7 +16106,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffIdentificationSystemDescriptor : DescriptorType {
     }
     
@@ -16021,7 +16115,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffClassificationDescriptor : DescriptorType {
     }
     
@@ -16030,7 +16124,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SpecialEducationSettingDescriptor : DescriptorType {
     }
     
@@ -16039,7 +16133,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SpecialEducationProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16048,7 +16142,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SourceSystemDescriptor : DescriptorType {
     }
     
@@ -16057,7 +16151,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SexDescriptor : DescriptorType {
     }
     
@@ -16066,7 +16160,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ServiceDescriptor : DescriptorType {
     }
     
@@ -16075,7 +16169,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SeparationReasonDescriptor : DescriptorType {
     }
     
@@ -16084,7 +16178,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SeparationDescriptor : DescriptorType {
     }
     
@@ -16093,7 +16187,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionCharacteristicDescriptor : DescriptorType {
     }
     
@@ -16102,7 +16196,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolTypeDescriptor : DescriptorType {
     }
     
@@ -16111,7 +16205,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolFoodServiceProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16120,7 +16214,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolChoiceImplementStatusDescriptor : DescriptorType {
     }
     
@@ -16129,7 +16223,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SchoolCategoryDescriptor : DescriptorType {
     }
     
@@ -16138,7 +16232,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RetestIndicatorDescriptor : DescriptorType {
     }
     
@@ -16147,7 +16241,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ResultDatatypeTypeDescriptor : DescriptorType {
     }
     
@@ -16156,7 +16250,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RestraintEventReasonDescriptor : DescriptorType {
     }
     
@@ -16165,7 +16259,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ResponsibilityDescriptor : DescriptorType {
     }
     
@@ -16174,7 +16268,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ResponseIndicatorDescriptor : DescriptorType {
     }
     
@@ -16183,7 +16277,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ResidencyStatusDescriptor : DescriptorType {
     }
     
@@ -16192,7 +16286,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReporterDescriptionDescriptor : DescriptorType {
     }
     
@@ -16201,7 +16295,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RepeatIdentifierDescriptor : DescriptorType {
     }
     
@@ -16210,7 +16304,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RelationDescriptor : DescriptorType {
     }
     
@@ -16219,7 +16313,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RecognitionTypeDescriptor : DescriptorType {
     }
     
@@ -16228,7 +16322,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReasonNotTestedDescriptor : DescriptorType {
     }
     
@@ -16237,7 +16331,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReasonExitedDescriptor : DescriptorType {
     }
     
@@ -16246,7 +16340,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RaceDescriptor : DescriptorType {
     }
     
@@ -16255,7 +16349,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class QuestionFormDescriptor : DescriptorType {
     }
     
@@ -16264,7 +16358,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PublicationStatusDescriptor : DescriptorType {
     }
     
@@ -16273,7 +16367,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProviderStatusDescriptor : DescriptorType {
     }
     
@@ -16282,7 +16376,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProviderProfitabilityDescriptor : DescriptorType {
     }
     
@@ -16291,7 +16385,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProviderCategoryDescriptor : DescriptorType {
     }
     
@@ -16300,7 +16394,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgressLevelDescriptor : DescriptorType {
     }
     
@@ -16309,7 +16403,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgressDescriptor : DescriptorType {
     }
     
@@ -16318,7 +16412,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramTypeDescriptor : DescriptorType {
     }
     
@@ -16327,7 +16421,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramSponsorDescriptor : DescriptorType {
     }
     
@@ -16336,7 +16430,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramCharacteristicDescriptor : DescriptorType {
     }
     
@@ -16345,7 +16439,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProgramAssignmentDescriptor : DescriptorType {
     }
     
@@ -16354,7 +16448,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ProficiencyDescriptor : DescriptorType {
     }
     
@@ -16363,7 +16457,34 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class PrimaryLearningDeviceProviderDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class PrimaryLearningDeviceAwayFromSchoolDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class PrimaryLearningDeviceAccessDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryInstitutionLevelDescriptor : DescriptorType {
     }
     
@@ -16372,7 +16493,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryEventCategoryDescriptor : DescriptorType {
     }
     
@@ -16381,7 +16502,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostingResultDescriptor : DescriptorType {
     }
     
@@ -16390,7 +16511,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PopulationServedDescriptor : DescriptorType {
     }
     
@@ -16399,7 +16520,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PlatformTypeDescriptor : DescriptorType {
     }
     
@@ -16408,7 +16529,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PersonalInformationVerificationDescriptor : DescriptorType {
     }
     
@@ -16417,7 +16538,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PerformanceLevelDescriptor : DescriptorType {
     }
     
@@ -16426,7 +16547,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PerformanceBaseConversionDescriptor : DescriptorType {
     }
     
@@ -16435,7 +16556,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParticipationStatusDescriptor : DescriptorType {
     }
     
@@ -16444,7 +16565,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ParticipationDescriptor : DescriptorType {
     }
     
@@ -16453,7 +16574,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OtherNameTypeDescriptor : DescriptorType {
     }
     
@@ -16462,7 +16583,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OperationalStatusDescriptor : DescriptorType {
     }
     
@@ -16471,7 +16592,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OldEthnicityDescriptor : DescriptorType {
     }
     
@@ -16480,7 +16601,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class NetworkPurposeDescriptor : DescriptorType {
     }
     
@@ -16489,7 +16610,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class NeglectedOrDelinquentProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16498,7 +16619,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class NeglectedOrDelinquentProgramDescriptor : DescriptorType {
     }
     
@@ -16507,7 +16628,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MonitoredDescriptor : DescriptorType {
     }
     
@@ -16516,7 +16637,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MigrantEducationProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16525,7 +16646,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MethodCreditEarnedDescriptor : DescriptorType {
     }
     
@@ -16534,7 +16655,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MediumOfInstructionDescriptor : DescriptorType {
     }
     
@@ -16543,7 +16664,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class MagnetSpecialProgramEmphasisSchoolDescriptor : DescriptorType {
     }
     
@@ -16552,7 +16673,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgencyCategoryDescriptor : DescriptorType {
     }
     
@@ -16561,7 +16682,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocaleDescriptor : DescriptorType {
     }
     
@@ -16570,7 +16691,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LimitedEnglishProficiencyDescriptor : DescriptorType {
     }
     
@@ -16579,7 +16700,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LicenseTypeDescriptor : DescriptorType {
     }
     
@@ -16588,7 +16709,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LicenseStatusDescriptor : DescriptorType {
     }
     
@@ -16597,7 +16718,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LevelOfEducationDescriptor : DescriptorType {
     }
     
@@ -16606,7 +16727,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardScopeDescriptor : DescriptorType {
     }
     
@@ -16615,7 +16736,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardEquivalenceStrengthDescriptor : DescriptorType {
     }
     
@@ -16624,7 +16745,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardCategoryDescriptor : DescriptorType {
     }
     
@@ -16633,7 +16754,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LanguageUseDescriptor : DescriptorType {
     }
     
@@ -16642,7 +16763,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LanguageInstructionProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16651,7 +16772,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LanguageDescriptor : DescriptorType {
     }
     
@@ -16660,7 +16781,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionEffectivenessRatingDescriptor : DescriptorType {
     }
     
@@ -16669,7 +16790,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionClassDescriptor : DescriptorType {
     }
     
@@ -16678,7 +16799,25 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class InternetPerformanceInResidenceDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class InternetAccessTypeInResidenceDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InternetAccessDescriptor : DescriptorType {
     }
     
@@ -16687,7 +16826,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InteractivityStyleDescriptor : DescriptorType {
     }
     
@@ -16696,7 +16835,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InstitutionTelephoneNumberTypeDescriptor : DescriptorType {
     }
     
@@ -16705,7 +16844,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IndicatorLevelDescriptor : DescriptorType {
     }
     
@@ -16714,7 +16853,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IndicatorGroupDescriptor : DescriptorType {
     }
     
@@ -16723,7 +16862,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IndicatorDescriptor : DescriptorType {
     }
     
@@ -16732,7 +16871,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IncidentLocationDescriptor : DescriptorType {
     }
     
@@ -16741,7 +16880,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class IdentificationDocumentUseDescriptor : DescriptorType {
     }
     
@@ -16750,7 +16889,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class HomelessProgramServiceDescriptor : DescriptorType {
     }
     
@@ -16759,7 +16898,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class HomelessPrimaryNighttimeResidenceDescriptor : DescriptorType {
     }
     
@@ -16768,7 +16907,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GunFreeSchoolsActReportingStatusDescriptor : DescriptorType {
     }
     
@@ -16777,7 +16916,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GraduationPlanTypeDescriptor : DescriptorType {
     }
     
@@ -16786,7 +16925,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradingPeriodDescriptor : DescriptorType {
     }
     
@@ -16795,7 +16934,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradeTypeDescriptor : DescriptorType {
     }
     
@@ -16804,7 +16943,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradePointAverageTypeDescriptor : DescriptorType {
     }
     
@@ -16813,7 +16952,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradeLevelDescriptor : DescriptorType {
     }
     
@@ -16822,7 +16961,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradebookEntryTypeDescriptor : DescriptorType {
     }
     
@@ -16831,7 +16970,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ExitWithdrawTypeDescriptor : DescriptorType {
     }
     
@@ -16840,7 +16979,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EventCircumstanceDescriptor : DescriptorType {
     }
     
@@ -16849,7 +16988,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EntryTypeDescriptor : DescriptorType {
     }
     
@@ -16858,7 +16997,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EntryGradeLevelReasonDescriptor : DescriptorType {
     }
     
@@ -16867,7 +17006,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EmploymentStatusDescriptor : DescriptorType {
     }
     
@@ -16876,7 +17015,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ElectronicMailTypeDescriptor : DescriptorType {
     }
     
@@ -16885,7 +17024,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationPlanDescriptor : DescriptorType {
     }
     
@@ -16894,7 +17033,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationIdentificationSystemDescriptor : DescriptorType {
     }
     
@@ -16903,7 +17042,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationCategoryDescriptor : DescriptorType {
     }
     
@@ -16912,7 +17051,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationalEnvironmentDescriptor : DescriptorType {
     }
     
@@ -16921,7 +17060,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineIncidentParticipationCodeDescriptor : DescriptorType {
     }
     
@@ -16930,7 +17069,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineDescriptor : DescriptorType {
     }
     
@@ -16939,7 +17078,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineActionLengthDifferenceReasonDescriptor : DescriptorType {
     }
     
@@ -16948,7 +17087,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisabilityDeterminationSourceTypeDescriptor : DescriptorType {
     }
     
@@ -16957,7 +17096,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisabilityDesignationDescriptor : DescriptorType {
     }
     
@@ -16966,7 +17105,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisabilityDescriptor : DescriptorType {
     }
     
@@ -16975,7 +17114,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DiplomaTypeDescriptor : DescriptorType {
     }
     
@@ -16984,7 +17123,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DiplomaLevelDescriptor : DescriptorType {
     }
     
@@ -16993,7 +17132,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DiagnosisDescriptor : DescriptorType {
     }
     
@@ -17002,7 +17141,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DeliveryMethodDescriptor : DescriptorType {
     }
     
@@ -17011,7 +17150,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CurriculumUsedDescriptor : DescriptorType {
     }
     
@@ -17020,7 +17159,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CTEProgramServiceDescriptor : DescriptorType {
     }
     
@@ -17029,7 +17168,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CreditTypeDescriptor : DescriptorType {
     }
     
@@ -17038,7 +17177,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CreditCategoryDescriptor : DescriptorType {
     }
     
@@ -17047,7 +17186,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CredentialTypeDescriptor : DescriptorType {
     }
     
@@ -17056,7 +17195,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CredentialFieldDescriptor : DescriptorType {
     }
     
@@ -17065,7 +17204,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseRepeatCodeDescriptor : DescriptorType {
     }
     
@@ -17074,7 +17213,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseLevelCharacteristicDescriptor : DescriptorType {
     }
     
@@ -17083,7 +17222,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseIdentificationSystemDescriptor : DescriptorType {
     }
     
@@ -17092,7 +17231,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseGPAApplicabilityDescriptor : DescriptorType {
     }
     
@@ -17101,7 +17240,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseDefinedByDescriptor : DescriptorType {
     }
     
@@ -17110,7 +17249,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseAttemptResultDescriptor : DescriptorType {
     }
     
@@ -17119,7 +17258,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CountryDescriptor : DescriptorType {
     }
     
@@ -17128,7 +17267,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CostRateDescriptor : DescriptorType {
     }
     
@@ -17137,7 +17276,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContinuationOfServicesReasonDescriptor : DescriptorType {
     }
     
@@ -17146,7 +17285,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContentClassDescriptor : DescriptorType {
     }
     
@@ -17155,7 +17294,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContactTypeDescriptor : DescriptorType {
     }
     
@@ -17164,7 +17303,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CompetencyLevelDescriptor : DescriptorType {
     }
     
@@ -17173,7 +17312,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortYearTypeDescriptor : DescriptorType {
     }
     
@@ -17182,7 +17321,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortTypeDescriptor : DescriptorType {
     }
     
@@ -17191,7 +17330,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CohortScopeDescriptor : DescriptorType {
     }
     
@@ -17200,7 +17339,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ClassroomPositionDescriptor : DescriptorType {
     }
     
@@ -17209,7 +17348,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CitizenshipStatusDescriptor : DescriptorType {
     }
     
@@ -17218,7 +17357,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CharterStatusDescriptor : DescriptorType {
     }
     
@@ -17227,7 +17366,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CharterApprovalAgencyTypeDescriptor : DescriptorType {
     }
     
@@ -17236,7 +17375,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CareerPathwayDescriptor : DescriptorType {
     }
     
@@ -17245,7 +17384,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarTypeDescriptor : DescriptorType {
     }
     
@@ -17254,7 +17393,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarEventDescriptor : DescriptorType {
     }
     
@@ -17263,7 +17402,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BehaviorDescriptor : DescriptorType {
     }
     
@@ -17272,7 +17411,16 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
+    public partial class BarrierToInternetAccessInResidenceDescriptor : DescriptorType {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AttendanceEventCategoryDescriptor : DescriptorType {
     }
     
@@ -17281,7 +17429,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AttemptStatusDescriptor : DescriptorType {
     }
     
@@ -17290,7 +17438,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentReportingMethodDescriptor : DescriptorType {
     }
     
@@ -17299,7 +17447,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentPeriodDescriptor : DescriptorType {
     }
     
@@ -17308,7 +17456,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentItemResultDescriptor : DescriptorType {
     }
     
@@ -17317,7 +17465,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentItemCategoryDescriptor : DescriptorType {
     }
     
@@ -17326,7 +17474,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentIdentificationSystemDescriptor : DescriptorType {
     }
     
@@ -17335,7 +17483,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentCategoryDescriptor : DescriptorType {
     }
     
@@ -17344,7 +17492,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AncestryEthnicOriginDescriptor : DescriptorType {
     }
     
@@ -17353,7 +17501,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AdministrativeFundingControlDescriptor : DescriptorType {
     }
     
@@ -17362,7 +17510,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AdministrationEnvironmentDescriptor : DescriptorType {
     }
     
@@ -17371,7 +17519,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AddressTypeDescriptor : DescriptorType {
     }
     
@@ -17380,7 +17528,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AdditionalCreditTypeDescriptor : DescriptorType {
     }
     
@@ -17389,7 +17537,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AchievementCategoryDescriptor : DescriptorType {
     }
     
@@ -17398,7 +17546,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountClassificationDescriptor : DescriptorType {
     }
     
@@ -17407,7 +17555,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccommodationDescriptor : DescriptorType {
     }
     
@@ -17416,7 +17564,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicSubjectDescriptor : DescriptorType {
     }
     
@@ -17425,7 +17573,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicHonorCategoryDescriptor : DescriptorType {
     }
     
@@ -17434,7 +17582,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AbsenceEventCategoryDescriptor : DescriptorType {
     }
     
@@ -17443,7 +17591,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseStaffTargetAssociation : ComplexObjectType {
         
         private SurveySectionResponseReferenceType surveySectionResponseReferenceField;
@@ -17476,7 +17624,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponseEducationOrganizationTargetAssociation : ComplexObjectType {
         
         private SurveySectionResponseReferenceType surveySectionResponseReferenceField;
@@ -17509,7 +17657,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionAssociation : ComplexObjectType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -17542,7 +17690,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseStaffTargetAssociation : ComplexObjectType {
         
         private SurveyResponseReferenceType surveyResponseReferenceField;
@@ -17575,7 +17723,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponseEducationOrganizationTargetAssociation : ComplexObjectType {
         
         private SurveyResponseReferenceType surveyResponseReferenceField;
@@ -17608,7 +17756,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyProgramAssociation : ComplexObjectType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -17641,7 +17789,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyCourseAssociation : ComplexObjectType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -17674,7 +17822,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -17820,7 +17968,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18202,7 +18350,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentParentAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18384,7 +18532,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18479,7 +18627,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationResponsibilityAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18563,7 +18711,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentEducationOrganizationAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18611,6 +18759,22 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         private string loginIdField;
         
         private string[] ancestryEthnicOriginField;
+        
+        private string primaryLearningDeviceAwayFromSchoolField;
+        
+        private string primaryLearningDeviceAccessField;
+        
+        private string primaryLearningDeviceProviderField;
+        
+        private bool internetAccessInResidenceField;
+        
+        private bool internetAccessInResidenceFieldSpecified;
+        
+        private string barrierToInternetAccessInResidenceField;
+        
+        private string internetAccessTypeInResidenceField;
+        
+        private string internetPerformanceInResidenceField;
         
         /// <remarks/>
         public StudentReferenceType StudentReference {
@@ -18856,6 +19020,87 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
                 this.ancestryEthnicOriginField = value;
             }
         }
+        
+        /// <remarks/>
+        public string PrimaryLearningDeviceAwayFromSchool {
+            get {
+                return this.primaryLearningDeviceAwayFromSchoolField;
+            }
+            set {
+                this.primaryLearningDeviceAwayFromSchoolField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PrimaryLearningDeviceAccess {
+            get {
+                return this.primaryLearningDeviceAccessField;
+            }
+            set {
+                this.primaryLearningDeviceAccessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PrimaryLearningDeviceProvider {
+            get {
+                return this.primaryLearningDeviceProviderField;
+            }
+            set {
+                this.primaryLearningDeviceProviderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool InternetAccessInResidence {
+            get {
+                return this.internetAccessInResidenceField;
+            }
+            set {
+                this.internetAccessInResidenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool InternetAccessInResidenceSpecified {
+            get {
+                return this.internetAccessInResidenceFieldSpecified;
+            }
+            set {
+                this.internetAccessInResidenceFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string BarrierToInternetAccessInResidence {
+            get {
+                return this.barrierToInternetAccessInResidenceField;
+            }
+            set {
+                this.barrierToInternetAccessInResidenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string InternetAccessTypeInResidence {
+            get {
+                return this.internetAccessTypeInResidenceField;
+            }
+            set {
+                this.internetAccessTypeInResidenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string InternetPerformanceInResidence {
+            get {
+                return this.internetPerformanceInResidenceField;
+            }
+            set {
+                this.internetPerformanceInResidenceField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -18863,7 +19108,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentNonOffenderAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18909,7 +19154,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentBehaviorAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -18979,7 +19224,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentDisciplineIncidentAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -19037,7 +19282,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCohortAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -19122,7 +19367,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSectionAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19294,7 +19539,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffSchoolAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19402,7 +19647,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffProgramAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19499,7 +19744,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationEmploymentAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19656,7 +19901,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationContactAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19750,7 +19995,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffEducationOrganizationAssignmentAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19774,6 +20019,10 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         private StaffEducationOrganizationEmploymentAssociationReferenceType staffEducationOrganizationEmploymentAssociationReferenceField;
         
         private CredentialReferenceType credentialReferenceField;
+        
+        private decimal fullTimeEquivalencyField;
+        
+        private bool fullTimeEquivalencyFieldSpecified;
         
         /// <remarks/>
         public StaffReferenceType StaffReference {
@@ -19888,6 +20137,27 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
                 this.credentialReferenceField = value;
             }
         }
+        
+        /// <remarks/>
+        public decimal FullTimeEquivalency {
+            get {
+                return this.fullTimeEquivalencyField;
+            }
+            set {
+                this.fullTimeEquivalencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FullTimeEquivalencySpecified {
+            get {
+                return this.fullTimeEquivalencyFieldSpecified;
+            }
+            set {
+                this.fullTimeEquivalencyFieldSpecified = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -19895,7 +20165,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffDisciplineIncidentAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -19941,7 +20211,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffCohortAssociation : ComplexObjectType {
         
         private StaffReferenceType staffReferenceField;
@@ -20038,7 +20308,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandardEquivalenceAssociation : ComplexObjectType {
         
         private LearningStandardReferenceType sourceLearningStandardReferenceField;
@@ -20142,7 +20412,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GeneralStudentProgramAssociation : ComplexObjectType {
         
         private StudentReferenceType studentReferenceField;
@@ -20288,7 +20558,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentTitleIPartAProgramAssociation : GeneralStudentProgramAssociation {
         
         private string titleIPartAParticipantField;
@@ -20335,7 +20605,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSpecialEducationProgramAssociation : GeneralStudentProgramAssociation {
         
         private bool ideaEligibilityField;
@@ -20624,7 +20894,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolFoodServiceProgramAssociation : GeneralStudentProgramAssociation {
         
         private bool directCertificationField;
@@ -20671,7 +20941,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAssociation : GeneralStudentProgramAssociation {
         
         private Service[] serviceField;
@@ -20693,7 +20963,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentNeglectedOrDelinquentProgramAssociation : GeneralStudentProgramAssociation {
         
         private string neglectedOrDelinquentProgramField;
@@ -20751,7 +21021,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentMigrantEducationProgramAssociation : GeneralStudentProgramAssociation {
         
         private bool priorityForServicesField;
@@ -20966,7 +21236,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLanguageInstructionProgramAssociation : GeneralStudentProgramAssociation {
         
         private EnglishLanguageProficiencyAssessment[] englishLanguageProficiencyAssessmentField;
@@ -21051,7 +21321,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentHomelessProgramAssociation : GeneralStudentProgramAssociation {
         
         private string homelessPrimaryNighttimeResidenceField;
@@ -21135,7 +21405,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCTEProgramAssociation : GeneralStudentProgramAssociation {
         
         private CTEProgram[] cTEProgramField;
@@ -21245,7 +21515,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class FeederSchoolAssociation : ComplexObjectType {
         
         private SchoolReferenceType feederSchoolReferenceField;
@@ -21329,7 +21599,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationPeerAssociation : ComplexObjectType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -21362,7 +21632,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetworkAssociation : ComplexObjectType {
         
         private EducationOrganizationNetworkReferenceType educationOrganizationNetworkReferenceField;
@@ -21447,7 +21717,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationInterventionPrescriptionAssociation : ComplexObjectType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -21532,7 +21802,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySectionResponse : ComplexObjectType {
         
         private SurveySectionReferenceType surveySectionReferenceField;
@@ -21590,7 +21860,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveySection : ComplexObjectType {
         
         private SurveyReferenceType surveyReferenceField;
@@ -21623,7 +21893,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyResponse : ComplexObjectType {
         
         private string surveyResponseIdentifierField;
@@ -21758,7 +22028,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestionResponse : ComplexObjectType {
         
         private SurveyQuestionReferenceType surveyQuestionReferenceField;
@@ -21854,7 +22124,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SurveyQuestion : ComplexObjectType {
         
         private string questionCodeField;
@@ -21949,7 +22219,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Survey : ComplexObjectType {
         
         private string surveyIdentifierField;
@@ -22067,7 +22337,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSectionAttendanceEvent : ComplexObjectType {
         
         private AttendanceEvent attendanceEventField;
@@ -22087,6 +22357,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         private System.DateTime departureTimeField;
         
         private bool departureTimeFieldSpecified;
+        
+        private ClassPeriodReferenceType[] classPeriodReferenceField;
         
         /// <remarks/>
         public AttendanceEvent AttendanceEvent {
@@ -22182,6 +22454,17 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
                 this.departureTimeFieldSpecified = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ClassPeriodReference")]
+        public ClassPeriodReferenceType[] ClassPeriodReference {
+            get {
+                return this.classPeriodReferenceField;
+            }
+            set {
+                this.classPeriodReferenceField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -22189,7 +22472,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentSchoolAttendanceEvent : ComplexObjectType {
         
         private AttendanceEvent attendanceEventField;
@@ -22323,7 +22606,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentProgramAttendanceEvent : ComplexObjectType {
         
         private AttendanceEvent attendanceEventField;
@@ -22405,7 +22688,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentLearningObjective : ComplexObjectType {
         
         private LearningObjectiveReferenceType learningObjectiveReferenceField;
@@ -22488,7 +22771,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentInterventionAttendanceEvent : ComplexObjectType {
         
         private AttendanceEvent attendanceEventField;
@@ -22558,7 +22841,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentGradebookEntry : ComplexObjectType {
         
         private System.DateTime dateFulfilledField;
@@ -22678,7 +22961,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentCompetencyObjective : ComplexObjectType {
         
         private CompetencyObjectiveReferenceType competencyObjectiveReferenceField;
@@ -22761,7 +23044,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAssessment : ComplexObjectType {
         
         private string studentAssessmentIdentifierField;
@@ -23041,7 +23324,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StudentAcademicRecord : ComplexObjectType {
         
         private Credits cumulativeEarnedCreditsField;
@@ -23361,7 +23644,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Student : ComplexObjectType {
         
         private string studentUniqueIdField;
@@ -23443,7 +23726,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffLeave : ComplexObjectType {
         
         private System.DateTime beginDateField;
@@ -23552,7 +23835,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StaffAbsenceEvent : ComplexObjectType {
         
         private System.DateTime eventDateField;
@@ -23635,7 +23918,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Staff : ComplexObjectType {
         
         private string staffUniqueIdField;
@@ -24022,7 +24305,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Session : ComplexObjectType {
         
         private string sessionNameField;
@@ -24143,7 +24426,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class SectionAttendanceTakenEvent : ComplexObjectType {
         
         private SectionReferenceType sectionReferenceField;
@@ -24201,7 +24484,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Section : ComplexObjectType {
         
         private string sectionIdentifierField;
@@ -24445,7 +24728,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class RestraintEvent : ComplexObjectType {
         
         private string restraintEventIdentifierField;
@@ -24541,7 +24824,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ReportCard : ComplexObjectType {
         
         private GradeReferenceType[] gradeReferenceField;
@@ -24763,7 +25046,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Program : ComplexObjectType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -24885,7 +25168,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryEvent : ComplexObjectType {
         
         private System.DateTime eventDateField;
@@ -24943,7 +25226,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Person : ComplexObjectType {
         
         private string personIdField;
@@ -24976,7 +25259,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Payroll : ComplexObjectType {
         
         private decimal amountToDateField;
@@ -25034,7 +25317,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Parent : ComplexObjectType {
         
         private string parentUniqueIdField;
@@ -25193,7 +25476,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OpenStaffPosition : ComplexObjectType {
         
         private string employmentStatusField;
@@ -25351,7 +25634,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ObjectiveAssessment : ComplexObjectType {
         
         private string identificationCodeField;
@@ -25547,7 +25830,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Location : ComplexObjectType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -25630,7 +25913,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningStandard : ComplexObjectType {
         
         private string learningStandardIdField;
@@ -25823,7 +26106,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LearningObjective : ComplexObjectType {
         
         private string learningObjectiveIdField;
@@ -25967,7 +26250,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionStudy : ComplexObjectType {
         
         private EducationContentSource educationContentSourceField;
@@ -26125,7 +26408,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class InterventionPrescription : ComplexObjectType {
         
         private EducationContentSource educationContentSourceField;
@@ -26296,7 +26579,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Intervention : ComplexObjectType {
         
         private EducationContentSource educationContentSourceField;
@@ -26545,7 +26828,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GraduationPlan : ComplexObjectType {
         
         private string graduationPlanTypeField;
@@ -26679,7 +26962,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradingPeriod : ComplexObjectType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -26775,7 +27058,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class GradebookEntry : ComplexObjectType {
         
         private string gradebookEntryTitleField;
@@ -26909,7 +27192,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Grade : ComplexObjectType {
         
         private string letterGradeEarnedField;
@@ -27037,7 +27320,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public abstract partial class EducationOrganization : ComplexObjectType {
         
         private EducationOrganizationIdentificationCode[] educationOrganizationIdentificationCodeField;
@@ -27172,7 +27455,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class StateEducationAgency : EducationOrganization {
         
         private int stateEducationAgencyIdField;
@@ -27219,7 +27502,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class School : EducationOrganization {
         
         private int schoolIdField;
@@ -27387,7 +27670,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class PostSecondaryInstitution : EducationOrganization {
         
         private int postSecondaryInstitutionIdField;
@@ -27445,7 +27728,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class OrganizationDepartment : EducationOrganization {
         
         private int organizationDepartmentIdField;
@@ -27490,7 +27773,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class LocalEducationAgency : EducationOrganization {
         
         private int localEducationAgencyIdField;
@@ -27597,7 +27880,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationServiceCenter : EducationOrganization {
         
         private int educationServiceCenterIdField;
@@ -27630,7 +27913,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationOrganizationNetwork : EducationOrganization {
         
         private int educationOrganizationNetworkIdField;
@@ -27663,7 +27946,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProvider : EducationOrganization {
         
         private int communityProviderIdField;
@@ -27782,7 +28065,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityOrganization : EducationOrganization {
         
         private int communityOrganizationIdField;
@@ -27803,7 +28086,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class EducationContent : ComplexObjectType {
         
         private string contentIdentifierField;
@@ -27887,7 +28170,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineIncident : ComplexObjectType {
         
         private string incidentIdentifierField;
@@ -28120,7 +28403,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class DisciplineAction : ComplexObjectType {
         
         private string disciplineActionIdentifierField;
@@ -28379,7 +28662,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Credential : ComplexObjectType {
         
         private System.DateTime effectiveDateField;
@@ -28576,7 +28859,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseTranscript : ComplexObjectType {
         
         private string courseAttemptResultField;
@@ -28611,6 +28894,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         
         private EducationOrganizationReferenceType externalEducationOrganizationReferenceField;
         
+        private string externalEducationOrganizationNameOfInstitutionField;
+        
         private CourseIdentificationCode[] alternativeCourseIdentificationCodeField;
         
         private string assigningOrganizationIdentificationCodeField;
@@ -28620,6 +28905,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         private string[] creditCategoryField;
         
         private string[] academicSubjectField;
+        
+        private PartialCourseTranscriptAwards[] partialCourseTranscriptAwardsField;
         
         /// <remarks/>
         public string CourseAttemptResult {
@@ -28784,6 +29071,16 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         }
         
         /// <remarks/>
+        public string ExternalEducationOrganizationNameOfInstitution {
+            get {
+                return this.externalEducationOrganizationNameOfInstitutionField;
+            }
+            set {
+                this.externalEducationOrganizationNameOfInstitutionField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AlternativeCourseIdentificationCode")]
         public CourseIdentificationCode[] AlternativeCourseIdentificationCode {
             get {
@@ -28835,6 +29132,17 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
                 this.academicSubjectField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("PartialCourseTranscriptAwards")]
+        public PartialCourseTranscriptAwards[] PartialCourseTranscriptAwards {
+            get {
+                return this.partialCourseTranscriptAwardsField;
+            }
+            set {
+                this.partialCourseTranscriptAwardsField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -28842,7 +29150,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CourseOffering : ComplexObjectType {
         
         private string localCourseCodeField;
@@ -28975,7 +29283,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Course : ComplexObjectType {
         
         private string courseCodeField;
@@ -29295,7 +29603,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ContractedStaff : ComplexObjectType {
         
         private decimal amountToDateField;
@@ -29353,7 +29661,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CompetencyObjective : ComplexObjectType {
         
         private string competencyObjectiveIdField;
@@ -29434,7 +29742,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CommunityProviderLicense : ComplexObjectType {
         
         private CommunityProviderReferenceType communityProviderReferenceField;
@@ -29467,7 +29775,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Cohort : ComplexObjectType {
         
         private string cohortIdentifierField;
@@ -29561,7 +29869,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class ClassPeriod : ComplexObjectType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -29632,7 +29940,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class CalendarDate : ComplexObjectType {
         
         private System.DateTime dateField;
@@ -29679,7 +29987,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Calendar : ComplexObjectType {
         
         private string calendarCodeField;
@@ -29749,7 +30057,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Budget : ComplexObjectType {
         
         private decimal amountField;
@@ -29795,7 +30103,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class BellSchedule : ComplexObjectType {
         
         private string bellScheduleNameField;
@@ -29956,7 +30264,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentScoreRangeLearningStandard : ComplexObjectType {
         
         private AssessmentReferenceType assessmentReferenceField;
@@ -30050,7 +30358,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AssessmentItem : ComplexObjectType {
         
         private string identificationCodeField;
@@ -30207,7 +30515,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Actual : ComplexObjectType {
         
         private decimal amountToDateField;
@@ -30253,7 +30561,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountCode : ComplexObjectType {
         
         private string accountCodeNumberField;
@@ -30322,7 +30630,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AccountabilityRating : ComplexObjectType {
         
         private EducationOrganizationReferenceType educationOrganizationReferenceField;
@@ -30429,7 +30737,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class Account : ComplexObjectType {
         
         private string accountIdentifierField;
@@ -30499,7 +30807,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.0-b")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ed-fi.org/3.3.1-b")]
     public partial class AcademicWeek : ComplexObjectType {
         
         private SchoolReferenceType schoolReferenceField;
@@ -30570,8 +30878,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeDescriptors {
         
         private DescriptorType[] itemsField;
@@ -30596,6 +30904,7 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         [System.Xml.Serialization.XmlElementAttribute("AssessmentReportingMethodDescriptor", typeof(AssessmentReportingMethodDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("AttemptStatusDescriptor", typeof(AttemptStatusDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("AttendanceEventCategoryDescriptor", typeof(AttendanceEventCategoryDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("BarrierToInternetAccessInResidenceDescriptor", typeof(BarrierToInternetAccessInResidenceDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("BehaviorDescriptor", typeof(BehaviorDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("CTEProgramServiceDescriptor", typeof(CTEProgramServiceDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("CalendarEventDescriptor", typeof(CalendarEventDescriptor))]
@@ -30662,6 +30971,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         [System.Xml.Serialization.XmlElementAttribute("InstitutionTelephoneNumberTypeDescriptor", typeof(InstitutionTelephoneNumberTypeDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("InteractivityStyleDescriptor", typeof(InteractivityStyleDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("InternetAccessDescriptor", typeof(InternetAccessDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("InternetAccessTypeInResidenceDescriptor", typeof(InternetAccessTypeInResidenceDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("InternetPerformanceInResidenceDescriptor", typeof(InternetPerformanceInResidenceDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("InterventionClassDescriptor", typeof(InterventionClassDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("InterventionEffectivenessRatingDescriptor", typeof(InterventionEffectivenessRatingDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("LanguageDescriptor", typeof(LanguageDescriptor))]
@@ -30697,6 +31008,9 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
         [System.Xml.Serialization.XmlElementAttribute("PostSecondaryEventCategoryDescriptor", typeof(PostSecondaryEventCategoryDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("PostSecondaryInstitutionLevelDescriptor", typeof(PostSecondaryInstitutionLevelDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("PostingResultDescriptor", typeof(PostingResultDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("PrimaryLearningDeviceAccessDescriptor", typeof(PrimaryLearningDeviceAccessDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("PrimaryLearningDeviceAwayFromSchoolDescriptor", typeof(PrimaryLearningDeviceAwayFromSchoolDescriptor))]
+        [System.Xml.Serialization.XmlElementAttribute("PrimaryLearningDeviceProviderDescriptor", typeof(PrimaryLearningDeviceProviderDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("ProficiencyDescriptor", typeof(ProficiencyDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("ProgramAssignmentDescriptor", typeof(ProgramAssignmentDescriptor))]
         [System.Xml.Serialization.XmlElementAttribute("ProgramCharacteristicDescriptor", typeof(ProgramCharacteristicDescriptor))]
@@ -30769,8 +31083,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeEducationOrganization {
         
         private ComplexObjectType[] itemsField;
@@ -30809,8 +31123,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeEducationOrgCalendar {
         
         private ComplexObjectType[] itemsField;
@@ -30836,8 +31150,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeFinance {
         
         private ComplexObjectType[] itemsField;
@@ -30864,8 +31178,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeMasterSchedule {
         
         private ComplexObjectType[] itemsField;
@@ -30889,8 +31203,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeParent {
         
         private ComplexObjectType[] itemsField;
@@ -30914,8 +31228,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangePostSecondaryEvent {
         
         private PostSecondaryEvent[] itemsField;
@@ -30937,8 +31251,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStaffAssociation {
         
         private ComplexObjectType[] itemsField;
@@ -30971,8 +31285,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStandards {
         
         private ComplexObjectType[] itemsField;
@@ -30996,8 +31310,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudent {
         
         private ComplexObjectType[] itemsField;
@@ -31020,8 +31334,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentAssessment {
         
         private object[] itemsField;
@@ -31046,8 +31360,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentAttendance {
         
         private ComplexObjectType[] itemsField;
@@ -31073,8 +31387,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentCohort {
         
         private ComplexObjectType[] itemsField;
@@ -31098,8 +31412,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentDiscipline {
         
         private ComplexObjectType[] itemsField;
@@ -31126,8 +31440,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentEnrollment {
         
         private object[] itemsField;
@@ -31154,8 +31468,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentGrade {
         
         private ComplexObjectType[] itemsField;
@@ -31182,8 +31496,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentGradebook {
         
         private object[] itemsField;
@@ -31208,8 +31522,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentIntervention {
         
         private ComplexObjectType[] itemsField;
@@ -31236,8 +31550,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentProgram {
         
         private ComplexObjectType[] itemsField;
@@ -31268,8 +31582,8 @@ namespace EdFi.SampleDataGenerator.Core.Entities {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.0-b")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.0-b", IsNullable=false)]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ed-fi.org/3.3.1-b")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://ed-fi.org/3.3.1-b", IsNullable=false)]
     public partial class InterchangeStudentTranscript {
         
         private ComplexObjectType[] itemsField;

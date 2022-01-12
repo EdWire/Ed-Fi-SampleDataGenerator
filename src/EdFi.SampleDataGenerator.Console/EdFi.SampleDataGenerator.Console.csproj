@@ -10,6 +10,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -21,6 +22,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+    <PropertyGroup>
+        <ContentSQLiteInteropFiles>true</ContentSQLiteInteropFiles>
+        <CopySQLiteInteropFiles>false</CopySQLiteInteropFiles>
+        <CleanSQLiteInteropFiles>false</CleanSQLiteInteropFiles>
+        <CollectSQLiteInteropFiles>false</CollectSQLiteInteropFiles>
+    </PropertyGroup>
   <Import Project="$(MSBuildProjectDirectory)\..\..\eng\CopyOutputForChocolatey.targets" />
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />

@@ -1,0 +1,5 @@
+CodeValue,ShortDescription,Description,Namespace
+Not Available,Not Available,The student cannot access the internet in their primary place of residence because internet service is not available.,uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor
+Not Affordable,Not Affordable,The student cannot access the internet in their primary place of residence because internet service is not affordable.,uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor
+Not Desired,Not Desired,The student cannot access the internet in their primary place of residence because the parent or guardian chooses not to subscribe to internet service.,uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor
+Other,Other,The reason why a student cannot access the internet in their primary place of residence is not yet defined.,uri://ed-fi.org/BarrierToInternetAccessInResidenceDescriptor

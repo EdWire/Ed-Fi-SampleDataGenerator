@@ -1,0 +1,10 @@
+CodeValue,ShortDescription,Description,Namespace
+Residential Broadband,Residential Broadband,The type of internet service used in the student’s primary place of residence is residential broadband.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Cellular Network,Cellular Network,The type of internet service used in the student’s primary place of residence is a cellular network that creates a hot spot using a cell phone for additional device access or access to the internet is only available through a cellular device.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Hot Spot,Hot Spot,The type of internet service used in the student’s primary place of residence is a standalone hot spot device that is not a cell phone that allows for additional device access.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Community Provided Wi-Fi,Community Provided Wi-Fi,The type of internet service used in the student’s primary place of residence is community provided Wi-Fi.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Satellite,Satellite,The type of internet service used in the student’s primary place of residence is satellite.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Dial-up,Dial-up,The type of internet service used in the student’s primary place of residence is dial-up.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Other,Other,The type of internet service used in the student’s primary place of residence is not yet defined.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+None,None,There is no internet service in the student’s primary place of residence.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor
+Unknown,Unknown,It is not known whether there is internet service in the student’s primary place of residence.,uri://ed-fi.org/InternetAccessTypeInResidenceDescriptor

@@ -1,0 +1,4 @@
+CodeValue,ShortDescription,Description,Namespace
+Yes,Yes,The student experiences very few or no interruptions in learning activities caused by poor internet performance in their primary place of residence.,uri://ed-fi.org/InternetPerformanceInResidenceDescriptor
+Sometimes,Sometimes,The student regularly experiences interruptions in learning activities caused by poor internet performance in their primary place of residence.,uri://ed-fi.org/InternetPerformanceInResidenceDescriptor
+No,No,The student is unable to complete learning activities due to poor internet performance in their primary place of residence.,uri://ed-fi.org/InternetPerformanceInResidenceDescriptor

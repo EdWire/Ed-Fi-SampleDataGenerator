@@ -302,6 +302,24 @@
     <None Include="Expected CSV Output\Descriptors\WeaponDescriptor.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Expected CSV Output\Descriptors\BarrierToInternetAccessInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Expected CSV Output\Descriptors\InternetAccessTypeInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Expected CSV Output\Descriptors\InternetPerformanceInResidenceDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Expected CSV Output\Descriptors\PrimaryLearningDeviceAccessDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Expected CSV Output\Descriptors\PrimaryLearningDeviceAwayFromSchoolDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Expected CSV Output\Descriptors\PrimaryLearningDeviceProviderDescriptor.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Expected CSV Output\Standards\LearningStandard.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -460,6 +478,26 @@
     <None Include="Sample XML\Descriptors\SurveyLevelDescriptor.xml">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+
+    <None Include="Sample XML\Descriptors\BarrierToInternetAccessInResidenceDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\InternetAccessTypeInResidenceDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\InternetPerformanceInResidenceDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\PrimaryLearningDeviceAccessDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\PrimaryLearningDeviceAwayFromSchoolDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Sample XML\Descriptors\PrimaryLearningDeviceProviderDescriptor.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+      
     <None Include="Sample XML\Standards\Standards.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>   
@@ -590,5 +628,12 @@
     <Content Include="Sample XML\Descriptors\TitleIPartASchoolDesignationDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\TribalAffiliationDescriptor.xml" />
     <Content Include="Sample XML\Descriptors\VisaDescriptor.xml" />
+     
+    <Content Include="Sample XML\Descriptors\BarrierToInternetAccessInResidenceDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\InternetAccessTypeInResidenceDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\InternetPerformanceInResidenceDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\PrimaryLearningDeviceAccessDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\PrimaryLearningDeviceAwayFromSchoolDescriptor.xml" />
+    <Content Include="Sample XML\Descriptors\PrimaryLearningDeviceProviderDescriptor.xml" />
   </ItemGroup>
 </Project>

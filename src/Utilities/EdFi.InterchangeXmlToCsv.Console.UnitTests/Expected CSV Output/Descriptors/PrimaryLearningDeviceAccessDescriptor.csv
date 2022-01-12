@@ -1,0 +1,4 @@
+CodeValue,ShortDescription,Description,Namespace
+Shared,Shared,The primary learning device is shared with another individual.,uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor
+Not Shared,Not Shared,The primary learning device is not shared with another individual.,uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor
+Unknown,Unknown,It is not known whether the primary learning device is shared with another individual.,uri://ed-fi.org/PrimaryLearningDeviceAccessDescriptor

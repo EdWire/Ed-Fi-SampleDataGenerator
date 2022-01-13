@@ -105,6 +105,7 @@ namespace EdFi.SampleDataGenerator.Console.Entities.Csv
                         c.CourseLevelCharacteristic,
                         c.CourseIdentificationSystem,
                         c.CourseTitle,
+                        c.NumberOfParts,
                         c.CourseIdentificationCode,
                         c.LearningStandardIdentityId,
                         c.AcademicSubject
@@ -117,6 +118,7 @@ namespace EdFi.SampleDataGenerator.Console.Entities.Csv
                         c.Key.CourseLevelCharacteristic,
                         c.Key.CourseIdentificationSystem,
                         c.Key.CourseTitle,
+                        c.Key.NumberOfParts,
                         c.Key.CourseIdentificationCode,
                         c.Key.LearningStandardIdentityId,
                         c.Key.AcademicSubject
@@ -144,6 +146,7 @@ namespace EdFi.SampleDataGenerator.Console.Entities.Csv
                             CourseLevelCharacteristic = course.CourseLevelCharacteristic,
                             CourseIdentificationSystem = course.CourseIdentificationSystem,
                             CourseTitle = course.CourseTitle,
+                            NumberOfParts = course.NumberOfParts,
                             CourseIdentificationCode = course.CourseIdentificationCode,
                             EducationOrganizationIdentityId = school.Id,
                             LearningStandardIdentityId = course.LearningStandardIdentityId,
@@ -185,7 +188,6 @@ namespace EdFi.SampleDataGenerator.Console.Entities.Csv
                                 {
                                     AvailableCreditsCredits1 = section?.AvailableCreditsCredits1,
                                     ClassPeriodIdentityClassPeriodName = $"0{i} - Traditional",
-                                    ClassPeriodIdentitySchoolId = school.Id,
                                     ClassPeriodIdentitySchoolIdentityId = school.Id,
                                     CourseOfferingIdentityLocalCourseCode = course.CourseCode,
                                     CourseOfferingIdentitySessionIdentitySchoolIdentityId = school.Id,

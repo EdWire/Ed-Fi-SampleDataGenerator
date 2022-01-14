@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net452</TargetFramework>
@@ -24,12 +24,17 @@
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
     <PackageReference Include="FluentCommandLineParser" Version="1.4.3" />
-    <PackageReference Include="log4net" Version="2.0.7" />
+    <PackageReference Include="log4net" Version="2.0.12" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EdFi.SampleDataGenerator.Core\EdFi.SampleDataGenerator.Core.csproj" />

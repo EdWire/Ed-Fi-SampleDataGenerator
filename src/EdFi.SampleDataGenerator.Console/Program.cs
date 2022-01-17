@@ -8,6 +8,7 @@ using EdFi.SampleDataGenerator.Console.Entities.Csv;
 using EdFi.SampleDataGenerator.Console.XMLTemplates;
 using EdFi.SampleDataGenerator.Core.Config.Xml;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Coordination;
+using EdFi.SampleDataGenerator.Core.ApplicationPerformanceLog;
 using log4net;
 using log4net.Config;
 
@@ -16,6 +17,7 @@ namespace EdFi.SampleDataGenerator.Console
     class Program
     {
         private static ILog _log;
+        private static PerformanceLogger _performancelog;
 
         static void Main(string[] args)
         {
@@ -31,8 +33,10 @@ namespace EdFi.SampleDataGenerator.Console
                 if (commandLineConfig.ConfigurationType == ConfigurationType.Database &&
                     !string.IsNullOrEmpty(commandLineConfig.NCESDatabasePath) && !string.IsNullOrEmpty(commandLineConfig.NCESDistrictId))
                 {
+                    var tracker = _performancelog.Start("Building custom config");
                     BuildXmlConfigFromDb(commandLineConfig.NCESDatabasePath, commandLineConfig.NCESDistrictId);
                     commandLineConfig.ConfigXmlPath = XmlTemplateHelper.WriteFilePath;
+                    tracker.End();
                 }
 
                 Directory.CreateDirectory(commandLineConfig.OutputPath);
@@ -55,7 +59,7 @@ namespace EdFi.SampleDataGenerator.Console
         {
             var invalidGradeLevels = new List<string> { "Grade 1", "Grade 2", "Grade 3" };
             var invalidEthnicities = new List<string> { "No Category Codes", "Not Specified" };
-            System.Console.WriteLine("Building the config file from db....");
+            _log.Info("Building the config file from db....");
 
             try
             {
@@ -83,11 +87,12 @@ namespace EdFi.SampleDataGenerator.Console
                     district.AreaCode = sqliteDataReader["PHONE"].ToString().Substring(1, 3);
                 }
 
-                System.Console.WriteLine("District -" + district.Name);
+                var districtName = $"District - {district.Name}";
+                var readingSchools = "Reading schools...";
+                _log.Info(districtName);               
+                _log.Info(readingSchools);
 
-                System.Console.WriteLine("Reading schools...");
-
-
+                var tracker = _performancelog.Start($"{districtName} : {readingSchools}");
                 sqliteCommand = new SQLiteCommand($"SELECT * FROM school WHERE LEAID='{districtId}';", sqliteConnection);
                 sqliteDataReader = sqliteCommand.ExecuteReader();
                 while (sqliteDataReader.Read())
@@ -108,8 +113,11 @@ namespace EdFi.SampleDataGenerator.Console
 
                     district.Schools.Add(school);
                 }
+                tracker.End();
 
-                System.Console.WriteLine("Reading grades and students...");
+                var readingGrades = "Reading grades and students...";
+                _log.Info(readingGrades);
+                tracker = _performancelog.Start(readingGrades);
 
                 foreach (var school in district.Schools)
                 {
@@ -158,18 +166,13 @@ namespace EdFi.SampleDataGenerator.Console
 
                 if (!district.Schools.Any())
                     throw new Exception("There is missing data or gradelevels on all district schools.");
-
-                System.Console.WriteLine("Writing File...");
-
+                tracker.End();
+                _log.Info("Writing File...");
                 XmlTemplateHelper.BuildConfigFile(district);
-
-                System.Console.WriteLine("The Config file has been generated successfully.");
-
-                System.Console.WriteLine("Starting reading and writing csv files..");
-
+                _log.Info("The Config file has been generated successfully.");                
+                _log.Info("Starting reading and writing csv files..");
                 CsvWriteHelper.ModifyCsvFiles(district);
-
-                System.Console.WriteLine("The csv files have been modified successfully.");
+                _log.Info("The csv files have been modified successfully."); 
             }
             catch (Exception e)
             {
@@ -216,6 +219,7 @@ namespace EdFi.SampleDataGenerator.Console
         {
             BasicConfigurator.Configure();
             _log = LogManager.GetLogger(typeof (Program));
+            _performancelog = new PerformanceLogger();           
         }
 
         private static SampleDataGeneratorConsoleConfig ParseCommandLine(string[] args)

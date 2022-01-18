@@ -11,6 +11,7 @@ using EdFi.SampleDataGenerator.Core.DataGeneration.Coordination;
 using EdFi.SampleDataGenerator.Core.ApplicationPerformanceLog;
 using log4net;
 using log4net.Config;
+using System.Text;
 
 namespace EdFi.SampleDataGenerator.Console
 {
@@ -18,6 +19,7 @@ namespace EdFi.SampleDataGenerator.Console
     {
         private static ILog _log;
         private static PerformanceLogger _performancelog;
+        private static ILog _fileListlog;
 
         static void Main(string[] args)
         {
@@ -43,6 +45,8 @@ namespace EdFi.SampleDataGenerator.Console
 
                 var sampleDataGeneratorConfig = LoadXmlConfig(commandLineConfig);
                 Run(sampleDataGeneratorConfig);
+
+                SaveFileList(commandLineConfig.OutputPath);
             }
             catch (Exception e)
             {
@@ -53,6 +57,35 @@ namespace EdFi.SampleDataGenerator.Console
             System.Console.Write("Press any key to continue...");
             System.Console.ReadKey();
 #endif
+        }
+
+        public static void SaveFileList(string outputPath)
+        {
+            if(!Directory.Exists(outputPath))
+            {
+                _log.Warn($"Output {outputPath} path does not exist.");
+            }
+
+            StringBuilder sb = new StringBuilder();
+            try
+            {
+                sb.Append($"Path,Date{Environment.NewLine}");
+                sb.Append($"{outputPath}, {DateTime.Today.Date}{Environment.NewLine}");
+                sb.Append($"FileName,FileSize{Environment.NewLine}");
+                foreach (string file in Directory.GetFiles(outputPath))
+                {
+                    if (File.Exists(file))
+                    {
+                        FileInfo finfo = new FileInfo(file);
+                        sb.Append($"{finfo.Name},{finfo.Length / 1024} KB {Environment.NewLine}");
+                    }
+                }
+                _fileListlog.Info(sb.ToString());
+            }
+            catch(Exception ex)
+            {
+                _log.Warn($"Error while generating file list. Error:{ex.Message}");
+            }
         }
 
         private static void BuildXmlConfigFromDb(string dbPath, string districtId)
@@ -219,7 +252,8 @@ namespace EdFi.SampleDataGenerator.Console
         {
             BasicConfigurator.Configure();
             _log = LogManager.GetLogger(typeof (Program));
-            _performancelog = new PerformanceLogger();           
+            _performancelog = new PerformanceLogger();
+            _fileListlog = LogManager.GetLogger("FileListLog");
         }
 
         private static SampleDataGeneratorConsoleConfig ParseCommandLine(string[] args)

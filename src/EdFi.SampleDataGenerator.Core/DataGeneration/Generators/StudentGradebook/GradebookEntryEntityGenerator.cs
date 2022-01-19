@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using EdFi.SampleDataGenerator.Core.ApplicationPerformanceLog;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Common;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Common.Dependencies;
 using EdFi.SampleDataGenerator.Core.DataGeneration.Common.Entity;
@@ -17,12 +18,14 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators.StudentGradebo
         const int WeeksBetweenUnitTests = 6;
 
         private IEnumerable<CalendarDate> _currentSchoolInstructionalDays;
+        private PerformanceLogger _performanceLogger;
 
         public override IEntity GeneratesEntity => StudentGradebookEntity.GradebookEntry;
         public override IEntity[] DependsOnEntities => EntityDependencies.Create(EducationOrganizationEntity.School, MasterScheduleEntity.Section);
 
         public GradebookEntryEntityGenerator(IRandomNumberGenerator randomNumberGenerator) : base(randomNumberGenerator)
         {
+            _performanceLogger = new PerformanceLogger();
         }
 
         protected override void GenerateCore(GlobalDataGeneratorContext context)
@@ -34,6 +37,8 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators.StudentGradebo
         private List<GradebookEntry> GenerateGradebookEntries(GlobalDataGeneratorContext context)
         {
             var gradebookEntries = new List<GradebookEntry>();
+
+            var tracker = _performanceLogger.Start("Generate Gradebook Entries");
 
             foreach (var school in context.GlobalData.EducationOrganizationData.Schools)
             {
@@ -62,6 +67,8 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators.StudentGradebo
                     }
                 }
             }
+
+            tracker.End();
 
             return gradebookEntries;
         }

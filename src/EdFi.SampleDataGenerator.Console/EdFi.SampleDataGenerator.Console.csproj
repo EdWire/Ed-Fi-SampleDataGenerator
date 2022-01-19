@@ -33,13 +33,18 @@
     <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
     <PackageReference Include="FluentCommandLineParser" Version="1.4.3" />
     <PackageReference Include="FluentValidation" Version="6.2.1.0" />
-    <PackageReference Include="log4net" Version="2.0.7" />
+    <PackageReference Include="log4net" Version="2.0.12" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="log4net.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Samples\SampleDataGenerator\DataFiles\AssessmentMetadata\Assessment.csv">

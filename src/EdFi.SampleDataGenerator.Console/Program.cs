@@ -69,8 +69,7 @@ namespace EdFi.SampleDataGenerator.Console
             StringBuilder sb = new StringBuilder();
             try
             {
-                sb.Append($"Path,Date{Environment.NewLine}");
-                sb.Append($"{outputPath}, {DateTime.Today.Date}{Environment.NewLine}");
+                sb.Append($"Output path:,{outputPath}{Environment.NewLine}");              
                 sb.Append($"FileName,FileSize{Environment.NewLine}");
                 foreach (string file in Directory.GetFiles(outputPath))
                 {

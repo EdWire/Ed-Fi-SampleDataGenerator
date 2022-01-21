@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using EdFi.SampleDataGenerator.Core.Date;
 using FluentValidation;
-using FluentValidation.Validators;
 
 namespace EdFi.SampleDataGenerator.Core.Config
 {
@@ -21,7 +19,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
         public DataClockConfigValidator()
         {
             RuleFor(x => x.DataPeriods)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(CascadeMode.Stop)
                 .Must(x => x != null && x.Any()).WithMessage("At least one DataPeriod must be defined")
                 .Must(HaveUniqueNames).WithMessage("DataPeriod Names must be unique - two different data periods named {DataPeriodName} have been defined.")
                 .Must(HaveFileSystemSafeNames).WithMessage("DataPeriod Names must be safe for use in filenames. Invalid characters: {InvalidCharacters}")
@@ -37,7 +35,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
                 .WithMessage("DataClock EndDate must be greater than StartDate");
         }
 
-        private bool BeContiguous(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, PropertyValidatorContext context)
+        private bool BeContiguous(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, ValidationContext<IDataClockConfig> context)
         {
             bool first = true;
             IDataPeriod previousDataPeriod = null;
@@ -60,7 +58,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
             return true;
         }
 
-        private bool HaveUniqueNames(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, PropertyValidatorContext context)
+        private bool HaveUniqueNames(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, ValidationContext<IDataClockConfig> context)
         {
             var dataPeriodNames = dataPeriods.GroupBy(p => p.Name);
             var repeatedName = dataPeriodNames.FirstOrDefault(g => g.Count() > 1);
@@ -73,7 +71,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
             return true;
         }
 
-        private bool HaveFileSystemSafeNames(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, PropertyValidatorContext context)
+        private bool HaveFileSystemSafeNames(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, ValidationContext<IDataClockConfig> context)
         {
             var invalidCharacters = dataPeriods.SelectMany(x => x.Name).FileSystemUnsafeCharacters();
 
@@ -86,7 +84,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
             return true;
         }
 
-        private bool BeNonOverlapping(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, PropertyValidatorContext context)
+        private bool BeNonOverlapping(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, ValidationContext<IDataClockConfig> context)
         {
             IDataPeriod lastDataPeriod = null;
             foreach (var dataPeriod in dataPeriods.OrderBy(p => p.StartDate))
@@ -108,12 +106,12 @@ namespace EdFi.SampleDataGenerator.Core.Config
             return true;
         }
 
-        private bool AlignWithStartAndEndDates(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, PropertyValidatorContext context)
+        private bool AlignWithStartAndEndDates(IDataClockConfig dataClockConfig, IEnumerable<IDataPeriod> dataPeriods, ValidationContext<IDataClockConfig> context)
         {
             context.MessageFormatter.AppendArgument("GlobalStartDate", dataClockConfig.StartDate.ToShortDateString());
             context.MessageFormatter.AppendArgument("GlobalEndDate", dataClockConfig.EndDate.ToShortDateString());
 
-            var sortedDataPeriods = dataPeriods.OrderBy(dp => dp.StartDate);
+            var sortedDataPeriods = dataPeriods.OrderBy(dp => dp.StartDate).ToArray();
             if (sortedDataPeriods.First().StartDate != dataClockConfig.StartDate)
                 return false;
 
@@ -128,8 +126,8 @@ namespace EdFi.SampleDataGenerator.Core.Config
     {
         public static DateRange AsDateRange(this IDataClockConfig dataClockConfig)
         {
-            return dataClockConfig == null 
-                ? null 
+            return dataClockConfig == null
+                ? null
                 : new DateRange(dataClockConfig.StartDate, dataClockConfig.EndDate);
         }
     }

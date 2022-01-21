@@ -37,7 +37,7 @@ namespace EdFi.SampleDataGenerator.Console.Config
 
         public int GetHashCode(IEthnicityMapping obj)
         {
-            return $"{obj.Ethnicity}{obj.EdFiRaceType}{obj.HispanicLatinoEthnicity}".GetHashCode();
+            return $"{obj.Ethnicity}{obj.EdFiRaceType}{obj.HispanicLatinoEthnicity.ToString()}".GetHashCode();
         }
 
         public bool Equals(IEthnicityMapping other)

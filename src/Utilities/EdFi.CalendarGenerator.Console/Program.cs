@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using CommandLine;
 using EdFi.SampleDataGenerator.Core.Entities;
 using EdFi.SampleDataGenerator.Core.Helpers;
 using EdFi.SampleDataGenerator.Core.Serialization.CsvHelper;
@@ -57,7 +58,8 @@ namespace EdFi.CalendarGenerator.Console
             var expectedEndYear = startYear + 1;
             if (termTemplates.EndDate.Year != expectedEndYear)
             {
-                var message = $@"The calendar generated with the input parameters does not result in a valid school year (e.g. {startYear}-{expectedEndYear}).  At present, this utility cannot generate such a calendar.
+                var message =
+                    $@"The calendar generated with the input parameters does not result in a valid school year (e.g. {startYear}-{expectedEndYear}).  At present, this utility cannot generate such a calendar.
 StartDate={termTemplates.StartDate.Date:D}
 EndDate={termTemplates.EndDate.Date:D}
 ";
@@ -75,22 +77,39 @@ EndDate={termTemplates.EndDate.Date:D}
             var schools = MappedCsvFileReader.ReadEntityFile<School>(config.SchoolFilePath);
             var schoolIds = schools.Select(s => s.SchoolId.ToString());
 
-            config.SchoolIds = config.SchoolIds.SafeConcat(schoolIds).Distinct().ToList();
+            config.SchoolIds = config.SchoolIds.SafeConcat(schoolIds)
+                                     .Distinct()
+                                     .ToList();
 
             return config;
         }
 
         static CalendarGeneratorConfig ParseCommandLine(string[] args)
         {
-            var parser = new CommandLineParser();
-            var parseResult = parser.Parse(args);
+            CalendarGeneratorConfig config = null;
 
-            if (parseResult.HasErrors)
-            {
-                throw new Exception(parseResult.ErrorText);
-            }
+            new Parser(
+                    c =>
+                    {
+                        c.CaseInsensitiveEnumValues = true;
+                        c.CaseSensitive = false;
+                        c.HelpWriter = System.Console.Out;
+                        c.IgnoreUnknownArguments = true;
+                    })
+                .ParseArguments<CalendarGeneratorConfig>(args)
+                .WithParsed(a => config = a)
+                .WithNotParsed(
+                    errs =>
+                    {
+                        System.Console.WriteLine("Invalid options were entered.");
 
-            return parser.Object;
+                        System.Console.WriteLine(string.Join(Environment.NewLine, errs));
+
+                        Environment.ExitCode = -1;
+                        Environment.Exit(Environment.ExitCode);
+                    });
+
+            return config;
         }
 
         static void ValidateConfiguration(CalendarGeneratorConfig config)
@@ -102,7 +121,8 @@ EndDate={termTemplates.EndDate.Date:D}
 
             if (config.SchoolYearStartDate.IsWeekendDay())
             {
-                System.Console.WriteLine($"Warning: {config.SchoolYearStartDate:yyyy MMMM dd} is a {config.SchoolYearStartDate.DayOfWeek}.  Are you sure your school calendar starts on a weekend?");
+                System.Console.WriteLine(
+                    $"Warning: {config.SchoolYearStartDate:yyyy MMMM dd} is a {config.SchoolYearStartDate.DayOfWeek}.  Are you sure your school calendar starts on a weekend?");
             }
 
             if (string.IsNullOrEmpty(config.SchoolFilePath) && config.SchoolIds.Count == 0)
@@ -112,7 +132,8 @@ EndDate={termTemplates.EndDate.Date:D}
 
             if (!string.IsNullOrEmpty(config.SchoolFilePath) && config.SchoolIds?.Count > 0)
             {
-                System.Console.Write($"Warning: School Ids provided both as a command line argument and via the School.csv file - these sets of Ids will be combined");
+                System.Console.Write(
+                    $"Warning: School Ids provided both as a command line argument and via the School.csv file - these sets of Ids will be combined");
             }
         }
 
@@ -125,9 +146,15 @@ EndDate={termTemplates.EndDate.Date:D}
         static void WriteOutput(CalendarGeneratorConfig config, SchoolYearTemplate termTemplates)
         {
             var outputService = new CalendarOutputService();
-            outputService.WriteGradingPeriodFile(config, CalendarTemplateMappingService.MapToGradingPeriods(config, termTemplates));
-            outputService.WriteCalendarFile(config, CalendarTemplateMappingService.MapToCalendars(config, termTemplates));
-            outputService.WriteCalendarDateFile(config, CalendarTemplateMappingService.MapToCalendarDates(config, termTemplates));
+            outputService.WriteGradingPeriodFile(
+                config,
+                CalendarTemplateMappingService.MapToGradingPeriods(config, termTemplates));
+            outputService.WriteCalendarFile(
+                config,
+                CalendarTemplateMappingService.MapToCalendars(config, termTemplates));
+            outputService.WriteCalendarDateFile(
+                config,
+                CalendarTemplateMappingService.MapToCalendarDates(config, termTemplates));
             outputService.WriteSessionFile(config, CalendarTemplateMappingService.MapToSessions(config, termTemplates));
         }
     }

@@ -26,7 +26,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
             RuleFor(x => x.GraduationPlanType)
                 .NotNull()
                 .Must(BeAValidToGraduationPlanMapType)
-                .WithMessage("'{0}' is not a valid GraduationPlanMapType", x => x.GraduationPlanType);
+                .WithMessage(x => $"'{x.GraduationPlanType}' is not a valid GraduationPlanMapType");
 
             RuleFor(x => x.TotalCreditsRequired).GreaterThanOrEqualTo(1);
         }

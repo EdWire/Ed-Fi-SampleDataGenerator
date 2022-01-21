@@ -1,4 +1,4 @@
-﻿using Headspring;
+﻿using EdFi.Ods.Common;
 
 namespace EdFi.SampleDataGenerator.Core.DataGeneration.Common
 {

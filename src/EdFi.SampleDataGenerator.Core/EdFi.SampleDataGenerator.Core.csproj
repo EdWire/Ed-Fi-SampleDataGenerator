@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyTitle>EdFi.SampleDataGenerator.Core</AssemblyTitle>
     <Product>EdFi.SampleDataGenerator.Core</Product>
-    <Copyright>Copyright ©  2017</Copyright>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <Copyright>Copyright ©  2022</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -12,25 +11,14 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ChocoPack|AnyCPU'">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="6.1.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="CloneExtensions" Version="1.4.2" />
     <PackageReference Include="CsvHelper" Version="3.0.0-beta7" />
-    <PackageReference Include="Enumeration.dll" Version="2.0.3" />
-    <PackageReference Include="FluentValidation" Version="6.2.1.0" />
-    <PackageReference Include="log4net" Version="2.0.12" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Net.Http" />
+    <PackageReference Include="EdFi.Common" Version="5.0.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
+    <PackageReference Include="log4net" Version="2.0.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="DataGeneration\Common\Interchanges\Interchange.Extensions.cs">
@@ -248,174 +236,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Descriptors.cs</LastGenOutput>
     </Content>
-    <Content Include="Entities\Schema\v32\Descriptors\AbsenceEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AcademicHonorCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AcademicSubjectDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AccommodationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AccountClassificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AchievementCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdditionalCreditTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AddressTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdministrationEnvironmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AdministrativeFundingControlDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentItemResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentPeriodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AssessmentReportingMethodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AttemptStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\AttendanceEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\BehaviorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CalendarEventDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CalendarTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CareerPathwayDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CharterApprovalAgencyTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CharterStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CitizenshipStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ClassroomPositionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortScopeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CohortYearTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CompetencyLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContactTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContentClassDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ContinuationOfServicesReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CostRateDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CountryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseAttemptResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseDefinedByDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseGPAApplicabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseLevelCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CourseRepeatCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CredentialFieldDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CredentialTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CreditTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CTEProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\CurriculumUsedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DeliveryMethodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiagnosisDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiplomaLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DiplomaTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDesignationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisabilityDeterminationSourceTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineActionLengthDifferenceReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\DisciplineIncidentParticipationCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationalEnvironmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationOrganizationIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EducationPlanDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ElectronicMailTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EmploymentStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EntryGradeLevelReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EntryTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\EventCircumstanceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ExitWithdrawTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradebookEntryTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradeLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradePointAverageWeightSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradeTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GradingPeriodDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GraduationPlanTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\GunFreeSchoolsActReportingStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\HomelessPrimaryNighttimeResidenceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\HomelessProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\IdentificationDocumentUseDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\IncidentLocationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InstitutionTelephoneNumberTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InteractivityStyleDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InternetAccessDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InterventionClassDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\InterventionEffectivenessRatingDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageInstructionProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LanguageUseDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardEquivalenceStrengthDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LearningStandardScopeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LevelOfEducationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LicenseStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LicenseTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LimitedEnglishProficiencyDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LocaleDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\LocalEducationAgencyCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MagnetSpecialProgramEmphasisSchoolDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MediumOfInstructionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MethodCreditEarnedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MigrantEducationProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\MonitoredDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NeglectedOrDelinquentProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\NetworkPurposeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OldEthnicityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OperationalStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\OtherNameTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ParticipationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ParticipationStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PerformanceBaseConversionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PerformanceLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PersonalInformationVerificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PlatformTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PopulationServedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostingResultDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PostSecondaryInstitutionLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProficiencyDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramAssignmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramSponsorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgramTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgressDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProgressLevelDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderProfitabilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ProviderStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\PublicationStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RaceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReasonExitedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReasonNotTestedDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RecognitionTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RelationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RepeatIdentifierDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ReporterDescriptionDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResidencyStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResponseIndicatorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResponsibilityDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RestraintEventReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ResultDatatypeTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\RetestIndicatorDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolChoiceImplementStatusDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolFoodServiceProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SchoolTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SectionCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SeparationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SeparationReasonDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\ServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SexDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\SpecialEducationSettingDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffClassificationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StaffLeaveEventCategoryDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StateAbbreviationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentCharacteristicDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentIdentificationSystemDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\StudentParticipationCodeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialBasisDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TeachingCredentialDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TechnicalSkillsAssessmentDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TelephoneNumberTypeDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TermDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAParticipantDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartAProgramServiceDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TitleIPartASchoolDesignationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\TribalAffiliationDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\VisaDescriptor.xml" />
-    <Content Include="Entities\Schema\v32\Descriptors\WeaponDescriptor.xml" />
+    <Content Include="Entities\Schema\v32\Descriptors\*.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Serialization\CsvHelper\AssessmentMetadata\AssessmentCategoryDescriptorReferenceTypeCsvClassMap.cs" />

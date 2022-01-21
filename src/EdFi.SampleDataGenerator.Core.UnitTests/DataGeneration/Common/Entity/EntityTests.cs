@@ -17,7 +17,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common.Entity
         [Test, TestCaseSource(nameof(ConcreteEntityClasses))]
         public void EntityClassesShouldHavePrivateConstructors(Type entityClass)
         {
-            entityClass.GetConstructors().ForEach(x => x.IsPrivate.ShouldBeTrue($"Constructors on type {entityClass.FullName} should be private."));
+            Array.ForEach( entityClass.GetConstructors(), x => x.IsPrivate.ShouldBeTrue($"Constructors on type {entityClass.FullName} should be private."));
         }
 
         [Test, TestCaseSource(nameof(ConcreteEntityClasses))]
@@ -29,15 +29,15 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common.Entity
         [Test, TestCaseSource(nameof(ConcreteEntityClasses))]
         public void EntityClassesShouldHaveReadOnlyStaticPropertiesOfTheirOwnType(Type entityClass)
         {
-            entityClass.GetProperties(BindingFlags.Static | BindingFlags.Public)
-                .ForEach(x =>
+            Array.ForEach(entityClass.GetProperties(BindingFlags.Static | BindingFlags.Public),
+                    x =>
                 {
                     x.PropertyType.ShouldBe(entityClass, $"Public static property {entityClass.FullName}.{x.Name} was expected to have type {entityClass.FullName}.");
                     x.CanWrite.ShouldBeFalse($"Public static property {entityClass.FullName}.{x.Name} should not have a setter.");
                 });
 
-            entityClass.GetFields(BindingFlags.Static | BindingFlags.Public)
-                .ForEach(x =>
+           Array.ForEach(entityClass.GetFields(BindingFlags.Static | BindingFlags.Public),
+                    x =>
                 {
                     x.FieldType.ShouldBe(entityClass, $"Public static field {entityClass.FullName}.{x.Name} was expected to have type {entityClass.FullName}.");
                     x.IsInitOnly.ShouldBeTrue($"Public static fields {entityClass.FullName}.{x.Name} should be marked as readonly.");

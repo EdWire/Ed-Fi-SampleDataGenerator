@@ -11,12 +11,12 @@ namespace EdFi.SampleDataGenerator.Console
         {
             RuleFor(x => x.DataFilePath)
                 .Must((config, path) => Directory.Exists(path))
-                .WithMessage("DataFilePath '{0}' does not exist", config => config.DataFilePath);
+                .WithMessage(config => $"DataFilePath '{config.DataFilePath}' does not exist");
 
             RuleFor(x => x.ConfigXmlPath)
                 .Must((config, path) => File.Exists(path))
                 .When(x => x.ConfigurationType == ConfigurationType.ConfigurationFile)
-                .WithMessage("No config file found at '{0}'", config => config.ConfigXmlPath);
+                .WithMessage(config => $"No config file found at '{config.ConfigXmlPath}'");
 
             RuleFor(x => x.OutputMode)
                 .Must((config, mode) => !string.IsNullOrWhiteSpace(config.SeedFilePath))
@@ -26,22 +26,24 @@ namespace EdFi.SampleDataGenerator.Console
             RuleFor(x => x.OutputMode)
                 .Must((config, mode) => File.Exists(config.SeedFilePath))
                 .When(x => x.OutputMode == OutputMode.Standard && !string.IsNullOrWhiteSpace(x.SeedFilePath))
-                .WithMessage("No seed file found at '{0}'", config => config.SeedFilePath);
+                .WithMessage(config => $"No seed file found at '{config.SeedFilePath}'");
 
             RuleFor(x => x.AllowOverwrite)
                 .Must((config, allowOverwrite) => !Directory.GetFiles(config.OutputPath).Any())
                 .When(x => !x.AllowOverwrite && Directory.Exists(x.OutputPath))
-                .WithMessage("One or more files exist in {0}, but -AllowOverwrite argument not specified", config => config.OutputPath);
+                .WithMessage(config =>
+                    $"One or more files exist in {config.OutputPath}, but -AllowOverwrite argument not specified");
 
             RuleFor(x => x.AllowOverwrite)
                 .Must((config, mode) => !File.Exists(config.SeedFilePath))
                 .When(x => !x.AllowOverwrite && x.OutputMode == OutputMode.Seed)
-                .WithMessage("Seed file '{0}' exists, but -AllowOverwrite argument not specified", config => config.SeedFilePath);
+                .WithMessage(config =>
+                    $"Seed file '{config.SeedFilePath}' exists, but -AllowOverwrite argument not specified");
 
             RuleFor(x => x.NCESDatabasePath)
                 .Must((config, path) => File.Exists(path))
                 .When(x => x.ConfigurationType == ConfigurationType.Database)
-                .WithMessage("No database file found at '{0}'", config => config.NCESDatabasePath);
+                .WithMessage(config => $"No database file found at '{config.NCESDatabasePath}'");
 
             RuleFor(x => x.NCESDistrictId)
                 .Must((config, type) => !string.IsNullOrWhiteSpace(config.NCESDistrictId))

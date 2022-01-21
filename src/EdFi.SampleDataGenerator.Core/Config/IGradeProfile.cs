@@ -34,7 +34,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
 
     public class GradeProfileValidator : AbstractValidator<IGradeProfile>
     {
-        private readonly GradeLevelDescriptor[] _acceptableGradeLevels = 
+        private readonly GradeLevelDescriptor[] _acceptableGradeLevels =
         {
             GradeLevelDescriptor.Kindergarten,
             GradeLevelDescriptor.FirstGrade,
@@ -56,15 +56,17 @@ namespace EdFi.SampleDataGenerator.Core.Config
             RuleFor(x => x.GradeName)
                 .NotEmpty()
                 .Must(BeConvertibleToGradeLevelType)
-                .WithMessage("'{0}' is not a valid GradeName for SchoolProfile '{1}'", p => p.GradeName, p => schoolName);
+                .WithMessage(p => $"'{p.GradeName}' is not a valid GradeName for SchoolProfile '{schoolName}'");
 
             RuleFor(x => x.GradeName)
                 .NotEmpty()
                 .Must(BeAKThroughTwelveGradeLevel)
-                .WithMessage("'{0}' is not a valid GradeName for SchoolProfile '{1}' - only K-12 grades are allowed", p => p.GradeName, p => schoolName);
+                .WithMessage(p =>
+                    $"'{p.GradeName}' is not a valid GradeName for SchoolProfile '{schoolName}' - only K-12 grades are allowed");
 
             RuleFor(x => x.AssessmentParticipationConfigurations).NotNull()
-                .WithMessage("At least one AssessmentParticipationRate must be defined for {0}, {1}", p => schoolName, p => p.GradeName);
+                .WithMessage(p =>
+                    $"At least one AssessmentParticipationRate must be defined for {schoolName}, {p.GradeName}");
 
             RuleForEach(x => x.AssessmentParticipationConfigurations).SetValidator(a => new AssessmentParticipationConfigurationValidator(schoolName, a.GradeName));
         }

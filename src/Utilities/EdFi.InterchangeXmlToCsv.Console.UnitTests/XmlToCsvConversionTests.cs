@@ -13,26 +13,16 @@ namespace EdFi.InterchangeXmlToCsv.Console.UnitTests
         private static readonly string ExpectedCsvOutputFolderName = Path.Combine(AssemblyDirectory, "Expected CSV Output");
         private static readonly string ActualCsvOutputFolderName = Path.Combine(AssemblyDirectory, "Actual CSV Output");
 
-        private static string AssemblyDirectory
-        {
-            get
-            {
-                var codeBase = Assembly.GetExecutingAssembly().CodeBase;
-                var uri = new UriBuilder(codeBase);
-                var path = Uri.UnescapeDataString(uri.Path);
-                return Path.GetDirectoryName(path);
-            }
-        }
+        private static string AssemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-
-        [OneTimeSetUp]
+        [SetUp]
         public void Setup()
         {
             DeleteDirectory(ActualCsvOutputFolderName);
             Directory.CreateDirectory(ActualCsvOutputFolderName);
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void Teardown()
         {
             DeleteDirectory(ActualCsvOutputFolderName);

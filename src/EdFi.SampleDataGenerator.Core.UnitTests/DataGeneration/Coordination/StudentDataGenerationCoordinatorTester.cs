@@ -47,11 +47,11 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             var studentDataGenerationCoordinator = new StudentDataGenerationCoordinator
             (
-                studentDataOutputCoordinator.Object, 
+                studentDataOutputCoordinator.Object,
                 seedOutputService,
-                mutationLogOutputService.Object, 
-                randomNumberGenerator, 
-                mapper, 
+                mutationLogOutputService.Object,
+                randomNumberGenerator,
+                mapper,
                 StudentDataGenerationCoordinator.DefaultGeneratorFactory,
                 MutatorFactory.StudentMutatorFactory
             );
@@ -101,7 +101,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             var sampleDataGeneratorConfig = GetSampleDataGeneratorConfig();
             sampleDataGeneratorConfig.OutputMode = OutputMode.Seed;
-            sampleDataGeneratorConfig.SeedFilePath = ".\\Test.csv";
+            sampleDataGeneratorConfig.SeedFilePath = "./Test.csv";
 
             var globalDataGeneratorConfig = GetGlobalDataGeneratorConfig(sampleDataGeneratorConfig);
             var globalData = GetGlobalDataGeneratorContext(globalDataGeneratorConfig);
@@ -112,7 +112,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             studentDataGenerationCoordinator.Configure(studentDataGeneratorConfig);
             studentDataGenerationCoordinator.Run(globalDataGeneratorConfig, globalData);
-            
+
             generatedSeedRecord.ShouldNotBeNull();
         }
 
@@ -229,7 +229,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             var sampleDataGeneratorConfig = GetSampleDataGeneratorConfig();
             sampleDataGeneratorConfig.OutputMode = OutputMode.Standard;
-            
+
             var globalDataGeneratorConfig = GetGlobalDataGeneratorConfig();
             var globalData = GetGlobalDataGeneratorContext(globalDataGeneratorConfig);
             var studentDataGeneratorConfig = GetStudentGeneratorConfig(globalData.GlobalData, sampleDataGeneratorConfig, globalDataGeneratorConfig);
@@ -274,7 +274,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
 
             var sampleDataGeneratorConfig = GetSampleDataGeneratorConfig();
             sampleDataGeneratorConfig.OutputMode = OutputMode.Seed;
-            sampleDataGeneratorConfig.SeedFilePath = ".\\Test.csv";
+            sampleDataGeneratorConfig.SeedFilePath = "./Test.csv";
 
             var globalDataGeneratorConfig = GetGlobalDataGeneratorConfig(sampleDataGeneratorConfig);
             var globalData = GetGlobalDataGeneratorContext(globalDataGeneratorConfig);
@@ -330,7 +330,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Coordination
             var globalDataGeneratorConfig = GetGlobalDataGeneratorConfig(sampleDataGeneratorConfig);
 
             sampleDataGeneratorConfig.TimeConfig.DataClockConfig.DataPeriods.Count().ShouldBe(1);
-            
+
             var globalData = GetGlobalDataGeneratorContext(globalDataGeneratorConfig);
             var studentDataGeneratorConfig = GetStudentGeneratorConfig(globalData.GlobalData, sampleDataGeneratorConfig, globalDataGeneratorConfig);
 

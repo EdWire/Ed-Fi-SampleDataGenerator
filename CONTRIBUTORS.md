@@ -9,3 +9,5 @@ contributors
 graph](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-SampleDataGenerator/graphs/contributors).
 New contributors should add their name and e-mail address or link to GitHub
 profile to this file with their first pull request.
+
+* [Jim McKay](https://github.com/jamessmckay)

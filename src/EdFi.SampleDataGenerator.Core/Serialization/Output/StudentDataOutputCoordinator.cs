@@ -10,7 +10,7 @@ namespace EdFi.SampleDataGenerator.Core.Serialization.Output
         void WriteToOutput(GeneratedStudentData dataToOutput, ISchoolProfile schoolProfile, IDataPeriod dataPeriod, double performanceIndex);
         void FinalizeOutput(ISchoolProfile schoolProfile, IEnumerable<IDataPeriod> dataPeriods);
     }
-    
+
     public class StudentDataOutputCoordinator : IStudentDataOutputCoordinator
     {
         private ISampleDataGeneratorConfig _configuration;

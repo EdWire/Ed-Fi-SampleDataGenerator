@@ -36,27 +36,58 @@ namespace EdFi.SampleDataGenerator.Core.Config
     {
         public SampleDataGeneratorConfigValidator()
         {
-            RuleFor(x => x.TimeConfig).NotEmpty().WithMessage("Time config must be defined");
-            RuleFor(x => x.TimeConfig).SetValidator(x => new TimeConfigValidator());
-            RuleFor(x => x.DistrictProfiles).NotEmpty().WithMessage("At least one DistrictProfile must be defined");
-            RuleFor(x => x.DistrictProfiles).SetCollectionValidator(x => new DistrictProfileValidator(x));
-            RuleFor(x => x.StudentProfiles).NotEmpty().WithMessage("At least one StudentProfile must be defined");
-            RuleFor(x => x.StudentProfiles).SetCollectionValidator(x => new StudentProfileValidator(x));
-            RuleForEach(x => x.StudentProfiles).Must(UseValidRaceOptions).WithMessage("Student Profile '{0}' contains an invalid Race configuration option", (config, profile) => profile.Name);
-            RuleForEach(x => x.StudentProfiles).Must(UseValidGenderOptions).WithMessage("Student Profile '{0}' contains an invalid Sex configuration option", (config, profile) => profile.Name);
-            RuleFor(x => x.GraduationPlanTemplates).SetCollectionValidator(x => new GraduationPlanTemplateValidator());
+            RuleFor(x => x.TimeConfig)
+                .NotEmpty()
+                .WithMessage("Time config must be defined");
 
-            RuleFor(x => x.EthnicityMappings).NotEmpty().WithMessage("EthnicityMappings must be defined");
-            RuleFor(x => x.GenderMappings).NotEmpty().WithMessage("GenderMappings must be defined");
-            RuleFor(x => x.MutatorConfig).SetValidator(x => new MutatorConfigurationValidator());
+            RuleFor(x => x.TimeConfig)
+                .SetValidator(x => new TimeConfigValidator());
+
+            RuleFor(x => x.DistrictProfiles)
+                .NotEmpty()
+                .WithMessage("At least one DistrictProfile must be defined");
+
+            RuleForEach(x => x.DistrictProfiles)
+                .SetValidator(x => new DistrictProfileValidator(x));
+
+            RuleFor(x => x.StudentProfiles)
+                .NotEmpty()
+                .WithMessage("At least one StudentProfile must be defined");
+
+            RuleForEach(x => x.StudentProfiles)
+                .SetValidator(x => new StudentProfileValidator(x));
+
+            RuleForEach(x => x.StudentProfiles)
+                .Must(UseValidRaceOptions)
+                .WithMessage((config, profile) =>
+                    $"Student Profile '{profile.Name}' contains an invalid Race configuration option");
+
+            RuleForEach(x => x.StudentProfiles)
+                .Must(UseValidGenderOptions)
+                .WithMessage((config, profile) =>
+                    $"Student Profile '{profile.Name}' contains an invalid Sex configuration option");
+
+            RuleForEach(x => x.GraduationPlanTemplates)
+                .SetValidator(x => new GraduationPlanTemplateValidator());
+
+            RuleFor(x => x.EthnicityMappings)
+                .NotEmpty()
+                .WithMessage("EthnicityMappings must be defined");
+
+            RuleFor(x => x.GenderMappings)
+                .NotEmpty()
+                .WithMessage("GenderMappings must be defined");
+
+            RuleFor(x => x.MutatorConfig)
+                .SetValidator(x => new MutatorConfigurationValidator());
         }
 
         private bool UseValidRaceOptions(ISampleDataGeneratorConfig config, IStudentProfile profile)
         {
             var raceConfig = profile.RaceConfiguration;
-            return raceConfig != null 
-                && raceConfig.AttributeGeneratorConfigurationOptions
-                    .All(o => config.IsValidRaceOption(o.Value));
+            return raceConfig != null
+                   && raceConfig.AttributeGeneratorConfigurationOptions
+                                .All(o => config.IsValidRaceOption(o.Value));
         }
 
         private bool UseValidGenderOptions(ISampleDataGeneratorConfig config, IStudentProfile profile)
@@ -64,7 +95,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
             var genderConfig = profile.SexConfiguration;
             return genderConfig != null
                    && genderConfig.AttributeGeneratorConfigurationOptions
-                       .All(o => config.IsValidGenderOption(o.Value));
+                                  .All(o => config.IsValidGenderOption(o.Value));
         }
     }
 

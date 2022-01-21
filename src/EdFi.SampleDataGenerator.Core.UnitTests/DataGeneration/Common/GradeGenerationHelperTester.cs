@@ -83,7 +83,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common
 
                         actualGradesGenerated.ShouldBe(totalGradesToGenerate);
 
-                        actualGradePoints.ShouldBe(expectedGradePoints, () =>
+                        actualGradePoints.ShouldBe(expectedGradePoints,
                             $"Expected an average of {targetGradeAverage} over {totalGradesToGenerate} grades generated, " +
                             $"but got an average of {actualGradePoints / (1.0 * actualGradesGenerated)} over {actualGradesGenerated} grades generated. "
                         );

@@ -14,11 +14,13 @@ namespace EdFi.SampleDataGenerator.Core.Config
         {
             RuleFor(x => x.AverageAttendanceRate)
                 .InclusiveBetween(0.0, 1.0)
-                .WithMessage("The AverageAttendanceRate for {0} has an invalid value; AverageAttendanceRate must be between 0 and 1.", schoolName);
+                .WithMessage(
+                    $"The AverageAttendanceRate for {schoolName} has an invalid value; AverageAttendanceRate must be between 0 and 1.");
 
             RuleFor(x => x.AverageTardyRate)
                 .InclusiveBetween(0.0, 1.0)
-                .WithMessage("The AverageTardyRate for {0} has an invalid value; AverageTardyRate must be between 0 and 1.", schoolName);
+                .WithMessage(
+                    $"The AverageTardyRate for {schoolName} has an invalid value; AverageTardyRate must be between 0 and 1.");
         }
     }
 }

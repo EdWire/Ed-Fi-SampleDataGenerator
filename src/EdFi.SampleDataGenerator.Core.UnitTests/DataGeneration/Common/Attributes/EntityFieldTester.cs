@@ -76,7 +76,7 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common.Attribut
                 .ToArray();
 
             fullyQualifiedNames.ShouldBe(fullyQualifiedNames.Distinct(),
-                () => "IEntityField implementations must provide unique values. " +
+                 "IEntityField implementations must provide unique values. " +
                       "If an attribute needs to be meaningfully repeated for different " +
                       "use cases, distinguish them by providing the optional 'description' " +
                       "string.");

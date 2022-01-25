@@ -36,6 +36,10 @@ namespace EdFi.SampleDataGenerator.Console
                     !string.IsNullOrEmpty(commandLineConfig.NCESDatabasePath) && !string.IsNullOrEmpty(commandLineConfig.NCESDistrictId))
                 {
                     var tracker = _performancelog.Start("Building custom config");
+
+                    SetDynamicDataFiles(commandLineConfig);
+
+                    Entities.Csv.CsvHelper.BasePath = commandLineConfig.DataFilePath;
                     BuildXmlConfigFromDb(commandLineConfig.NCESDatabasePath, commandLineConfig.NCESDistrictId);
                     commandLineConfig.ConfigXmlPath = XmlTemplateHelper.WriteFilePath;
                     tracker.End();
@@ -84,6 +88,42 @@ namespace EdFi.SampleDataGenerator.Console
             catch(Exception ex)
             {
                 _log.Warn($"Error while generating file list. Error:{ex.Message}");
+            }
+        }
+
+        public static void SetDynamicDataFiles(SampleDataGeneratorConsoleConfig config)
+        {
+            if (!Directory.Exists(config.DataFilePath))
+            {
+                _log.Error($"DataFilePath {config.DataFilePath} does not exist.");
+            }
+           
+            try
+            {
+                var dynamicDataFilesPath = @".\Samples\SampleDataGenerator\DynamicDataFiles\";
+                var source = new DirectoryInfo(config.DataFilePath);
+                var target = new DirectoryInfo(dynamicDataFilesPath);
+                CopyAll(source, target);
+                config.DataFilePath = dynamicDataFilesPath;
+            }
+            catch (Exception ex)
+            {
+                _log.Error($"Error while copying data files. Error:{ex.Message}");
+            }
+        }
+
+        public static void CopyAll(DirectoryInfo source, DirectoryInfo target)
+        {
+            Directory.CreateDirectory(target.FullName);            
+            foreach (FileInfo fi in source.GetFiles())
+            {                
+                fi.CopyTo(Path.Combine(target.FullName, fi.Name), true);
+            }            
+            foreach (DirectoryInfo diSourceSubDir in source.GetDirectories())
+            {
+                DirectoryInfo nextTargetSubDir =
+                    target.CreateSubdirectory(diSourceSubDir.Name);
+                CopyAll(diSourceSubDir, nextTargetSubDir);
             }
         }
 

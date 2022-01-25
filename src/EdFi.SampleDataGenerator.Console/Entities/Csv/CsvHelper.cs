@@ -9,7 +9,7 @@ namespace EdFi.SampleDataGenerator.Console.Entities.Csv
     public static class CsvHelper
     {
         // EducationOrganization
-        public const string BasePath = @".\Samples\SampleDataGenerator\DataFiles\";
+        public static string BasePath = @".\Samples\SampleDataGenerator\DataFiles\";
         public const string AccountabilityRatingPath = @"EducationOrganization\AccountabilityRating.csv";
         public const string ClassPeriodPath = @"EducationOrganization\ClassPeriod.csv";
         public const string CoursePath = @"EducationOrganization\Course.csv";

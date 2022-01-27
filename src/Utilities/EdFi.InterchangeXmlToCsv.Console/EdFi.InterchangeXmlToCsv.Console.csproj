@@ -22,7 +22,7 @@
     <ProjectReference Include="..\..\EdFi.SampleDataGenerator.Core\EdFi.SampleDataGenerator.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="log4net.config.xml">
+    <None Update="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

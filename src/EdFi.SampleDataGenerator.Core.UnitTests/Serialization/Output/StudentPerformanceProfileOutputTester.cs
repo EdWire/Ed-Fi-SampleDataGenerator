@@ -12,8 +12,9 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Serialization.Output
         {
             var spOutput = new StudentPerformanceProfileOutput();
 
-            spOutput.Add("000016", 0.28830903736831892);
-            spOutput.Add("000017", 0.56956021043894056);
+            // note: had to remove a digit of precision as it is not valid on other operating systems
+            spOutput.Add("000016", 0.2883090373683189);
+            spOutput.Add("000017", 0.5695602104389406);
 
             spOutput.ToXml().ToString().ShouldBe(Expectation);
         }
@@ -22,11 +23,11 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Serialization.Output
 <StudentPerformanceProfile>
   <Student>
     <StudentUniqueId>000016</StudentUniqueId>
-    <PerformanceIndex>0.28830903736831892</PerformanceIndex>
+    <PerformanceIndex>0.2883090373683189</PerformanceIndex>
   </Student>
   <Student>
     <StudentUniqueId>000017</StudentUniqueId>
-    <PerformanceIndex>0.56956021043894056</PerformanceIndex>
+    <PerformanceIndex>0.5695602104389406</PerformanceIndex>
   </Student>
 </StudentPerformanceProfile>".Trim();
     }

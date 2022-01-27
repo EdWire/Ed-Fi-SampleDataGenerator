@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using CommandLine;
 using EdFi.EducationOrganizationGenerator.Console.Configuration;
 using EdFi.EducationOrganizationGenerator.Console.Generators;
 using EdFi.EducationOrganizationGenerator.Console.SampleDataGeneratorConfiguration;
@@ -75,15 +76,30 @@ namespace EdFi.EducationOrganizationGenerator.Console
 
         private static CommandLineOptions ParseCommandLine(string[] args)
         {
-            var parser = new CommandLineParser();
-            var parseResult = parser.Parse(args);
+            CommandLineOptions config = new CommandLineOptions();
 
-            if (parseResult.HasErrors)
-            {
-                throw new Exception(parseResult.ErrorText);
-            }
+            new Parser(
+                    c =>
+                    {
+                        c.CaseInsensitiveEnumValues = true;
+                        c.CaseSensitive = false;
+                        c.HelpWriter = System.Console.Out;
+                        c.IgnoreUnknownArguments = true;
+                    })
+                .ParseArguments<CommandLineOptions>(args)
+                .WithParsed(a => config = a)
+                .WithNotParsed(
+                    errs =>
+                    {
+                        System.Console.WriteLine("Invalid options were entered.");
 
-            return parser.Object;
+                        System.Console.WriteLine(string.Join(Environment.NewLine, errs));
+
+                        Environment.ExitCode = -1;
+                        Environment.Exit(Environment.ExitCode);
+                    });
+
+            return config;
         }
 
         private static void WriteEducationOrganizationOutputFiles(CommandLineOptions commandLineOptions, EducationOrganizationData data)

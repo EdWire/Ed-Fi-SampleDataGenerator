@@ -16,11 +16,11 @@ namespace EdFi.SampleDataGenerator.Core.Config
         {
             RuleFor(x => x.SchoolProfiles)
                 .NotEmpty()
-                .WithMessage("At least one School Profile must be defined for District {0}", x => x.DistrictName);
+                .WithMessage(x => $"At least one School Profile must be defined for District {x.DistrictName}");
 
             RuleFor(a => a.HighPerformingStudentPercentile)
                 .InclusiveBetween(0, 1)
-                .WithMessage("HighPerformingStudentPercentile must be between 0 and 1 for District {0}", x => x.DistrictName);
+                .WithMessage(x => $"HighPerformingStudentPercentile must be between 0 and 1 for District {x.DistrictName}");
 
             RuleForEach(x => x.SchoolProfiles)
                 .SetValidator(new SchoolProfileValidator(globalConfig));

@@ -24,15 +24,16 @@ namespace EdFi.SampleDataGenerator.Core.Config
                 .NotEmpty()
                 .WithMessage($"AttributeConfiguration Name property cannot be empty ({containerDescription})");
 
-            RuleFor(x => x.AttributeGeneratorConfigurationOptions)
+            RuleForEach(x => x.AttributeGeneratorConfigurationOptions)
                 .NotNull()
-                .SetCollectionValidator(config => new AttributeGeneratorConfigurationOptionValidator(containerDescription, config.Name));
+                .SetValidator(config => new AttributeGeneratorConfigurationOptionValidator(containerDescription, config.Name));
 
             if (requireFullOptionDistribution)
             {
                 RuleFor(x => x.AttributeGeneratorConfigurationOptions)
                     .Must(x => x.Sum(o => o.Frequency).IsEqualWithinTolerance(1.0))
-                    .WithMessage("Options for '{0}' must have Frequency values totaling 1.0 ({1})", x => x.Name, x => containerDescription);
+                    .WithMessage(x =>
+                        $"Options for '{x.Name}' must have Frequency values totaling 1.0 ({containerDescription})");
             }
         }
     }
@@ -47,7 +48,8 @@ namespace EdFi.SampleDataGenerator.Core.Config
 
             RuleFor(x => x.Frequency)
                 .Must(f => f > 0.0 && f <= 1.0)
-                .WithMessage("Frequency for Value '{0}' must be greater than 0.0 and less than or equal to 1.0 for Attribute '{1}' ({2})", x => x.Value, x => attributeName, x => containerDescription);
+                .WithMessage(x =>
+                    $"Frequency for Value '{x.Value}' must be greater than 0.0 and less than or equal to 1.0 for Attribute '{attributeName}' ({containerDescription})");
         }
     }
 }

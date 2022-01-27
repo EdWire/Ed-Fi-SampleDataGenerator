@@ -61,16 +61,7 @@ Test3,0.3
             }
         }
 
-        private static string AssemblyDirectory
-        {
-            get
-            {
-                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-                UriBuilder uri = new UriBuilder(codeBase);
-                string path = Uri.UnescapeDataString(uri.Path);
-                return Path.GetDirectoryName(path);
-            }
-        }
+        private static string AssemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         private static string TestFilePath => Path.Combine(AssemblyDirectory, TestFileName);
         private static string TestFileName = "Testfile.txt";

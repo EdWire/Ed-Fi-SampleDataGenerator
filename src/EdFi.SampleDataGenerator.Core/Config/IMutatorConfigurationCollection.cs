@@ -25,7 +25,7 @@ namespace EdFi.SampleDataGenerator.Core.Config
                 "Mutator Names must be unique - two different mutators named {MutatorName} have been defined.");
         }
 
-        private bool HaveUniqueNames(IMutatorConfigurationCollection mutatorConfig, IEnumerable<IMutatorConfiguration> mutators, PropertyValidatorContext context)
+        private bool HaveUniqueNames(IMutatorConfigurationCollection mutatorConfig, IEnumerable<IMutatorConfiguration> mutators, ValidationContext<IMutatorConfigurationCollection> context)
         {
             var mutatorNames = mutators.GroupBy(p => p.Name);
             var repeatedName = mutatorNames.FirstOrDefault(g => g.Count() > 1);
@@ -43,7 +43,8 @@ namespace EdFi.SampleDataGenerator.Core.Config
         public MutatorValidator()
         {
             RuleFor(x => x.Name).NotEmpty().WithMessage("Mutator Name must be defined and non-empty");
-            RuleFor(x => x.Probability).InclusiveBetween(0,1).WithMessage("Mutator {0} has an invalid value; Probability must be greater than zero and less than 1.", m => m.Name);
+            RuleFor(x => x.Probability).InclusiveBetween(0,1).WithMessage(m =>
+                $"Mutator {m.Name} has an invalid value; Probability must be greater than zero and less than 1.");
         }
     }
 }

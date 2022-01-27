@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using CommandLine;
 using EdFi.MasterScheduleGenerator.Console.Configuration;
 using EdFi.MasterScheduleGenerator.Console.Generators;
 using EdFi.SampleDataGenerator.Core.Serialization.Output.Interchanges;
@@ -57,15 +58,30 @@ namespace EdFi.MasterScheduleGenerator.Console
 
         static CommandLineOptions ParseCommandLine(string[] args)
         {
-            var parser = new CommandLineParser();
-            var parseResult = parser.Parse(args);
+            CommandLineOptions config = null;
 
-            if (parseResult.HasErrors)
-            {
-                throw new Exception(parseResult.ErrorText);
-            }
+            new Parser(
+                    c =>
+                    {
+                        c.CaseInsensitiveEnumValues = true;
+                        c.CaseSensitive = false;
+                        c.HelpWriter = System.Console.Out;
+                        c.IgnoreUnknownArguments = true;
+                    })
+                .ParseArguments<CommandLineOptions>(args)
+                .WithParsed(a => config = a)
+                .WithNotParsed(
+                    errs =>
+                    {
+                        System.Console.WriteLine("Invalid options were entered.");
 
-            return parser.Object;
+                        System.Console.WriteLine(string.Join(Environment.NewLine, errs));
+
+                        Environment.ExitCode = -1;
+                        Environment.Exit(Environment.ExitCode);
+                    });
+
+            return config;
         }
 
         static void WriteOutput(CommandLineOptions commandLineOptions, MasterScheduleData data)

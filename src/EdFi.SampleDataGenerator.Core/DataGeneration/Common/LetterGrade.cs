@@ -1,6 +1,6 @@
 ﻿using System.Linq;
+using EdFi.Ods.Common;
 using EdFi.SampleDataGenerator.Core.Entities;
-using Headspring;
 
 namespace EdFi.SampleDataGenerator.Core.DataGeneration.Common
 {

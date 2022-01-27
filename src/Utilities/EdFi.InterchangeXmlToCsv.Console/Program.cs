@@ -1,4 +1,9 @@
-﻿using log4net.Config;
+﻿using System;
+using System.IO;
+using System.Reflection;
+using CommandLine;
+using log4net;
+using log4net.Config;
 
 namespace EdFi.InterchangeXmlToCsv.Console
 {
@@ -8,19 +13,47 @@ namespace EdFi.InterchangeXmlToCsv.Console
         {
             PrintCopyrightMessageToConsole();
 
-            BasicConfigurator.Configure();
+            var assembly = typeof(Program).GetTypeInfo().Assembly;
 
-            var parser = new CommandLineParser();
-            var parseResult = parser.Parse(args);
+            var configPath = Path.Combine(Path.GetDirectoryName(assembly.Location), "log4net.config");
 
-            if (parseResult.HasErrors)
-            {
-                System.Console.WriteLine(parseResult.ErrorText);
-                return -1;
-            }
+            XmlConfigurator.Configure(LogManager.GetRepository(assembly), new FileInfo(configPath));
+
+            InterchangeXmlToCsvConfig config = new InterchangeXmlToCsvConfig();
+
+            var parser = new Parser(
+                    c =>
+                    {
+                        c.CaseInsensitiveEnumValues = true;
+                        c.CaseSensitive = false;
+                        c.HelpWriter = System.Console.Out;
+                        c.IgnoreUnknownArguments = true;
+                    })
+                .ParseArguments<InterchangeXmlToCsvConfig>(args)
+                .WithParsed(a => config = a)
+                .WithNotParsed(
+                    errs =>
+                    {
+                        System.Console.WriteLine("Invalid options were entered.");
+
+                        System.Console.WriteLine(string.Join(Environment.NewLine, errs));
+
+                        Environment.ExitCode = -1;
+                        Environment.Exit(Environment.ExitCode);
+                    });
+
+            // return config;
+            // var parser = new CommandLineParser();
+            // var parseResult = parser.Parse(args);
+            //
+            // if (parseResult.HasErrors)
+            // {
+            //     System.Console.WriteLine(parseResult.ErrorText);
+            //     return -1;
+            // }
 
             var converter = new InterchangeXmlToCsvConverter();
-            converter.Convert(parser.Object);
+            converter.Convert(config);
 
 #if DEBUG
             System.Console.Write("Press any key to continue...");

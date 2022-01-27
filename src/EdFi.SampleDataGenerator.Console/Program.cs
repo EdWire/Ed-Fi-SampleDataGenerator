@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using CommandLine;
 using EdFi.SampleDataGenerator.Console.Config;
 using EdFi.SampleDataGenerator.Console.Entities.Csv;
 using EdFi.SampleDataGenerator.Console.XMLTemplates;
@@ -277,9 +279,9 @@ namespace EdFi.SampleDataGenerator.Console
 
         private static void PrintCopyrightMessageToConsole()
         {
-            const string copyrightText = 
-                "\r\n" + 
-                "Sample Data Generator is Copyright \u00a9 2018 Ed-Fi Alliance, LLC\r\n" + 
+            const string copyrightText =
+                "\r\n" +
+                "Sample Data Generator is Copyright \u00a9 2018 Ed-Fi Alliance, LLC\r\n" +
                 "License info available at https://techdocs.ed-fi.org/display/SDG/Licensing \r\n";
 
             //Set encoding to UTF8 so copyright symbol in the above message prints correctly
@@ -289,7 +291,11 @@ namespace EdFi.SampleDataGenerator.Console
 
         private static void InitializeApp()
         {
-            BasicConfigurator.Configure();
+            var assembly = typeof(Program).GetTypeInfo().Assembly;
+
+            var configPath = Path.Combine(Path.GetDirectoryName(assembly.Location), "log4net.config");
+
+            XmlConfigurator.Configure(LogManager.GetRepository(assembly), new FileInfo(configPath));
             _log = LogManager.GetLogger(typeof (Program));
             _performancelog = new PerformanceLogger();
             _fileListlog = LogManager.GetLogger("FileListLog");
@@ -297,17 +303,30 @@ namespace EdFi.SampleDataGenerator.Console
 
         private static SampleDataGeneratorConsoleConfig ParseCommandLine(string[] args)
         {
-            var parser = new CommandLineParser();
-            var parseResult = parser.Parse(args);
+            SampleDataGeneratorConsoleConfig config = null;
 
-            if (parseResult.HasErrors)
-            {
-                throw new Exception(parseResult.ErrorText);
-            }
+            new Parser(
+                    c =>
+                    {
+                        c.CaseInsensitiveEnumValues = true;
+                        c.CaseSensitive = false;
+                        c.HelpWriter = System.Console.Out;
+                        c.IgnoreUnknownArguments = true;
+                    })
+                .ParseArguments<SampleDataGeneratorConsoleConfig>(args)
+                .WithParsed(a => config = a)
+                .WithNotParsed(
+                    errs =>
+                    {
+                        System.Console.WriteLine("Invalid options were entered.");
 
-            ValidateCommandLineConfig(parser.Object);
+                        System.Console.WriteLine(string.Join(Environment.NewLine, errs));
 
-            return parser.Object;
+                        Environment.ExitCode = -1;
+                        Environment.Exit(Environment.ExitCode);
+                    });
+
+            return config;
         }
 
         private static void ValidateCommandLineConfig(SampleDataGeneratorConsoleConfig config)

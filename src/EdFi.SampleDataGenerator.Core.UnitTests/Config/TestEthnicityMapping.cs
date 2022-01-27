@@ -33,10 +33,10 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Config
 
         public int GetHashCode(IEthnicityMapping obj)
         {
-            return $"{obj.Ethnicity}{obj.EdFiRaceType}{obj.HispanicLatinoEthnicity}".GetHashCode();
+            return $"{obj.Ethnicity}{obj.EdFiRaceType}{obj.HispanicLatinoEthnicity.ToString()}".GetHashCode();
         }
 
-        public static IEthnicityMapping[] Defaults = 
+        public static IEthnicityMapping[] Defaults =
         {
             new TestEthnicityMapping
             {

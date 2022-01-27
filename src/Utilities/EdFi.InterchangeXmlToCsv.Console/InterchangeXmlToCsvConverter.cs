@@ -8,7 +8,7 @@ namespace EdFi.InterchangeXmlToCsv.Console
 {
     public class InterchangeXmlToCsvConverter
     {
-        private static readonly ILog Logger = LogManager.GetLogger(nameof(InterchangeXmlToCsvConverter));
+        private static readonly ILog Logger = LogManager.GetLogger(typeof(InterchangeXmlToCsvConverter));
 
         public void Convert(InterchangeXmlToCsvConfig config)
         {
@@ -46,7 +46,7 @@ namespace EdFi.InterchangeXmlToCsv.Console
                 var entitiesToOutput = interchangeItems[outputType];
 
                 Logger.Info($"Saving data for type {outputType.Name} to {outputFilePath}");
-                
+
                 using (var sw = new StreamWriter(outputFilePath))
                 {
                     if (map != null)
@@ -75,7 +75,7 @@ namespace EdFi.InterchangeXmlToCsv.Console
         }
 
         private string GetOutputFilePath(Type outputType, string outputPath)
-        {   
+        {
             var outputFileName = $"{outputType.Name}.csv";
             return Path.Combine(outputPath, outputFileName);
         }

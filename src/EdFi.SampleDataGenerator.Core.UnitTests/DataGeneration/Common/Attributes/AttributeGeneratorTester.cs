@@ -10,19 +10,32 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common.Attribut
     [TestFixture]
     public class AttributeGeneratorTester
     {
-        public static readonly IEnumerable<IEntityAttributeGenerator<GlobalDataGeneratorContext, GlobalDataGeneratorConfig>> GlobalAttributeGenerators = GetAttributeGenerators<GlobalDataGeneratorContext, GlobalDataGeneratorConfig>();
-        public static readonly IEnumerable<IEntityAttributeGenerator<StudentDataGeneratorContext, StudentDataGeneratorConfig>> StudentAttributeGenerators = GetAttributeGenerators<StudentDataGeneratorContext, StudentDataGeneratorConfig>();
+        public static IEntityAttributeGenerator<GlobalDataGeneratorContext, GlobalDataGeneratorConfig>[]
+            GlobalAttributeGenerators = GetAttributeGenerators<GlobalDataGeneratorContext, GlobalDataGeneratorConfig>()
+            .ToArray();
 
-        [Test, TestCaseSource(nameof(GlobalAttributeGenerators))]
-        public void GlobalAttributeGeneratorsShouldNotDependOnThemselves(IEntityAttributeGenerator<GlobalDataGeneratorContext, GlobalDataGeneratorConfig> instance)
+        public static IEnumerable<IEntityAttributeGenerator<StudentDataGeneratorContext, StudentDataGeneratorConfig>>
+            StudentAttributeGenerators =
+            GetAttributeGenerators<StudentDataGeneratorContext, StudentDataGeneratorConfig>();
+
+        [Test]
+        public void GlobalAttributeGeneratorsShouldNotDependOnThemselves()
         {
-            instance.DependsOnFields?.Any(f => f.FullyQualifiedFieldName == instance.FullyQualifiedFieldName).ShouldBeFalse();
+            foreach (var instance in GlobalAttributeGenerators)
+            {
+                instance.DependsOnFields?.Any(f => f.FullyQualifiedFieldName == instance.FullyQualifiedFieldName)
+                        .ShouldBeFalse();
+            }
         }
 
-        [Test, TestCaseSource(nameof(StudentAttributeGenerators))]
-        public void StudentAttributeGeneratorsShouldNotDependOnThemselves(IEntityAttributeGenerator<StudentDataGeneratorContext, StudentDataGeneratorConfig> instance)
+        [Test]
+        public void StudentAttributeGeneratorsShouldNotDependOnThemselves()
         {
-            instance.DependsOnFields?.Any(f => f.FullyQualifiedFieldName == instance.FullyQualifiedFieldName).ShouldBeFalse();
+            foreach (var instance in StudentAttributeGenerators)
+            {
+                instance.DependsOnFields?.Any(f => f.FullyQualifiedFieldName == instance.FullyQualifiedFieldName)
+                        .ShouldBeFalse();
+            }
         }
 
         [Test]
@@ -61,26 +74,34 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration.Common.Attribut
                 .ShouldBeEmpty();
         }
 
-        [Test, TestCaseSource(nameof(GlobalAttributeGenerators))]
-        public void GlobalAttributeGeneratorsShouldNotHaveNullDependencyList(IEntityAttributeGenerator<GlobalDataGeneratorContext, GlobalDataGeneratorConfig> instance)
+        [Test]
+        public void GlobalAttributeGeneratorsShouldNotHaveNullDependencyList()
         {
-            instance.DependsOnFields.ShouldNotBeNull();
+            foreach (var instance in GlobalAttributeGenerators)
+            {
+                instance.DependsOnFields.ShouldNotBeNull();
+            }
         }
 
-        [Test, TestCaseSource(nameof(StudentAttributeGenerators))]
-        public void StudentAttributeGeneratorsShouldNotHaveNullDependencyList(IEntityAttributeGenerator<StudentDataGeneratorContext, StudentDataGeneratorConfig> instance)
+        [Test]
+        public void StudentAttributeGeneratorsShouldNotHaveNullDependencyList()
         {
-            instance.DependsOnFields.ShouldNotBeNull();
+            foreach (var instance in StudentAttributeGenerators)
+            {
+                instance.DependsOnFields.ShouldNotBeNull();
+            }
         }
 
-        private static IEnumerable<IEntityAttributeGenerator<TContext, TConfig>> GetAttributeGenerators<TContext, TConfig>()
+        private static IEnumerable<IEntityAttributeGenerator<TContext, TConfig>> GetAttributeGenerators<
+            TContext, TConfig>()
         {
             var random = new TestRandomNumberGenerator();
 
             return EntityAttributeGeneratorFactory
-                .BuildAllAttributeGenerators<
-                    TContext,
-                    TConfig>(random).ToArray();
+                   .BuildAllAttributeGenerators<
+                       TContext,
+                       TConfig>(random)
+                   .ToArray();
         }
     }
 }

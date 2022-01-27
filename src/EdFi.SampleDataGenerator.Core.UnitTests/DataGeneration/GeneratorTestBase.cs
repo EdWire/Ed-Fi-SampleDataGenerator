@@ -195,30 +195,13 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.DataGeneration
             return config;
         }
 
-        private static string AssemblyDirectory
-        {
-            get
-            {
-                var codeBase = Assembly.GetExecutingAssembly().CodeBase;
-                var uri = new UriBuilder(codeBase);
-                var path = Uri.UnescapeDataString(uri.Path);
-                return Path.GetDirectoryName(path);
-            }
-        }
+        private static string AssemblyDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        public static TestSchoolProfile GetTestSchoolProfile()
-        {
-            return TestSchoolProfile.Default;
-        }
+        public static TestSchoolProfile GetTestSchoolProfile() => TestSchoolProfile.Default;
 
-        public static TestGradeProfile GetTestGradeProfile()
-        {
-            return TestGradeProfile.Default;
-        }
+        public static TestGradeProfile GetTestGradeProfile() => TestGradeProfile.Default;
 
-        public static string GetPath(string FileName) {
-                return $".{Path.DirectorySeparatorChar}{FileName}";
-        }
+        public static string GetPath(string FileName) => $".{Path.DirectorySeparatorChar}{FileName}";
 
         public static NameFileData GetNameFileData()
         {

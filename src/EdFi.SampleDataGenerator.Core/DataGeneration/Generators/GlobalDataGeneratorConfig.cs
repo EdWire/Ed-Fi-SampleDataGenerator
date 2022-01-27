@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using EdFi.SampleDataGenerator.Core.Config;
 using EdFi.SampleDataGenerator.Core.Config.DataFiles;
 using EdFi.SampleDataGenerator.Core.Config.SeedData;
@@ -25,7 +24,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
         public Dictionary<int, ISchoolProfile> SchoolProfilesById { get; set; }
         public CourseLookupCache CourseLookupCache { get; set; }
         public List<GraduationPlan> GraduationPlans { get; set; } = new List<GraduationPlan>();
-        public List<SeedRecord> SeedRecords { get; set; } = new List<SeedRecord>(); 
+        public List<SeedRecord> SeedRecords { get; set; } = new List<SeedRecord>();
     }
 
     public class GlobalDataGeneratorConfigValidator : AbstractValidator<GlobalDataGeneratorConfig>
@@ -105,14 +104,14 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
         {
             var graduationPlanTemplateNames = new HashSet<string>(config.GlobalConfig.GraduationPlanTemplates.Select(gpt => gpt.Name));
 
-            return globalConfig.DistrictProfiles.All(districtProfile => 
-                !districtProfile.SchoolProfiles.Any(schoolProfile => 
-                    schoolProfile.GradeProfiles.Any(gradeProfile => 
-                        gradeProfile.GraduationPlanTemplateReferences.Any(graduationPlanTemplateReference => 
+            return globalConfig.DistrictProfiles.All(districtProfile =>
+                !districtProfile.SchoolProfiles.Any(schoolProfile =>
+                    schoolProfile.GradeProfiles.Any(gradeProfile =>
+                        gradeProfile.GraduationPlanTemplateReferences.Any(graduationPlanTemplateReference =>
                             !graduationPlanTemplateNames.Contains(graduationPlanTemplateReference.Name)))));
         }
 
-        private static bool SectionsMustHaveOnlyOneClassPeriod(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool SectionsMustHaveOnlyOneClassPeriod(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return masterScheduleData.Sections.All(s =>
             {
@@ -122,7 +121,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool SectionMustReferenceValidClassPeriods(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool SectionMustReferenceValidClassPeriods(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return masterScheduleData.Sections.All(s =>
             {
@@ -132,7 +131,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool SectionMustReferenceValidCourseOffering(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool SectionMustReferenceValidCourseOffering(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return masterScheduleData.Sections.All(s =>
             {
@@ -142,7 +141,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool CourseMustHaveSectionForEveryClassPeriod(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool CourseMustHaveSectionForEveryClassPeriod(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return config.EducationOrganizationData.Schools.All(school =>
             {
@@ -165,7 +164,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool CourseOfferingMustHaveSectionForEveryTerm(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool CourseOfferingMustHaveSectionForEveryTerm(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return config.EducationOrganizationData.Schools.All(school =>
             {
@@ -195,7 +194,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool CourseAcademicSubjectCountMustBeGreaterThanOrEqualToSchoolCourseLoad(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool CourseAcademicSubjectCountMustBeGreaterThanOrEqualToSchoolCourseLoad(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             var schoolProfiles = config.GlobalConfig.DistrictProfiles.SelectMany(dp => dp.SchoolProfiles).ToList();
 
@@ -223,7 +222,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool SectionMustHaveAValidCourseOffering(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private static bool SectionMustHaveAValidCourseOffering(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             var courseOfferings = masterScheduleData.CourseOfferings;
             return masterScheduleData.Sections.All(section =>
@@ -239,7 +238,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private bool CourseOfferingMustHaveValidCourseCode(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, PropertyValidatorContext propertyValidatorContext)
+        private bool CourseOfferingMustHaveValidCourseCode(GlobalDataGeneratorConfig config, MasterScheduleData masterScheduleData, ValidationContext<GlobalDataGeneratorConfig> propertyValidatorContext)
         {
             return masterScheduleData.CourseOfferings.All(offering =>
             {
@@ -250,7 +249,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
     }
-    
+
     public class AssessmentMetadataDataValidator : AbstractValidator<AssessmentMetadataData>
     {
         public AssessmentMetadataDataValidator()
@@ -280,7 +279,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
                 .WithMessage("AssessmentPerformanceLevel {PerformanceLevelName} in Assessment {AssessmentTitle} must define a MinimumScore and MaximumScore");
         }
 
-        private static bool DefineAtLeastOnePassingAndOneFailingScore(Assessment assessment, AssessmentPerformanceLevel[] assessmentPerformanceLevels, PropertyValidatorContext propertyValidatorContext)
+        private static bool DefineAtLeastOnePassingAndOneFailingScore(Assessment assessment, AssessmentPerformanceLevel[] assessmentPerformanceLevels, ValidationContext<Assessment> propertyValidatorContext)
         {
             return assessmentPerformanceLevels.Any(pl =>
             {
@@ -294,7 +293,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool DefineScores(Assessment assessment, AssessmentPerformanceLevel[] assessmentPerformanceLevels, PropertyValidatorContext propertyValidatorContext)
+        private static bool DefineScores(Assessment assessment, AssessmentPerformanceLevel[] assessmentPerformanceLevels, ValidationContext<Assessment> propertyValidatorContext)
         {
             return assessmentPerformanceLevels.All(pl =>
             {
@@ -346,7 +345,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
                 .WithMessage("The LocalEducationAgency {NameOfInstitution} must have a RegularEducation program.");
         }
 
-        private static bool HaveValidAtLeastOneOfferedGradeLevel(EducationOrganizationData educationOrganizationData, List<Course> courses, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveValidAtLeastOneOfferedGradeLevel(EducationOrganizationData educationOrganizationData, List<Course> courses, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return courses.All(c =>
             {
@@ -356,7 +355,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveValidClassPeriodName(EducationOrganizationData educationOrganizationData, List<ClassPeriod> classPeriods, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveValidClassPeriodName(EducationOrganizationData educationOrganizationData, List<ClassPeriod> classPeriods, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return classPeriods.All(cp =>
             {
@@ -365,7 +364,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveAtLeastOneLocationPerSchool(EducationOrganizationData educationOrganizationData, List<Location> locations, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveAtLeastOneLocationPerSchool(EducationOrganizationData educationOrganizationData, List<Location> locations, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return educationOrganizationData.Schools.All(s =>
             {
@@ -374,7 +373,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveAtLeastOneClassPeriodPerSchool(EducationOrganizationData educationOrganizationData, List<ClassPeriod> classPeriods, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveAtLeastOneClassPeriodPerSchool(EducationOrganizationData educationOrganizationData, List<ClassPeriod> classPeriods, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return educationOrganizationData.Schools.All(school =>
             {
@@ -386,7 +385,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveProgramNameValue(EducationOrganizationData educationOrganizationData, List<Program> programs, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveProgramNameValue(EducationOrganizationData educationOrganizationData, List<Program> programs, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return !programs.Any(p =>
             {
@@ -395,7 +394,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveEducationOrganizationReferenceValue(EducationOrganizationData educationOrganizationData, List<Program> programs, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveEducationOrganizationReferenceValue(EducationOrganizationData educationOrganizationData, List<Program> programs, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             return programs.All(p =>
             {
@@ -404,7 +403,7 @@ namespace EdFi.SampleDataGenerator.Core.DataGeneration.Generators
             });
         }
 
-        private static bool HaveStandardPrograms(EducationOrganizationData educationOrganizationData, List<Program> programs, PropertyValidatorContext propertyValidatorContext)
+        private static bool HaveStandardPrograms(EducationOrganizationData educationOrganizationData, List<Program> programs, ValidationContext<EducationOrganizationData> propertyValidatorContext)
         {
             var localEducationAgenciesWithRegularEducationPrograms =
                 programs.Where(p => p.ProgramType == ProgramTypeDescriptor.RegularEducation.GetStructuredCodeValue())

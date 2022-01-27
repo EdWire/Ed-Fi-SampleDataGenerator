@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
 using CsvHelper.Configuration;
 using EdFi.SampleDataGenerator.Core.Entities;
 using EdFi.SampleDataGenerator.Core.Serialization.CsvHelper;
@@ -141,14 +142,11 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Serialization.CsvHelper
                 }
             };
 
-            var expectedResult =
+            var expectedResult = !RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
                 "id,SessionName,SchoolYear,BeginDate,EndDate,TotalInstructionalDays,Term,id,ref,SchoolId,id,ref,GradingPeriod,PeriodSequence,SchoolYear,id,ref,SchoolId" +
-                Environment.NewLine + ",,2017-2018,6/13/2018 12:00:00 AM,1/1/0001 12:00:00 AM,0,,,,,1,1,,,,,," + Environment.NewLine;
-
-            if (RunningOnUnixLikeSystem)
-                expectedResult =
-                    "id,SessionName,SchoolYear,BeginDate,EndDate,TotalInstructionalDays,Term,id,ref,SchoolId,id,ref,GradingPeriod,PeriodSequence,SchoolYear,id,ref,SchoolId" +
-                    Environment.NewLine + ",,2017-2018,06/13/2018 00:00:00,01/01/0001 00:00:00,0,,,,,1,1,,,,,," + Environment.NewLine;
+                Environment.NewLine + ",,2017-2018,6/13/2018 12:00:00 AM,1/1/0001 12:00:00 AM,0,,,,,1,1,,,,,," + Environment.NewLine
+                : "id,SessionName,SchoolYear,BeginDate,EndDate,TotalInstructionalDays,Term,id,ref,SchoolId,id,ref,GradingPeriod,PeriodSequence,SchoolYear,id,ref,SchoolId" +
+                  Environment.NewLine + ",,2017-2018,06/13/2018 00:00:00,01/01/0001 00:00:00,0,,,,,1,1,,,,,," + Environment.NewLine;
 
             var map = new SessionCsvClassMap();
             using (var writer = new StringWriter())
@@ -176,14 +174,11 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Serialization.CsvHelper
                 id = "1"
             };
 
-            var expectedResult =
+            var expectedResult = !RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
                 "id,CalendarEvent,Date,id,ref,CalendarCode,SchoolYear,id,ref,SchoolId" + Environment.NewLine +
-                "1,Instructional day,6/13/2018 12:00:00 AM,,,,,,," + Environment.NewLine;
-            
-            if (RunningOnUnixLikeSystem)
-                expectedResult =
-                    "id,CalendarEvent,Date,id,ref,CalendarCode,SchoolYear,id,ref,SchoolId" + Environment.NewLine +
-                    "1,Instructional day,06/13/2018 00:00:00,,,,,,," + Environment.NewLine;
+                "1,Instructional day,6/13/2018 12:00:00 AM,,,,,,," + Environment.NewLine
+                : "id,CalendarEvent,Date,id,ref,CalendarCode,SchoolYear,id,ref,SchoolId" + Environment.NewLine +
+                  "1,Instructional day,06/13/2018 00:00:00,,,,,,," + Environment.NewLine;
 
             var map = new CalendarDateCsvClassMap();
             using (var writer = new StringWriter())
@@ -195,11 +190,6 @@ namespace EdFi.SampleDataGenerator.Core.UnitTests.Serialization.CsvHelper
 
                 result.ShouldBe(expectedResult);
             }
-        }
-
-        private static bool RunningOnUnixLikeSystem
-        {
-            get { return (new List<int>() {4, 6, 128}).Contains((int) Environment.OSVersion.Platform); }
         }
     }
 }

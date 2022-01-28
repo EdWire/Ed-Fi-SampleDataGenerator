@@ -9,9 +9,9 @@ namespace EdFi.SampleDataGenerator.Console.XMLTemplates
 {
     public static class XmlTemplateHelper
     {
-        public static List<string> ValidEthnicitiesRaces = new List<string> { "Hispanic", "Asian", "Black", "AmericanIndianAlaskanNative", "NativeHawaiianPacificIslander", "White" };
-        public const string BasePath = @".\XMLTemplates\";
-        public const string WriteFilePath = @".\Samples\SampleDataGenerator\NewGeneratedConfig.xml";
+        public static List<string> ValidEthnicitiesRaces = new() { "Hispanic", "Asian", "Black", "AmericanIndianAlaskanNative", "NativeHawaiianPacificIslander", "White" };
+        private static string basePath = $"{Path.Combine(".", "XMLTemplates")}{Path.DirectorySeparatorChar}";
+        public static string WriteFilePath = Path.Combine(".","Samples","SampleDataGenerator","NewGeneratedConfig.xml");
 
         public const string ConfigStart = "StartConfigTemplate.txt";
         public const string ConfigEnd = "</SampleDataGeneratorConfig>";
@@ -47,6 +47,8 @@ namespace EdFi.SampleDataGenerator.Console.XMLTemplates
         public const string Grade10File = "Grade10ConfigTemplate.txt";
         public const string Grade11File = "Grade11ConfigTemplate.txt";
         public const string Grade12File = "Grade12ConfigTemplate.txt";
+
+        public static string BasePath { get => basePath; set => basePath = value; }
 
         public static void BuildConfigFile(Entities.District district) {
             var fullFileString = "";

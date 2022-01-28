@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Reflection;
 using CommandLine;
@@ -41,16 +41,6 @@ namespace EdFi.InterchangeXmlToCsv.Console
                         Environment.ExitCode = -1;
                         Environment.Exit(Environment.ExitCode);
                     });
-
-            // return config;
-            // var parser = new CommandLineParser();
-            // var parseResult = parser.Parse(args);
-            //
-            // if (parseResult.HasErrors)
-            // {
-            //     System.Console.WriteLine(parseResult.ErrorText);
-            //     return -1;
-            // }
 
             var converter = new InterchangeXmlToCsvConverter();
             converter.Convert(config);

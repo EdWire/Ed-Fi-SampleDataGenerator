@@ -102,11 +102,11 @@ namespace EdFi.SampleDataGenerator.Console
            
             try
             {
-                var dynamicDataFilesPath = @".\Samples\SampleDataGenerator\DynamicDataFiles\";
+                var dynamicDataFilesPath = Path.Combine(".", "Samples", "SampleDataGenerator", "DynamicDataFiles");
                 var source = new DirectoryInfo(config.DataFilePath);
                 var target = new DirectoryInfo(dynamicDataFilesPath);
                 CopyAll(source, target);
-                config.DataFilePath = dynamicDataFilesPath;
+                config.DataFilePath = $"{dynamicDataFilesPath}{Path.DirectorySeparatorChar}";
             }
             catch (Exception ex)
             {

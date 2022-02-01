@@ -326,6 +326,8 @@ namespace EdFi.SampleDataGenerator.Console
                         Environment.Exit(Environment.ExitCode);
                     });
 
+            ValidateCommandLineConfig(config);
+
             return config;
         }
 
